@@ -1,0 +1,41 @@
+\newpage
+
+\section{Anexo - Listado de grupos de referencia universitarios.}
+
+A continuaci\'on se presenta la lista de los grupos de referencia a nivel
+universitario para 2014.
+
+\begin{table}[h!]
+          \begin{center}
+            \caption{Grupos de referencia universitarios}
+            \label{Tabla 1}
+            \begin{tabular*}{8.6cm}{|l|l|}
+              \thickline
+Código & Grupo de Referencia \\
+              \hline
+            1 & Bellas artes y diseño \\
+            2 & Ciencias naturales y exactas \\
+            3 & Ciencias sociales \\
+            4 & Humanidades \\
+            5 & Derecho \\
+            6 & Comunicación, periodismo y publicidad \\
+            7 & Ciencias militares y navales \\
+            8 & Ciencias agropecuarias \\
+            9 & Administración y afines \\
+            10 & Educación \\
+            11 & Arquitectura y afines \\
+            12 & Ingeniería \\
+            13 & Salud \\
+            14 & Medicina \\
+            31 & Economía \\
+            32 & Contaduría y afines \\
+            33 & Psicología \\
+            34 & Enfermería \\
+            \thickline
+            \end{tabular*}
+          \end{center}
+        \end{table}
+
+\newpage
+\normalsize
+

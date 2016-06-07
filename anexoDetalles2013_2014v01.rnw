@@ -1,0 +1,94 @@
+\newpage
+
+\section{Anexo - Tamaño del efecto para comparaciones censales.}
+
+Para la lectura y an\'alisis de algunos resultados ser\'a necesario tener en
+cuenta el \textit{umbral del tama\~no del efecto}, el
+cual es una medida que permite identificar si existen diferencias
+importantes entre los promedios, cuando se comparan datos censales. Para
+este reporte, el umbral del tama\~{n}o del efecto se calcula como ($0,2*$
+\textit{desviaci\'on est\'andar})\footnote{Morales, P. (2012). El
+tama\~{n}o del efecto \textit{(effect size)}: an\'alisis complementarios al contraste de medias. Estad\'\i{}stica Aplicada a las Ciencias Sociales. Universidad Pontificia Comillas, Madrid, Facultad de Ciencias Humanas y
+Sociales.}, tomando, en cada caso, la desviaci\'on est\'andar de
+los puntajes de cada prueba dentro del grupo de referencia a nivel
+nacional. Si la diferencia entre dos promedios es mayor al umbral del
+ tama\~{n}o del efecto, entonces la diferencia es importante. Este
+valor ser\'a de mucha utilidad en el momento de realizar
+comparaciones entre diferentes tipos de agregados (Nacional, Vecindad e
+IGR) o entre a\~{n}os (2013 y 2014). \vspace{3mm}
+
+La siguiente tabla presenta los umbrales del tama\~{n}o del efecto por prueba y tipo de comparaci\'on:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Generación de tabla con información sobre los tamaños del efecto para
+% % las comparaciones de resultados de SABER PRO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<ConsTabla1_2,results=hide,echo=false>>=
+TamanoEfectoTabla13 <- Desviac2013GR[, c('Prueba', 'DesvEstand')]
+
+TamanoEfectoTabla14 <- Desviac2014GR[, c('Prueba', 'DesvEstand')]
+
+TamanoEfectoTabla  <- merge(TamanoEfectoTabla13, TamanoEfectoTabla14, by
+                            = 'Prueba')
+
+TamanoEfectoTabla[, 'TamanoEfecto2014'] <- 0.2 * TamanoEfectoTabla[,
+                                                             'DesvEstand.y']
+
+TamanoEfectoTabla[, 'TamanoEfecto2013'] <- 0.2 * TamanoEfectoTabla[,
+                                                             'DesvEstand.x']
+
+TamanoEfectoTabla[, 'Prueba'] <-
+  as.character(TamanoEfectoTabla[, 'Prueba'])
+
+for(i in seq(nrow(TamanoEfectoTabla))){
+TamanoEfectoTabla[i, 'TamanoEfecto13_14'] <-
+  max(TamanoEfectoTabla[i, 'TamanoEfecto2013'],
+      TamanoEfectoTabla[i, 'TamanoEfecto2014'])
+     if(length(TamanoEfectoTabla[i, 'TamanoEfecto2013']) == 0 &
+               length(TamanoEfectoTabla[i, 'TamanoEfecto2014']) == 0){
+       TamanoEfectoTabla[i, 'TamanoEfecto13_14'] <- 'NA'
+       cat("No se cuenta con informaci\\'on para la IGR en alguno de los
+           a\\~{n}os.")}
+
+tmpP <- TamanoEfectoTabla[i, 'Prueba']
+
+TamanoEfectoTabla[i, 'Prueba'] <- as.character(PruebasMin[tmpP])
+}
+
+TamanoEfectoTabla[, 'DesvEstand.x']  <- NULL
+
+TamanoEfectoTabla[, 'DesvEstand.y']  <- NULL
+
+TamanoEfectoTabla <- TamanoEfectoTabla[, c('Prueba', 'TamanoEfecto2013',
+                                        'TamanoEfecto2014',
+                                        'TamanoEfecto13_14')]
+@
+
+<<Tabla1_2,results=tex,echo=false>>=
+addRows <- list(pos = as.list(c(-1, 1, nrow(TamanoEfectoTabla))),
+                command = c("\\thickline\n & & & \\\\ Prueba &
+                            Umbral & Umbral
+             & Umbral \\\\
+             & 2013 & 2014 & 2013-2014 \\\\
+\\hline",
+                            '' ,
+                            '\\thickline\n'))
+
+tabla <- xtable(TamanoEfectoTabla)
+align(tabla)   <- c('l', 'p{6cm}', rep('r', 3))
+caption(tabla) <- paste("Umbral del tama\\~no del efecto, por pruebas, para el grupo de
+                        referencia de ",
+                        GrupRefer[refGr], ".", sep = '')
+label(tabla) <- 'Tabla2'
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H",
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force)
+@
+
+Tenga en cuenta que promedios entre dos
+pruebas diferentes no pueden compararse y que cuando se comparan dos
+a\~{n}os, el umbral del tama\~{n}o del efecto se calcula a partir de la
+desviaci\'on est\'andar m\'as grande.

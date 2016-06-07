@@ -1,0 +1,270 @@
+
+<<IncluirAnexo,results=hide,echo=false>>=
+flag  <-  1
+
+if(flag == 0){} else if(flag==1){}
+@
+
+\newpage
+
+\section{Anexo - Resultados de Aporte Relativo para la vecindad extendida}
+
+A continuaci\'on se presentan los resultados de Aporte Relativa considerando 
+todas las instituciones que se ubican dentro del criterio de 0.3 desviaciones 
+est\'andar en el \'\i{}ndice SABER 11$^\text{o}$. Cada una de las filas de la 
+siguiente tabla corresponden a una instituci\'on de la vecindad de comparaci\'on.
+Las instituciones que se presentaron como vecindad (m\'aximo 15) dentro de todo
+el reporte se presentan en negrilla y con su correspondiente c\'odigo. El s\'\i{}mbolo 
+$\mathbin{\textcolor{blue}{\triangledown}}$ representa que la instituci\'on tiene un
+Aporte Relativo estad\'\i{}camente menor que la IGR. El s\'\i{}mbolo 
+$\mathbin{\textcolor{blue}{\vartriangle}}$ representa que la instituci\'on tiene un
+Aporte Relativo estad\'\i{}camente mayor que la IGR. Por su parte, $\mathbin{\textcolor{blue}{\circ}}$
+aparece cuando no hay diferencias significativas.
+
+<<TablaAnexo,results=tex,echo=false>>=
+out <- outcomes[2]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+  foc <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  foc <- merge(foc, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% TodasComparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(foc)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(foc, comp))->tmpLC
+tmpLC[, 'CodInst']  <- substr(tmpLC[, 'inst_by_ref'], 1, 4)
+tmpLC[, 'rowname'] <- row.names(tmpLC)
+tmpLC <- merge(tmpLC, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmpLC) <- tmpLC[, 'rowname']
+
+Agregtmp <- merge(tmpLC, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+isFoc <- tmpLC[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+for (val in c("base", "inse", "sb11")) {
+  tmpLC[, paste(val, "_025", sep = '')] <- tmpLC[, paste(val, "_025", sep = '')] - tmpLC[isFoc, val]
+  tmpLC[, paste(val, "_975", sep = '')] <- tmpLC[, paste(val, "_975", sep = '')] - tmpLC[isFoc, val]
+    tmpLC[, val] <- tmpLC[, val] - tmpLC[isFoc, val]
+}
+
+nm = 'base'
+    Ordennm <- order(tmpLC[[nm]])
+    tmpLC <- tmpLC[Ordennm,]
+    range(tmpLC[[nm]])->ran
+    ran[2]-ran[1]->L
+    ran[1]-.1*L->ran[1]
+    ran[2]+.1*L->ran[2]
+  limInfnm <- min(tmpLC[, paste(nm, "_025", sep = '')])
+  limSupnm <- max(tmpLC[, paste(nm, "_975", sep = '')])
+
+    isFoc <- tmpLC[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+       varsPer <- grep(paste(nm, "_", sep = ""),
+                    names(foc), value = TRUE)
+    radio <- max(abs(foc[, varsPer]-foc[, nm]))
+    tP025 <- paste(nm, "_025", sep = '')
+    tP975 <- paste(nm, "_975", sep = '')
+
+    isAbove <- tmpLC[isFoc, tP975] < tmpLC[, tP025]
+    isBelow <- tmpLC[isFoc, tP025] > tmpLC[, tP975]
+    isSimil <- !isAbove & !isBelow
+
+	tmpLC[isAbove, 'LC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangle}}'
+	tmpLC[isSimil, 'LC_AR'] <- '\\mathbin{\\textcolor{blue}{\\ocircle}}'
+    tmpLC[isBelow, 'LC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangledown}}'
+    
+out <- outcomes[1]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+  foc <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  foc <- merge(foc, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% TodasComparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(foc)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(foc, comp))->tmpRC
+tmpRC[, 'CodInst']  <- substr(tmpRC[, 'inst_by_ref'], 1, 4)
+tmpRC[, 'rowname'] <- row.names(tmpRC)
+tmpRC <- merge(tmpRC, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmpRC) <- tmpRC[, 'rowname']
+
+Agregtmp <- merge(tmpRC, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+isFoc <- tmpRC[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+for (val in c("base", "inse", "sb11")) {
+  tmpRC[, paste(val, "_025", sep = '')] <- tmpRC[, paste(val, "_025", sep = '')] - tmpRC[isFoc, val]
+  tmpRC[, paste(val, "_975", sep = '')] <- tmpRC[, paste(val, "_975", sep = '')] - tmpRC[isFoc, val]
+    tmpRC[, val] <- tmpRC[, val] - tmpRC[isFoc, val]
+}
+
+nm = 'base'
+    Ordennm <- order(tmpRC[[nm]])
+    tmpRC <- tmpRC[Ordennm,]
+    range(tmpRC[[nm]])->ran
+    ran[2]-ran[1]->L
+    ran[1]-.1*L->ran[1]
+    ran[2]+.1*L->ran[2]
+  limInfnm <- min(tmpRC[, paste(nm, "_025", sep = '')])
+  limSupnm <- max(tmpRC[, paste(nm, "_975", sep = '')])
+
+    isFoc <- tmpRC[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+       varsPer <- grep(paste(nm, "_", sep = ""),
+                    names(foc), value = TRUE)
+    radio <- max(abs(foc[, varsPer]-foc[, nm]))
+    tP025 <- paste(nm, "_025", sep = '')
+    tP975 <- paste(nm, "_975", sep = '')
+
+    isAbove <- tmpRC[isFoc, tP975] < tmpRC[, tP025]
+    isBelow <- tmpRC[isFoc, tP025] > tmpRC[, tP975]
+    isSimil <- !isAbove & !isBelow
+
+    tmpRC[isAbove, 'RC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangle}}'
+	tmpRC[isSimil, 'RC_AR'] <- '\\mathbin{\\textcolor{blue}{\\ocircle}}'
+    tmpRC[isBelow, 'RC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangledown}}'
+    
+	tmp <- merge(tmpLC, tmpRC, by = 'CodInst')
+	
+	tmp <- merge(tmp, Tabla1, by.x = 'UNIV_NOMBREREDUCIDO.x', 
+	             by.y = 'UNIV_NOMBREREDUCIDO', all.x = TRUE)
+				 
+	tmp[, 'UNIV_NOMBREREDUCIDO.x'] <- paste(tmp[, 'UNIV_NOMBREREDUCIDO.x'], ' vs. IGR',  sep = '')			 
+	
+	Orden <- order(tmp[, 'IndicadorPuntajes_va.y'])
+
+	tmp <- tmp[Orden,]
+	
+	tmp <- tmp[, c('simbolo', 'UNIV_NOMBREREDUCIDO.x', 'IndicadorPuntajes_va.y',
+	               'LC_AR', 'RC_AR')]
+
+	tmp[, 'IndicadorPuntajes_va.y'] <- CambiarFormato(tmp[, 'IndicadorPuntajes_va.y'], digits= 2)
+
+	tmp[, 'UNIV_NOMBREREDUCIDO.x'] <- as.character(tmp[, 'UNIV_NOMBREREDUCIDO.x'])
+	
+for(ii in seq(nrow(tmp)))				   
+if(!is.na(tmp[ii, 'simbolo'])){
+tmp[ii, 'simbolo'] <- paste('\\textbf{', tmp[ii, 'simbolo'], '}', sep = '')
+tmp[ii, 'IndicadorPuntajes_va.y'] <- paste('\\textbf{', tmp[ii, 'IndicadorPuntajes_va.y'], '}', sep = '') 
+}
+
+for(ii in seq(nrow(tmp)))				   
+if(!is.na(tmp[ii, 'simbolo'])){
+tmp[ii, 'UNIV_NOMBREREDUCIDO.x'] <- paste('\\textbf{', tmp[ii, 'UNIV_NOMBREREDUCIDO.x'], '}', sep = '') 
+}
+
+titulo <- paste("Resultados de Aporte Relativo para la vecindad extendida.")
+
+encabezado <- paste(
+"\\hline
+C\\'odigo & Nombre IES & \\'I{}ndice & Comparaci\\'on en  &  Comparaci\\'on en \\\\
+ & IES  & SABER 11$^\\text{o}$ & Lectura  & Razonamiento \\\\
+ &      &                      & cr\\'\\i{}tica & cuantitativo \\\\
+\\hline
+\\endfirsthead
+\\multicolumn{4}{p{6cm}}
+{\\tablename\\ \\thetable\\ -- \\textit{", titulo, "(Continuaci\\'on\\dots)}} \\\\
+\\hline
+C\\'odigo & Nombre IES & \\'I{}ndice & Comparaci\\'on en  &  Comparaci\\'on en \\\\
+ & IES  & SABER 11$^\\text{o}$ & Lectura  & Razonamiento \\\\
+ &      &                      & cr\\'\\i{}tica & cuantitativo \\\\
+\\hline
+\\endhead
+\\hline
+\\multicolumn{4}{p{6cm}}{\\textit{Contin\\'ua en la siguiente p\\'agina\\ldots}} \\\\
+\\endfoot
+\\hline
+\\endlastfoot
+")
+
+addRows <- list(pos = as.list(c(-1, 1, nrow(tmp))),
+                command = c(encabezado,
+                            '',
+                            '\\thickline\n')
+                )				   
+				   
+tabla <- xtable(tmp)
+align(tabla)   <- c('l', 'c', 'p{7.8cm}', 'c', 'c', 'c')
+caption(tabla) <- titulo
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = seq(1,nrow(tmp)),
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, sanitize.rows.function = identity,
+      size = 'tiny',
+      tabular.environment="longtable", floating = FALSE)
+@
+
+\scriptsize{
+\begin{center}
+  \fbox{
+  \parbox[0.4cm]{\textwidth}{
+\begin{center}
+$\mathbin{\textcolor{blue}{\vartriangle}}$ Diferencias
+positivas estad\i{}sticamente signif. \hspace{2mm}
+$\mathbin{\textcolor{blue}{\triangledown}}$ Diferencias
+negativas estad\i{}sticamente signif. \vspace{1mm}
+
+$\mathbin{\textcolor{blue}{\circ}}$ No hay diferencias
+estad\i{}sticamente significativas.
+\end{center}}}
+\end{center}
+
+}
+
+\newpage
+

@@ -1,0 +1,502 @@
+<<NombreEncab,results=hide,echo=false>>=
+NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
+                     universidades[, 'INST_ID'] == Inst)
+@
+
+\documentclass[11pt,doc,babel,spanish,noapacite]{icfesdocapa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Construccion base de valor agregado 2011-2 y 2012
+% %
+% % Autor(es): Edwin Cuellar y Alvaro Uzaheta
+% %
+% % Descripcion: Procedimiento para la construccion de la base de datos
+% de Valor Agregado 2012 y 2013
+% %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % <<< Preambulo no modificable por el usuario
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Preambulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % Paquetes
+\usepackage[titles]{tocloft}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[letterpaper]{geometry}
+\usepackage[dvips]{graphicx,graphics}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[mathscr]{euscript}
+\usepackage{fancyhdr,pstricks,pst-node,multido}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color,array,verbatim,multirow,lscape}
+\usepackage{csquotes,longtable}
+\usepackage[style=apa]{biblatex}
+\usepackage{tabularx,ctable}
+\usepackage[colorlinks=TRUE,allcolors=black,breaklinks]{hyperref}
+\usepackage{breakurl}
+\usepackage{makecell}
+\usepackage[none]{hyphenat}
+\usepackage{chngcntr}
+\usepackage{fancyref}
+\usepackage{tikz}
+\usepackage{wasysym}
+%\usepackage{landscape}
+
+\definecolor{OliveGreen}{RGB}{55,139,46}
+
+\sloppy
+
+% % Modificaciones al paquete biblatex
+
+
+\renewcommand{\blxauxsuffix}{}
+\setcounter{smartand}{0}
+\DefineBibliographyStrings{spanish}{
+  andothers = {et al.},
+}
+
+% % Definicion del flotante ``cuadro'' (paquete float)
+
+\floatstyle{plaintop}
+\newfloat{cuadro}{htbp}{lop}
+\floatname{cuadro}{Cuadro}
+
+% % Modificaciones a la lista de tablas y de cuadros (paquete tocloft)
+
+\renewcommand{\cfttabpresnum}{Tabla }
+\setlength{\cfttabnumwidth}{60pt}
+\setlength{\cftfignumwidth}{60pt}
+\renewcommand{\cfttabaftersnum}{:}
+\setlength{\cftsecnumwidth}{0pt}
+\setlength{\cftsubsecnumwidth}{0pt}
+
+\setlength\LTleft\parindent
+\setlength\LTright\fill
+
+\makeatletter
+  \renewcommand{\@cftbsnum}{Cuadro }
+  \renewcommand{\@cftasnum}{:}
+\makeatother
+
+\makeatletter
+  \newcommand{\listofcuadros}{
+    \@namedef{l@cuadro}{\@dottedtocline{1}{1.5em}{60pt}}
+    \float@listhead{Lista de cuadros}
+    \begingroup\setlength{\parskip}{\z@}
+      \@starttoc{\@nameuse{ext@cuadro}}
+    \endgroup
+  }
+\makeatother
+
+% % Modificaciones a los encabezados de las tablas, cuadros y figuras
+% % (paquete caption)
+
+\captionsetup[table]{margin = 10pt, font = small, labelsep = space}
+\captionsetup[cuadro]{margin = 10pt, font = small, labelsep = colon}
+\captionsetup[figure]{margin = 10pt, font = small, labelsep = none}
+
+
+% % Modificaciones al tamanno de las tablas (paquete longtable)
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% % Otras opciones
+
+\DeclareGraphicsExtensions{.eps, .png, .pdf, .jpg}
+\renewcommand{\l}{\left}
+\renewcommand{\r}{\right}
+\newcommand{\ord}[1]{$#1\text{o.}$}
+\makeatletter
+  \def\hlinewd#1{
+    \noalign{\ifnum0=`}\fi\hrule \@height #1
+    \futurelet\reserved@a\@xhline
+  }
+\makeatother
+
+\renewcommand{\thickline}{\hlinewd{1.5pt}}
+
+% % Cambios a los parametros de presentacion de la pagina
+% % Incluir el logo del ICFES y el pie (paquete fancyhdr)
+
+\pagestyle{fancy}
+%% Esta línea permite modificar los márgenes de las páginas
+\headheight 53pt
+\fancyhead{}
+\fancyfoot{}
+\addtolength{\headheight}{\baselineskip}
+\newcommand{\ffont}{\fontsize{9}{9}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % >>>
+
+% % <<< Preambulo modificable por el usuario
+
+\usepackage{longtable}
+\chead{\includegraphics[width=8.8cm]{../logonuevo.eps}}
+%\scriptsize \textit{\Sexpr{GrupRefer[refGr]}} \\
+%\textit{\Sexpr{NombreUniv}}}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\footnotesize{\thepage}}
+\headinglevels{five} % one two three four or five
+\decimalpoint
+
+\title{Reporte de resultados en SABER PRO, medidas de Aporte Relativo y
+otros indicadores de calidad de las Instituciones de Educaci\'on
+Superior \vspace{8mm}}
+
+\author{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on - ICFES}
+
+% % Insertar la fecha del documento en la siguiente linea
+\date{Mayo de 2015}
+
+\affiliation{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on}
+
+% % Archivos de bibliografia e idioma de esta
+\bibliography{apa-es,jourlong,arts,soft,buks,R}
+
+\DeclareLanguageMapping{spanish}{spanish-apa}
+% % \addbibresource{arts.bib}
+% % >>>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<Preparacion,results=hide,echo=false>>=
+################################################################################
+# # Preparación para la generación de reportes
+################################################################################
+
+## A continuación se definen algunos valores relacionados con los reportes que 
+## se esten generando
+
+Annos  <- '2013 y 2014'
+AnnoActual <- '2014'
+kAjusteGraf4 <- 0.02
+
+## Calculo de desviacionesn para 2013 y 2014 a nivel del Grupo de referencia
+
+Desviac2013GR <- subset(Desviaciones[, c('Prueba', 'DesvEstand')],
+                        Desviaciones[, 'RefGrp'] == refGr
+                        & Desviaciones[, 'Ano'] == '2013')
+
+Desviac2014GR <- subset(Desviaciones[, c('Prueba', 'DesvEstand')],
+                        Desviaciones[, 'RefGrp'] == refGr
+                        & Desviaciones[, 'Ano'] == '2014')
+
+## Definición de la institución-grupo de referencia (IGR) (unidad de análisis)						
+						
+InstGR <- paste(Inst, refGr, sep = "__")
+
+tab <- table(dat[, 'inst_by_ref'])
+
+GR <- subset(AgregCompPunta, RefGrp == refGr)
+foc <- subset(GR, INST_BY_REF == InstGR)
+
+preFlag <- subset(TablaANEXO,
+                  INST_BY_REF %in% foc[, 'INST_BY_REF'])
+
+comparables <- NULL
+
+if (nrow(preFlag) == 0){
+  flagVA <- FALSE
+  flagVec <- FALSE
+  nComparables <- 0
+} else {
+  if(nrow(preFlag) > 1){ stop('algo mal con filtro de TablaANEXO') }
+  flagVA <- preFlag[, 'hasVA']
+  flagVec <- preFlag[, 'has15Vec']
+}
+
+## Para las instituciones que tienen la sección de Aporte Relativo, su
+## vecindad se escoge entre instituciones que tienen las condiciones
+## para tener Aporte Relativo
+
+  if (flagVA) {
+    instHasVA <- TablaANEXO[TablaANEXO[, 'hasVA'], 'INST_BY_REF']
+    resto <- subset(GR, INST_BY_REF != InstGR &
+                    INST_BY_REF %in% instHasVA)
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+    resto <- resto[order(resto[, 'dist']),]
+	TodasComparables <- resto[resto[, 'dist'] < .3, ]
+
+## Para las instituciones que no tienen la sección de Aporte Relativo
+## pero si tienen vecindad, esta se escoge entre instituciones con
+## vecindad
+
+  } else if (nrow(foc) > 0){
+  if(preFlag[, 'has15Vec']) {
+    instHas15Vec <- TablaANEXO[TablaANEXO[, 'has15Vec'], 'INST_BY_REF']
+    resto <- subset(GR, INST_BY_REF != InstGR)
+    nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+    resto <- resto[order(resto[, 'dist']),]
+	TodasComparables <- resto[resto[, 'dist'] < .3, ]
+  } else{
+    nComparables <- 0
+}
+  }
+
+  if(refGr == 'CIENCIAS MILITARES Y NAVALES'){
+    flagVA <- FALSE
+nComparables <- 0
+}
+
+  flag2 <- TRUE
+
+ if (nrow(foc) == 0){
+  flag2 <- FALSE
+}
+
+if(nrow(foc) > 0){
+if(preFlag[, 'has15Vec']){
+Vectores13_14Vec <- list()
+
+for(s in 1: 100){
+set.seed(s)
+tmpAgreg <- subset(dat, inst_by_ref == InstGR)
+
+TamMuestra <- round((0.95*dim(tmpAgreg)[1]))
+
+tmpAgreg <- sample(tmpAgreg[sample(nrow(tmpAgreg), TamMuestra), ])
+
+GR13_14 <- subset(AgregCompPunta, RefGrp == refGr)
+foc13_14 <- aggregate(tmpAgreg[, c('IndicadorPuntajes')],
+                    list(tmpAgreg$inst_by_ref), mean,
+                    na.rm = TRUE)
+names(foc13_14) <- c('INST_BY_REF', 'IndicadorPuntajes_va')
+foc13_14[, 'Inst'] <- gsub("(.*)__.*", "\\1", 
+                          foc13_14[, 'INST_BY_REF'])
+foc13_14[, 'RefGrp'] <- gsub(".*__(.*)", "\\1", 
+                          foc13_14[, 'INST_BY_REF'])	
+foc13_14 <- merge(foc13_14, TablaANEXO, by = 'INST_BY_REF')
+
+# # definicion si lleva o no AR
+preFlag <- subset(TablaANEXO,
+                  INST_BY_REF %in% foc13_14[, 'INST_BY_REF'])
+
+comparables <- NULL
+
+## Para las instituciones que tienen la sección de Aporte Relativo, su
+## vecindad se escoge entre instituciones que tienen las condiciones
+## para tener Aporte Relativo
+
+  if (flagVA) {
+    instHasVA <- TablaANEXO[TablaANEXO[, 'hasVA'], 'INST_BY_REF']
+    resto <- subset(GR13_14, INST_BY_REF != InstGR & INST_BY_REF %in% instHasVA)
+	nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc13_14$IndicadorPuntajes_va)
+	resto <- resto[order(resto[, 'dist']),]
+	tmpVec <- resto[seq(nParcial), ]
+	tmpVec <- tmpVec[tmpVec[, 'dist'] < .3, ]
+	Vectores13_14Vec[[s]] <- tmpVec[, c('INST_BY_REF', 'dist')]
+
+## Para las instituciones que no tienen la sección de Aporte Relativo
+## pero si tienen vecindad, esta se escoge entre instituciones con
+## vecindad
+
+  } else if (nrow(foc13_14) > 0 & nrow(preFlag) > 0){
+  if(preFlag[, 'has15Vec']) {
+    instHas15Vec <- TablaANEXO[TablaANEXO[, 'has15Vec'], 'INST_BY_REF']
+    resto <- subset(GR13_14, INST_BY_REF != InstGR & INST_BY_REF %in% instHas15Vec)
+	nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc13_14$IndicadorPuntajes_va)
+	resto <- resto[order(resto[, 'dist']),]
+	tmpVec <- resto[seq(nParcial), ]
+	tmpVec <- tmpVec[tmpVec[, 'dist'] < .3, ]
+	Vectores13_14Vec[[s]] <- tmpVec[, c('INST_BY_REF', 'dist')]} else {
+}
+  }
+
+  flag2 <- TRUE
+
+ if (nrow(foc13_14) == 0){
+  flag2 <- FALSE
+}
+}
+}
+}
+
+if(nrow(foc) > 0){
+if(preFlag[, 'has15Vec']){
+if(nrow(TodasComparables)>0){
+ListaComp13_14Vec <- data.frame()
+for(i in seq(1,100)){
+tmp <- Vectores13_14Vec[[i]][,c('INST_BY_REF', 'dist')]
+ListaComp13_14Vec <- rbind(ListaComp13_14Vec,tmp) 
+}
+AgregVecindad13_14 <- ddply(ListaComp13_14Vec, .(INST_BY_REF), summarize,
+						   dist = mean(dist))
+#ListaComp13_14Vec <- listaToDataframe(Vectores13_14Vec)
+#ListaComp13_14Vec <- as.matrix(ListaComp13_14Vec)
+#AgregVecindad13_14 <- as.data.frame(table(ListaComp13_14Vec))
+OrdenAgreg13_14 <- order(AgregVecindad13_14[, 'dist'], decreasing = TRUE)
+AgregVecindad13_14 <- AgregVecindad13_14[OrdenAgreg13_14,]
+AgregVecindad13_14 <- subset(AgregVecindad13_14, AgregVecindad13_14[, 'dist'] < 0.3)
+nParcial13_14Vec <- ifelse(nrow(AgregVecindad13_14) > 15, 15, nrow(AgregVecindad13_14))
+AgregVecindad13_14 <- AgregVecindad13_14[seq(nParcial13_14Vec),]
+nComparables <- nrow(AgregVecindad13_14)
+comparables <- subset(resto, INST_BY_REF %in% AgregVecindad13_14[, 'INST_BY_REF'])
+} else if (nrow(TodasComparables)==0){nComparables <- 0}
+}
+}
+
+if (nComparables > 0) {
+VecComp <- rbind.fill(foc, comparables)
+
+## En esta sección del código se calculan y guardan todos los agregados de la vecindad
+
+AgregadosVecindad  <- subset(Agregados, Agregados[, 'INST_BY_REF'] %in%
+                  VecComp[, 'INST_BY_REF'])
+
+AgregadosVecindad2 <- cast(AgregadosVecindad, INST_BY_REF + Ano ~
+                           Prueba,  value = "Promedio")
+
+tmp <- matrix(unlist(strsplit(as.character(AgregadosVecindad2$INST_BY_REF),
+                              '__')), ncol=2, byrow=TRUE)
+
+tmp  <-  as.data.frame(tmp)
+
+names(tmp) <- c('Inst', 'RefGrp')
+
+AgregadosVecindad2 <- cbind(AgregadosVecindad2, tmp)
+
+tmp2 <- subset(AgregadosVecindad2, AgregadosVecindad2[, 'Ano'] == 2014)
+
+tmp2[, 'rowname'] <- row.names(tmp2)
+
+AgregadosVecindad2014 <- merge(tmp2, universidades, by.x = "Inst",
+                               by.y = "INST_ID")
+
+rownames(AgregadosVecindad2014) <- tmp2[, 'rowname']
+
+PromedioPondVec <- ddply(AgregadosVecindad,
+                     .(RefGrp, Prueba, Ano), summarize,
+                     DesvEstand = sqrt( sum(x2, na.rm = TRUE) / sum(Tamano) -
+                                        weighted.mean(Promedio, Tamano) *
+                                        weighted.mean(Promedio, Tamano)),
+                      Promedio = weighted.mean(Promedio, Tamano),
+                      Tamano = sum(Tamano))
+
+QuintilesVec <-
+  aggregate(AgregadosVecindad[,c('Q1', 'Q2', 'Q3', 'Q4', 'Q5')],
+          AgregadosVecindad[, c('RefGrp', 'Prueba', 'Ano')],
+          FUN = sum, na.rm = TRUE)
+
+AgregadosPruebasVec  <- merge(PromedioPondVec, QuintilesVec,
+                           by = c('RefGrp', 'Prueba', 'Ano'))
+
+NivelesVec <-
+    aggregate(AgregadosVecindad[, c('A-', 'A1', 'A2', 'B1', 'B+', 'N1',
+                                    'N2', 'N3', 'N4', 'N5', 'N6', 'N7',
+                                    'N8')],
+          AgregadosVecindad[, c('RefGrp', 'Prueba', 'Ano')],
+          FUN = sum, na.rm = TRUE)
+
+AgregadosPruebasVec  <- merge(AgregadosPruebasVec, NivelesVec,
+                           by = c('RefGrp', 'Prueba', 'Ano'))
+} else { VecComp <- foc}
+@
+
+\begin{document}
+% %  <<< Cambios en los nombres de los flotantes y la lista de tablas
+
+  \renewcommand{\figurename}{Gr\'afico}
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listtablename}{Lista de tablas}
+  \renewcommand{\listfigurename}{Lista de gr\'aficos}
+% % >>>
+% % Titulo
+%  \maketitle
+
+\LARGE{
+\begin{center}
+\textbf{Reporte de resultados en SABER PRO, medidas de Aporte Relativo y
+otros indicadores de calidad de las Instituciones de Educaci\'on
+Superior 2013-2014\vspace{32mm}}
+\end{center}
+}
+
+\Large{
+\begin{center}
+\textbf{\Sexpr{GrupRefer[refGr]}} \\
+\textbf{\Sexpr{NombreUniv}}
+\end{center}} \vspace{30mm}
+
+\Large{
+\begin{center}
+\textbf{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on y
+\\
+Direcci\'on de Evaluaci\'on}
+
+\vspace{3mm}
+\textbf{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on -
+ICFES}
+\vspace{45mm}
+\end{center}
+}
+
+\Large{
+\begin{center}
+  \textbf{Agosto de 2015}
+\end{center}
+}
+\normalsize
+
+% % Para incluir el logo y el pie en la primera pagina
+  \thispagestyle{fancy}
+
+  % % No modificar la siguiente l\'\i{}nea
+
+  \setcounter{tocdepth}{2}
+
+% % Tabla de contenido
+
+\newpage
+
+\tableofcontents
+
+% % Lista de tablas y de cuadros, descomentar si se desea incluir
+ \listoftables
+% \listofcuadros
+\listoffigures
+
+\newpage
+
+<<Compilado,results=hide,echo=false>>=
+if(flag2){
+Sweave('ResPRO2013_2014v03.rnw', encoding = "latin1")
+    if (flagVA & nComparables > 0) {
+      Sweave('AR2013_2014v01.rnw', encoding = "latin1")
+    }
+    Sweave('OCalidad2013_2014v02.rnw', encoding = "latin1")
+    if (flagVec & nComparables > 0) {
+      Sweave('anexoAR2013_2014v01.rnw', encoding = "latin1")
+	  Sweave('anexoCompAR2013_2014v01.rnw', encoding = "latin1")
+}
+    Sweave('anexoDetalles2013_2014v01.rnw', encoding = "latin1")
+    Sweave('anexoGrupRef2013_2014v01.rnw', encoding = "latin1")
+}
+@
+
+<<Armado,results=tex,echo=false>>=
+if(flag2){
+    cat('\\input{ResPRO2013_2014v03}\n')
+    if (flagVA & nComparables > 0) {
+      cat('\\input{AR2013_2014v01}\n')
+    }
+    cat('\\input{OCalidad2013_2014v02}\n')
+    if (flagVec & nComparables > 0) {
+      cat('\\input{anexoAR2013_2014v01}\n')
+	  cat('\\input{anexoCompAR2013_2014v01}\n')
+}
+      cat('\\input{anexoDetalles2013_2014v01}\n')
+      cat('\\input{anexoGrupRef2013_2014v01}\n')
+}
+@
+
+\end{document}
+
+

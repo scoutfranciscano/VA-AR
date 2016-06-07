@@ -1,0 +1,78 @@
+\newpage
+
+\section{Anexo - Descripci\'on de los datos del estudio de Aporte Relativo}
+
+Para implementar los modelos de Aporte Relativo es necesario contar con
+informaci\'on de las pruebas SABER 11$^\text{o}$ y SABER PRO. Para realizar el
+cruce se implement\'o un procedimiento que utiliza los nombres,
+apellidos y la fecha de nacimiento. \vspace{3mm}
+
+La construcci\'on de la base de Aporte Relativo se inicia con los
+registros en SABER PRO. Utilizando el cruce entre los registros en SABER
+PRO y SABER 11$^\text{o}$, se incluyen los registros en donde hay una diferencia de
+6 a\~{n}os o menos entre los dos ex\'amenes. Adicionalmente se eliminan los
+registros de estudiantes que reportaron estar en un semestre inferior al
+s\'eptimo. Por \'ultimo, se excluyen los registros que ten\'\i{}an dos o
+m\'as m\'odulos del examen SABER PRO con puntaje igual a 0 o sin
+calificaci\'on. \vspace{3mm}
+
+La siguiente tabla presenta informaci\'on del tama\~{n}o
+de la poblaci\'on (N) para el periodo 2013-2014, el valor promedio del
+\'Indice de Nivel Socio-Econ\'omico (INSE) y el puntaje promedio en los
+m\'odulos de Razonamiento Cuantitativo (RC) y Lectura Cr\'\i{}tica (LC). Esta
+informaci\'on se presenta para dos conjuntos de datos: para el total de
+estudiantes del per\'\i{}odo en menci\'on y para aquellos con los cuales se
+realiz\'o el estudio de Aporte Relativo. En este \'ultimo caso se tiene,
+adicionalmente, el puntaje en el \'\i{}ndice que agrega los resultados
+de las ocho pruebas del Examen de Estado de SABER 11$^\text{o}$
+(IndSB11).
+
+################################################################################
+# # Tabla anexo con información de los estudiantes de SABER PRO y 
+# # Aporte Relativo
+################################################################################
+
+<<TablaAnexo,results=tex,echo=false>>=
+
+TablaAnexo <- subset(TablaANEXO, TablaANEXO[, 'INST_BY_REF'] %in%
+                     VecComp[, 'INST_BY_REF'])
+
+TablaAnexo <- merge(TablaAnexo, universidades, by.x = "INST_COD_INSTITUCION",
+                               by.y = "INST_ID")
+
+TablaAnexo[, 'INST_BY_REF'] <- NULL
+
+TablaAnexo <- merge(TablaAnexo, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+TablaAnexo[, 'vacio'] <- ''
+
+TablaAnexo <- TablaAnexo[, c('simbolo', 'Tamano.x', 'INSE.x', 'LC.x',
+                             'RC.x',
+                             'vacio',
+                             'Tamano.y', 'INSE.y', 'LC.y',
+                             'RC.y', 'IndSB11')]
+
+addRows <- list(pos = as.list(c(-1, 1, nrow(TablaAnexo))),
+                command = c(
+                            "\\thickline\n & \\multicolumn{4}{c}{Total estudiantes} &
+                            &
+                            \\multicolumn{5}{c}{Estudiantes Aporte Relativo}
+                             \\\\ \\cline{2-5} \\cline{7-11}
+                            C\\'odigo & N & INSE & LC & RC & & N & INSE &
+            LC & RC & IndSB11 \\\\
+\\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(TablaAnexo)
+label(tabla) <- 'TablaAnexo'
+align(tabla)   <- c('l', 'c', rep('r', 10))
+caption(tabla) <- paste("Caracter\\'\\i{}ticasticas de los estudiantes
+                        evaluados en SABER PRO y de los incluidos en el
+                        estudio de Aporte Relativo.")
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, floating = FALSE)
+@
+
+

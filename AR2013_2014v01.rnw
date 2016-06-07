@@ -1,0 +1,1476 @@
+  \section{Estudio de Aporte Relativo}
+
+El estudio de Aporte Relativo de la Educaci\'on Superior en Colombia,
+desarrollado por el ICFES desde el a\~no 2012, busca proveer informaci\'on
+\'util para la toma de decisiones, a trav\'es de la generaci\'on de
+indicadores de las IES, en t\'erminos de
+ense\~nanza y aprendizaje. Estos indicadores reflejan el cambio promedio en el
+desempe\~no de los estudiantes en las competencias gen\'ericas de lectura
+cr\'\i{}tica y razonamiento cuantitativo, en relaci\'on con el desempe\~no
+esperado en el Examen SABER PRO, de acuerdo a los puntajes de entrada,
+es decir, los resultados obtenidos en el Examen SABER 11$^\text{o}$.
+Para este primer reporte se decidi\'o incluir \'unicamente estas dos
+competencias gen\'ericas debido a dificultades relacionados con la
+calificaci\'on y la estructura de las pruebas, esto \'ultimo para el caso de
+competencias ciudadanas y comunicaci\'on escrita. En el caso de
+ingl\'es, los resultados no se incluyen debido a que esta prueba en
+SABER 11$^\text{o}$, tal y como est\'a estructurada actualmente, solo
+fue aplicada desde el per\'\i{}odo 2007-2, lo que no permite
+asegurar la comparabilidad con la anterior prueba de idioma extranjero.
+Est\'a previsto que para el reporte de resultados de 2014-2015 esta prueba sea
+incluida. \vspace{3mm}
+
+El Aporte Relativo de una instituci\'on se puede concebir de diferentes
+formas seg\'un el uso que se quiera dar a esa medida. En este reporte se
+presenta una medida base que solamente controla por el nivel
+acad\'emico de ingreso de los estudiantes. A continuaci\'on se encuentra
+una descripci\'on m\'as detallada de esta medida, con sus correspondientes usos y limitaciones:
+
+\begin{center}
+\begin{longtable}{|m{4cm}|m{10cm}|}
+\caption{Usos y limitaciones de la medida de Aporte Relativo.}\\
+\hline
+ & \textbf{Medida de Aporte Relativo} \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}
+{\tablename\ \thetable\ -- \textit{Usos y limitaciones de las medida de
+Aporte Relativo (Continuaci\'on\dots)}} \\
+\hline
+\textbf{Medidas} & \textbf{Medida de Aporte Relativo} \\
+\hline
+\endhead
+\hline
+\multicolumn{2}{r}{\textit{Contin\'ua en la siguiente p\'agina\ldots}} \\
+\endfoot
+\hline
+\endlastfoot
+\textbf{¿C\'omo se construye?} & La medida se basa exclusivamente en los
+resultados individuales en SABER 11$^\text{o}$ y SABER PRO. Es obtenida usando modelos lineales jer\'arquicos. Estos modelos permiten tomar en cuenta la estructura anidada de los datos, en este caso la que existe entre los
+estudiantes y los grupos de referencia dentro de instituciones. Esto permite que
+la estimaci\'on y el an\'alisis de estas medidas se oriente al nivel de
+grupos de referencia dentro de instituciones y no a nivel individual,
+reconociendo que es a ese nivel que los resultados son de mayor
+inter\'es con el fin de emprender acciones para el mejoramiento de la
+calidad de la educaci\'on superior. \\
+\hline
+
+\textbf{¿A qu\'e corresponde?} & Esta medida atribuye a la instituci\'on los efectos de todos los factores que puedan incidir en el desarrollo de competencias durante el pregrado, a excepci\'on del nivel acad\'emico de ingreso de los estudiantes. \\
+\hline
+
+\textbf{Usos} & Esta medida es \'util para identificar instituciones con  experiencias de formaci\'on exitosas, considerando el efecto generado por estudiar con un grupo de estudiantes con determinadas caracter\'\i{}sticas, como parte del
+aporte de la instituci\'on. \\
+\hline
+
+\textbf{Limitaciones} & Esta medida no permite aislar de la
+estimaci\'on cualquier otro efecto diferente al de las condiciones acad\'emicas de
+entrada evaluadas en SABER 11$^\text{o}$, como lo es el efecto del grupo de compa\~{n}eros sobre los resultados
+individuales. Para ello es necesario definir modelos que incluyen dentro de las variables, indicadores del efecto de grupo. En consecuencia, no es
+apropiado para valorar los esfuerzos de las instituciones que,
+trabajando con grupos menos favorecidos, ya sea en t\'erminos
+socioecon\'omicos o de habilidad acad\'emica, logran obtener resultados
+favorables. \\
+\end{longtable}
+\end{center}
+
+\vspace{-8mm}
+
+\textbf{Los resultados que se presentan a continuaci\'on se basan en la
+\textit{poblaci\'on de estudio de Aporte Relativo}, la cual se define a
+partir del cruce de resultados de las pruebas SABER PRO y SABER 11$^\text{o}$. Para m\'as informaci\'on, consulte el anexo y la gu\'\i{}a para la
+interpretaci\'on de resultados.} \vspace{3mm}
+
+\subsection{Resultados de Aporte Relativo en lectura cr\'\i{}tica}
+
+     Para comprender los resultados de Aporte Relativo de la IGR, es
+     relevante tener en cuenta la relaci\'on de los resultados de
+     los estudiantes en SABER PRO en conjunto con los resultados en
+     SABER 11$^\text{o}$ y el nivel socioecon\'omico de
+     los mismos para tener un panorama general de la relac\'on entre las variables 
+	 de interés dentro del estudio. Los gr\'aficos \ref{fig:Pro11LC} y \ref{fig:ProINSELC} muestran los resultados de todas las
+     instituciones del grupo de referencia de
+     \textbf{\Sexpr{GrupRefer[refGr]}} que hacen parte
+     del estudio de Aporte Relativo. En el gr\'afico \ref{fig:Pro11LC} aparece la comparaci\'on entre los resultados en el  \'\i{}ndice de SABER 11$^\text{o}$ y los resultados en la prueba de lectura
+     cr\'\i{}tica en SABER PRO. El gr\'afico \ref{fig:ProINSELC} muestra la comparaci\'on entre el
+     \'Indice de Nivel Socio-Econ\'omico (INSE)\footnote{El \'\i{}ndice de
+     nivel socio-econ\'omico (INSE) es un \'\i{}ndice calculado por el
+     ICFES para sintetizar el conjunto de caracter\'\i{}sticas sociales y
+     econ\'omicas de los individuos. Este \'\i{}ndice sigue una
+     metodolog\'\i{}a similar a la propuesta por el Programa de las Naciones
+     Unidas para el Desarrollo (PNUD) y el Departamento de Planeaci\'on
+     Nacional (DNP) para calcular el \'\i{}ndice de condiciones de vida.} y  los resultados en la
+     prueba de lectura cr\'\i{}tica en SABER PRO. El gr\'afico \ref{fig:ProVALC}
+     muestra los resultados promedio en lectura cr\'\i{}tica de los estudiantes
+     que fueron tomados en cuenta en las estimaciones de Aporte
+     Relativo para las instituciones comparables.
+
+\newpage
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs Índice SABER 11 para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Los siguientes resultados corresponden a los estudiantes que hacen
+parte de la poblaci\'on del estudio de Aporte Relativo (ver Anexo). \\
+
+<<grafica5,results=hide,echo=false>>=
+graf5Name <- file.path(
+                         paste("grafico5",
+                               ".eps", sep = ""))
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf5Name), width = 6.0, height = 6.0)
+out <- outcomes[2]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+  foc <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  foc <- merge(foc, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(foc)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(foc, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimaciones13_14[[out]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+Todos[, 'col']  <- "black"
+isCom <- Todos[, 'inst_by_ref'] %in% MatrizComparab[, 'inst_by_ref']
+isFoc <- Todos[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+Todos[isCom, 'col']  <- "blue"
+Todos[isFoc, 'col']  <- "red"
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+MediaPro <- mean(Todos[, 'M_post'])
+Media11 <- mean(Todos[, 'IndicadorPuntajes_va'])
+MediaINSE <- mean(Todos[, 'M_inse'])
+
+  MinX <- min(Todos[, "IndicadorPuntajes_va"])
+  MaxX <- max(Todos[, "IndicadorPuntajes_va"])
+  MinY <- min(Todos[, "M_post"])
+  MaxY <- max(Todos[, "M_post"])
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+     col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'],
+     ylab="Promedio SABER PRO \n Lectura crítica", xlab="Promedio Indice SABER 11")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+       col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO \n Lectura crítica",
+     xlab="Promedio Indice SABER 11")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+cerrar <- dev.off()
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs Índice SABER 11 para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico5,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      "\\caption{Promedio del \\'\\i{}ndice en SABER 11$^\\text{o}$ y promedio
+      de lectura Cr\\'\\i{}tica en SABER PRO 2013-2014 por instituciones.}\n",
+      '\\vspace{-10mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf5Name, '}\n',
+      '\\end{center}\n',
+      '\\vspace{-10mm}\n',
+      '\\label{fig:Pro11LC}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\scriptsize{
+
+\begin{center}
+\framebox{$\mathbin{\textcolor{red}{\blacksquare}}$ IGR \hspace{3mm}
+$\mathbin{\textcolor{blue}{\bigcirc}}$ Vecindad \hspace{3mm}
+$\mathbin{\textcolor{black}{\blacklozenge}}$ GR-Nac \hspace{3mm}
+\textcolor{red}{- - - - -} Valor promedio para el GR-NAC}
+\end{center}
+}
+
+\normalsize
+Situaci\'on de las instituciones de acuerdo a su ubicaci\'on en el
+gr\'afico anterior:
+
+
+\scriptsize{
+\begin{center}
+  \begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+    \textbf{Cuadrante II.} Instituciones cuyos estudiantes entraron con puntajes en SABER 11$^\text{o}$ por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por encima del promedio del grupo de referencia a nivel
+nacional en la prueba de lectura cr\'\i{}tica de SABER PRO. & \textbf{Cuadrante I.} Instituciones cuyos estudiantes entraron con puntajes en SABER 11$^\text{o}$ por
+encima del promedio del grupo de referencia a nivel nacional, y
+finalizan el nivel universitario con estudiantes cuyos puntajes est\'an
+por encima del promedio del grupo de referencia a nivel nacional en la
+prueba de lectura cr\'\i{}tica de SABER PRO. \\ \hline
+
+\textbf{Cuadrante III.} Instituciones cuyos estudiantes entraron con puntajes en
+SABER 11$^\text{o}$ por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por debajo del promedio del grupo de referencia a nivel
+nacional en la prueba de lectura cr\'\i{}tica de SABER PRO. & \textbf{Cuadrante IV.} Instituciones
+cuyos estudiantes entraron con puntajes en SABER 11$^\text{o}$ por encima del
+promedio del grupo de referencia a nivel nacional, y finalizan el nivel
+universitario con estudiantes cuyos puntajes est\'an por debajo del
+promedio del grupo de referencia a nivel nacional en la prueba de
+lectura cr\'\i{}tica de SABER PRO. \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\normalsize
+
+%\textbf{Principales resultados} \\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios del gráfico de SABER PRO vs Índice SABER 11 para 
+  %% Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentGrafico5,results=hide,echo=false>>=
+UbiPro <- Todos[isFoc, "M_post"] - MediaPro
+Ubi11 <- Todos[isFoc, "IndicadorPuntajes_va"] - Media11
+
+if (Ubi11>0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio del GR-Nac en los resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO.")} else if (Ubi11 < 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio del GR-Nac en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO.")} else if (Ubi11 > 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio del GR-Nac en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO.")} else if (Ubi11 < 0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio del GR-Nac en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO.")}
+@
+
+\newpage
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs INSE para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Los siguientes resultados corresponden a los estudiantes que hacen
+parte de la poblaci\'on del estudio de Aporte Relativo (ver Anexo). \\
+
+<<grafica6,results=hide,echo=false>>=
+
+graf6Name <- file.path(
+                         paste("grafico6",
+                               ".eps", sep = ""))
+
+MinX <- min(Todos[, "M_inse"])
+  MaxX <- max(Todos[, "M_inse"])
+  MinY <- min(Todos[, "M_post"])
+  MaxY <- max(Todos[, "M_post"])
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+options(OutDec= ",")
+
+  postscript(file.path(runPath,graf6Name), width = 6.0, height = 6.0)
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+     plot(Todos[, "M_inse"], Todos[, "M_post"], col = Todos[, 'col'],
+          pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO \n Lectura crítica",
+     xlab="Promedio INSE")
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "M_inse"], Todos[, "M_post"],col = Todos[, 'col'],
+       pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO \n Lectura crítica",
+     xlab="Promedio INSE")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=MediaINSE, col="red", lty=2)
+
+cerrar <- dev.off()
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs INSE para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico6,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+     "\\caption{Promedio del nivel socioecon\\'omico (INSE) y promedio en
+      lectura cr\\'\\i{}tica de SABER PRO 2013-2014 por instituciones.}\n",
+      '\\vspace{-15mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf6Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:ProINSELC}\n',
+      '\\vspace{-6mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\vspace{-6mm}
+
+\scriptsize{
+
+\begin{center}
+\framebox{$\mathbin{\textcolor{red}{\blacksquare}}$ IGR \hspace{3mm}
+$\mathbin{\textcolor{blue}{\bigcirc}}$ Vecindad \hspace{3mm}
+$\mathbin{\textcolor{black}{\blacklozenge}}$ GR-Nac \hspace{3mm}
+\textcolor{red}{- - - - -} Valor promedio para el GR-NAC}
+\end{center}
+}
+
+\normalsize
+
+Situaci\'on de las instituciones de acuerdo a su ubicaci\'on en el
+gr\'afico anterior:
+
+\scriptsize{
+\begin{center}
+  \begin{tabular}{|m{7cm}|m{7cm}|}
+    \hline
+\textbf{Cuadrante II.} Instituciones cuyo grupo de estudiantes presenta un nivel
+socioecon\'omico por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por encima del promedio del grupo de referencia a nivel
+nacional en la prueba de lectura cr\'\i{}tica de SABER PRO. & \textbf{Cuadrante I.} Instituciones cuyo
+grupo de estudiantes presenta un nivel socioecon\'omico por encima del
+promedio del grupo de referencia a nivel nacional, y finalizan el nivel
+universitario con estudiantes cuyos puntajes est\'an por encima del
+promedio del grupo de referencia a nivel nacional en la prueba de
+lectura cr\'\i{}tica de SABER PRO. \\
+\hline
+
+\textbf{Cuadrante III.} Instituciones cuyo grupo de estudiantes presenta un nivel socioecon\'omico por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por debajo del promedio en la prueba de lectura
+cr\'\i{}tica de SABER PRO. &
+\textbf{Cuadrante IV.} Instituciones cuyo grupo de estudiantes presenta un nivel
+socioecon\'mico por encima del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por debajo del promedio en la prueba de lectura
+cr\'\i{}tica de SABER PRO. \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\normalsize
+
+%\textbf{Principales resultados} \\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios del gráfico de SABER PRO vs INSE para 
+  %% Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentGrafico6,results=hide,echo=false>>=
+UbiPro <- Todos[isFoc, "M_post"] - MediaPro
+UbiINSE <- Todos[isFoc, "M_inse"] - MediaINSE
+
+if (UbiINSE>0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del INSE y superior al promedio del GR-Nac en los resultados en la prueba
+de lectura cr\\'\\i{}tica en SABER PRO.")} else if (UbiINSE < 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del INSE e inferior al promedio del GR-Nac en los resultados en la prueba
+de lectura cr\\'\\i{}tica en SABER PRO.")} else if (UbiINSE > 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del INSE e inferior al promedio del GR-Nac en los resultados en la prueba
+de lectura cr\\'\\i{}tica en SABER PRO.")} else if (UbiINSE < 0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del INSE y superior al promedio del GR-Nac en los resultados en la prueba
+de lectura cr\\'\\i{}tica en SABER PRO.")}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Resultados de SABER PRO en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\newpage
+
+Los siguientes resultados corresponden a los estudiantes que hacen
+parte de la poblaci\'on del estudio de Aporte Relativo (ver Anexo). \\
+
+<<grafica7,results=hide,echo=false>>=
+graf7Name <- file.path(
+                         paste("grafico7",
+                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf7Name), width = 6.0, height = 6.0)
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == 'LECTURA CRITICA'))
+
+OrdenPRO <- order(tmp[["M_post"]])
+tmp <- tmp[OrdenPRO,]
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+  limInfP <- min(tmp$M_post)
+  limSupP <- max(tmp$M_post)
+ plot(x = seq(1,nrow(tmp)), y = tmp$M_post,
+       cex = tmp[, 'tam'], pch = tmp[, 'pch'], xaxt = "n",
+       col = tmp[, 'color'], ylim = c(limInfP,limSupP), las = 1,
+       xlab="Instituciones", ylab="Promedio SABER PRO \n Lectura crítica")
+  limInfPRO <- tmp[isFoc, 'M_post'] - TamanoEfecto14
+  limSupPRO <- tmp[isFoc, 'M_post'] + TamanoEfecto14
+  rect(0 , limInfPRO, 17, limSupPRO,
+         col = "pink", border = "transparent")
+  par (new = TRUE)
+  plot(x = seq(1,nrow(tmp)), y = tmp$M_post,
+       cex = tmp[, 'tam'], pch = tmp[, 'pch'], xaxt = "n",
+       col = tmp[, 'color'], ylim = c(limInfP,limSupP), las = 1,
+       xlab="Instituciones", ylab="Promedio SABER PRO \n Lectura crítica")
+  axis(side = 1, at = seq(1,nrow(tmp)), labels = tmp[, 'simbolo'], cex =
+       0.8)
+  abline(h=tmp[isFoc, 'M_post'], col="red", lty=1)
+
+cerrar <-   dev.off()
+@
+
+\vspace{-2mm}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Resultados de SABER PRO en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico7,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      "\\caption{Promedio de lectura Cr\\'\\i{}tica en SABER PRO para
+      las instituciones de la vecindad para estudiantes del estudio de Aporte
+      Relativo 2013-2014.}\n",
+      '\\vspace{-15mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf7Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:ProVALC}\n',
+      '\\vspace{-10mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\begin{center}
+\framebox{$\mathbin{\textcolor{red}{\blacksquare}}$ IGR \hspace{3mm}
+$\mathbin{\textcolor{blue}{\bigcirc}}$ Vecindad}
+\end{center}
+
+\textbf{Principales resultados} \\
+
+\vspace{-2mm}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios de resultados de SABER PRO en Lectura crítica para 
+  %% estudiantes de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentGraf7,results=tex,echo=false>>=
+ValorInst <- tmp[isFoc, 'M_post']
+Otras <- tmp[!isFoc, ]
+Otras[, 'Dif'] <- Otras[, 'M_post'] - ValorInst
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == 'LECTURA CRITICA'))
+
+x1 <- subset(Otras[, 'simbolo'], Otras[, 'Dif'] > TamanoEfecto14)
+if (length(x1) == 1) {
+cat("\\noindent En la prueba de lectura cr\\'\\i{}tica se tiene que la
+    instituci\\'on ", x1, "(Ver Tabla 1) tiene promedios mayores al de la
+    IGR con diferencias
+    importantes. \\\\\n")} else if(length(x1) > 1) {
+cat("\\noindent En la prueba de lectura cr\\'\\i{}tica se tiene que las
+    instituciones ", paste(c(paste(head(x1, -1), collapse=', '), tail(x1, 1)),
+    collapse = " y "), "(Ver Tabla 1) tienen promedios mayores al de la
+    IGR con diferencias
+    importantes. \\\\\n")}
+x2 <- subset(Otras[, 'simbolo'], Otras[, 'Dif'] < -TamanoEfecto14)
+if (length(x2) == 1) {
+    cat("\\noindent En la prueba de lectura cr\\'\\i{}tica se tiene que la
+    instituci\\'on ", x2, "(Ver Tabla 1) tiene promedios menores al de la
+    IGR con diferencias
+    importantes. \\\\\n")} else if(length(x2) > 1) {
+cat("\\noindent En la prueba de lectura cr\\'\\i{}tica se tiene que las
+    instituciones ", paste(c(paste(head(x2, -1), collapse=', '), tail(x2, 1)),
+    collapse = " y "), "(Ver Tabla 1) tienen promedios menores al de la
+    IGR con diferencias importantes. \\\\\n")}
+if((length(x1) == 0) & (length(x2) == 0)) {
+cat("\\noindent En la prueba de lectura cr\\'\\i{}tica se tiene que no hay
+    instituciones dentro de la vecindad de comparaci\\'on que tengan
+    diferencias importantes en los puntajes promedio. \\\\\n")}
+@
+
+\vspace{-2mm}
+
+A continuaci\'on se presentan los resultados de la medida de Aporte Relativo en
+lectura cr\'\i{}tica de la IGR, de las instituciones de su vecindad y del
+grupo de referencia de \textbf{\Sexpr{GrupRefer[refGr]}} para los a\~{n}os \Sexpr{Annos}.
+La medida presentada en el gr\'afico se centran en el valor de la
+IGR. Los valores est\'an normalizados con una desviaci\'on est\'andar de 10 puntos.
+\vspace{1mm}
+
+De igual manera, se reporta informaci\'on sobre el error de estimaci\'on de
+las medidas de Aporte Relativo, lo que permite conocer la magnitud de la
+incertidumbre asociada a los valores reportados.
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\textbf{Medida de Aporte Relativo: controlando por resultados individuales en SABER
+11$^\text{o}$} \vspace{1mm}
+
+Las estimaciones de Aporte Relativo se encuentra centradas en la IGR, es
+decir, a cada una de las medidas de Aporte Relativo de las diferentes
+instituciones de la vecindad se les resta el valor de la estimaci\'on de
+la IGR del reporte. De esta forma, se tiene un valor de cero para la
+IGR, el cual sirve como referencia para comparar si las dem\'as
+instituciones tienen un Aporte Relativo mayor o menor que el de la
+instituci\'on a la cual se le reporta. La escala no tiene
+interpretaci\'on directa, solamente sirve para indicar la magnitud de las diferencias entre las estimaciones.
+
+\vspace{-1mm}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<grafica8,results=tex,echo=false>>=
+graf8Name <- file.path(
+                         paste("grafico8",
+                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf8Name), width = 7.0, height = 6.0)
+
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+for (val in c("base", "inse", "sb11")) {
+  tmp[, paste(val, "_025", sep = '')] <- tmp[, paste(val, "_025", sep = '')] - tmp[isFoc, val]
+  tmp[, paste(val, "_975", sep = '')] <- tmp[, paste(val, "_975", sep = '')] - tmp[isFoc, val]
+    tmp[, val] <- tmp[, val] - tmp[isFoc, val]
+}
+
+nm = 'base'
+    Ordennm <- order(tmp[[nm]])
+    tmp <- tmp[Ordennm,]
+    range(tmp[[nm]])->ran
+    ran[2]-ran[1]->L
+    ran[1]-.1*L->ran[1]
+    ran[2]+.1*L->ran[2]
+  limInfnm <- min(tmp[, paste(nm, "_025", sep = '')])
+  limSupnm <- max(tmp[, paste(nm, "_975", sep = '')])
+
+    isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+       varsPer <- grep(paste(nm, "_", sep = ""),
+                    names(foc), value = TRUE)
+    radio <- max(abs(foc[, varsPer]-foc[, nm]))
+    tmp[, "pch"] <- 1
+    tmp[, 'tam'] <- 1.9
+    tP025 <- paste(nm, "_025", sep = '')
+    tP975 <- paste(nm, "_975", sep = '')
+
+    isAbove <- tmp[isFoc, tP975] < tmp[, tP025]
+    isBelow <- tmp[isFoc, tP025] > tmp[, tP975]
+    isSimil <- !isAbove & !isBelow
+
+    tmp[isAbove, 'pch'] <- 24
+    tmp[isAbove, 'tam'] <- 1.4
+    tmp[isBelow, 'pch'] <- 25
+    tmp[isBelow, 'tam'] <- 1.4
+    tmp[isFoc, 'pch'] <- 15
+    tmp[isFoc, 'tam'] <- 1.2
+
+    tmp[, 'cod'] <- substr(tmp[, 'inst_by_ref'], 1, 4)
+
+        isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+    plot(x = seq(1,nrow(tmp)), y = tmp[, nm],
+         col = tmp[, 'color'],
+         ylab="Aporte Relativo", xlab="Instituciones",
+ cex = tmp[, 'tam'],
+         ylim=c(limInfnm, limSupnm),
+         pch = tmp[, 'pch'], xaxt="n", las = 1)
+    Perc25 <- paste(nm, "_025", sep = '')
+    Perc75 <- paste(nm, "_975", sep = '')
+    rect(0 , tmp[isFoc, Perc25], 17,
+         tmp[isFoc, Perc75],
+         col = rgb(0.67,0.9,0.93), density =20, border = "transparent")
+    par (new = TRUE)
+    plot(x = seq(1,nrow(tmp)), y = tmp[, nm],
+         col = tmp[, 'color'],
+         ylab="Aporte Relativo", xlab="Instituciones",
+         cex = tmp[, 'tam'],
+         ylim=c(limInfnm, limSupnm),
+         pch = tmp[, 'pch'], xaxt="n", las = 1)
+    axis(side = 1, at = seq(1,nrow(tmp)), labels = tmp[, 'simbolo'])
+  abline(h = tmp[isFoc, nm], col="red", lty=1)
+    for (k in 1:nrow(tmp)) {
+      segments(k, tmp[[nm]][k], k, tmp[[paste(nm, "_025", sep = '')]][k],
+               col = tmp[k, 'color'], lty=1)
+      segments(k, tmp[[nm]][k], k, tmp[[paste(nm, "_975", sep = '')]][k],
+               col = tmp[k, 'color'], lty=1)
+}
+
+cerrar <- dev.off()
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico8,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      "\\caption{Medida de Aporte Relativo, lectura cr\\'\\i{}tica
+      2013-2014.}\n",
+      '\\vspace{-15mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = 270]{',
+      graf8Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:ARLC1}\n',
+      '\\vspace{-12mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\scriptsize{
+\begin{center}
+  \fbox{
+  \parbox[0.4cm]{\textwidth}{
+\begin{center}
+  $\mathbin{\textcolor{blue}{\vartriangle}}$ Diferencias
+positivas estad\i{}sticamente signif. \hspace{2mm}
+$\mathbin{\textcolor{blue}{\triangledown}}$ Diferencias
+negativas estad\i{}sticamente signif. \vspace{1mm}
+
+$\mathbin{\textcolor{blue}{\circ}}$ No hay diferencias
+estad\i{}sticamente significativas.
+\end{center}
+}
+}
+\end{center}
+}
+
+\normalsize
+
+\textbf{Principales resultados} \\
+
+<<ComentGraf8,results=tex,echo=false>>=
+nm = 'base'
+ValorAR1InstInf <- tmp[isFoc, paste(nm, "_025", sep = '')]
+ValorAR1InstSup <- tmp[isFoc, paste(nm, "_975", sep = '')]
+OtrasAR1 <- tmp[!isFoc, ]
+# OtrasAR1[, 'DifAR1'] <- OtrasAR1[, paste(nm, "_025", sep = '')] - ValorAR1Inst
+x1 <- subset(OtrasAR1[, 'simbolo'],
+             OtrasAR1[, paste(nm, "_975", sep = '')] < ValorAR1InstInf)
+if (length(x1) == 1) {
+cat("\\noindent Se encuentra que la
+    instituci\\'on ", x1, "(Ver Tabla 1) tiene un menor Aporte Relativo al de la IGR. \n \n")} else if(length(x1) > 1) {
+cat("\\noindent Se encuentra que las
+    instituciones ", paste(c(paste(head(x1, -1), collapse=', '),
+    tail(x1, 1)), collapse=" y "), "(Ver Tabla 1) tienen un menor Aporte Relativo al
+de la
+    IGR. \n")}
+x2 <- subset(OtrasAR1[, 'simbolo'], OtrasAR1[, paste(nm, "_025", sep = '')]
+             > ValorAR1InstSup)
+if (length(x2) == 1) {
+cat("\\noindent La
+    instituci\\'on ", x2, "(Ver Tabla 1) tiene un mayor Aporte Relativo al de la
+    IGR. \n \n")} else if(length(x2) > 1) {
+cat("Las
+    instituciones ", paste(c(paste(head(x2, -1), collapse=', '),
+    tail(x2, 1)), collapse=" y "), "(Ver Tabla 1) tienen un mayor Aporte Relativo al
+de la
+    IGR. \n")}
+if((length(x1) == 0) & (length(x2) == 0)) {
+cat("\\noindent Se encuentra que no hay ninguna
+    instituci\\'on, dentro de la vecindad de comparaci\\'on, que tenga
+    diferencias estad\\'\\i{}sticamente significativas con el
+    Aporte Relativo de la IGR. \n")
+}
+@
+
+    \subsection{Resultados de Aporte Relativo en razonamiento
+    cuantitativo}
+
+Los gr\'aficos \ref{fig:Pro11RC} y \ref{fig:ProINSERC} muestran los
+resultados de todas las instituciones
+del grupo de referencia de \textbf{\Sexpr{GrupRefer[refGr]}} que hacen parte del estudio de
+Aporte Relativo. Recuerde que la IGR est\'a representada en color
+rojo, las de color azul son las que forman parte de su vecindad y las de
+color negro son todas las dem\'as instituciones del grupo de referencia. \vspace{3mm}
+
+En el gr\'afico \ref{fig:Pro11RC} aparece la comparaci\'on entre los resultados en el
+\'\i{}ndice de SABER 11$^\text{o}$ y los resultados en la prueba de
+razonamiento cuantitativo en SABER PRO. Mientras el gr\'afico \ref{fig:ProINSERC} muestra
+la comparaci\'on entre el \'Indice de Nivel Socio-Econ\'omico (INSE)  y
+los resultados en la prueba de razonamiento cuantitativo en SABER PRO.
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs Índice SABER 11 para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Los siguientes resultados corresponden a los estudiantes que hacen
+parte de la poblaci\'on del estudio de Aporte Relativo (ver Anexo).
+
+<<grafica11,results=tex,echo=false>>=
+graf11Name <- file.path(
+                         paste("grafico11",
+                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf11Name), width = 6.0, height = 6.0)
+out <- outcomes[1]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+  foc <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  foc <- merge(foc, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(foc)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(foc, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimaciones13_14[[out]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+Todos[, 'col']  <- "black"
+isCom <- Todos[, 'inst_by_ref'] %in% MatrizComparab[, 'inst_by_ref']
+isFoc <- Todos[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+Todos[isCom, 'col']  <- "blue"
+Todos[isFoc, 'col']  <- "red"
+
+MediaPro <- mean(Todos[, 'M_post'])
+Media11 <- mean(Todos[, 'IndicadorPuntajes_va'])
+MediaINSE <- mean(Todos[, 'M_inse'])
+
+  MinX <- min(Todos[, "IndicadorPuntajes_va"])
+  MaxX <- max(Todos[, "IndicadorPuntajes_va"])
+  MinY <- min(Todos[, "M_post"])
+  MaxY <- max(Todos[, "M_post"])
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+     col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'],
+     ylab="Promedio SABER PRO \n Razonamiento cuantitativo", xlab="Promedio Indice SABER 11")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+       col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO \n Razonamiento cuantitativo",
+     xlab="Promedio Indice SABER 11")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+cerrar <- dev.off()
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs Índice SABER 11 para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico11,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      "\\caption{Promedio del \\'\\i{}ndice en SABER 11$^\\text{o}$ y promedio
+      de razonamiento cuantitativo en SABER PRO 2013-2014 por
+      instituciones.}\n",
+      '\\vspace{-15mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf11Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:Pro11RC}\n',
+      '\\vspace{-8mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\scriptsize{
+
+\begin{center}
+\framebox{$\mathbin{\textcolor{red}{\blacksquare}}$ IGR \hspace{3mm}
+$\mathbin{\textcolor{blue}{\bigcirc}}$ Vecindad \hspace{3mm}
+$\mathbin{\textcolor{black}{\blacklozenge}}$ GR-Nac \hspace{3mm}
+\textcolor{red}{- - - - -} Valor promedio para el GR-NAC}
+\end{center}
+}
+
+\normalsize
+Situaci\'on de las instituciones de acuerdo a su ubicaci\'on en el
+gr\'afico anterior:
+
+\scriptsize{
+\begin{center}
+  \begin{tabular}{|m{7cm}|m{7cm}|}
+\hline
+    \textbf{Cuadrante II.} Instituciones cuyos estudiantes entraron con puntajes en SABER 11$^\text{o}$ por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por encima del promedio del grupo de referencia a nivel
+nacional en la prueba de razonamiento
+cuantitativo. & \textbf{Cuadrante I.} Instituciones cuyos estudiantes entraron con puntajes en SABER 11$^\text{o}$ por
+encima del promedio del grupo de referencia a nivel nacional, y
+finalizan el nivel universitario con estudiantes cuyos puntajes est\'an por encima del promedio del grupo de referencia a nivel nacional en la prueba de razonamiento cuantitativo. \\ \hline
+
+\textbf{Cuadrante III.} Instituciones cuyos estudiantes entraron con puntajes en
+SABER 11$^\text{o}$ por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por debajo del promedio del grupo de referencia a nivel
+nacional en la prueba de razonamiento
+cuantitativo. & \textbf{Cuadrante IV.} Instituciones
+cuyos estudiantes entraron con puntajes en SABER 11$^\text{o}$ por encima del
+promedio del grupo de referencia a nivel nacional, y finalizan el nivel
+universitario con estudiantes cuyos puntajes est\'an por debajo del
+promedio del grupo de referencia a nivel nacional en la prueba de razonamiento
+cuantitativo. \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\normalsize
+
+%\textbf{Principales resultados} \\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios del gráfico de SABER PRO vs Índice SABER 11 para 
+  %% Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico11,results=hide,echo=false>>=
+UbiPro <- Todos[isFoc, "M_post"] - MediaPro
+Ubi11 <- Todos[isFoc, "IndicadorPuntajes_va"] - Media11
+
+if (Ubi11>0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio del GR-Nac en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")} else if (Ubi11 < 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio del GR-Nac en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")} else if (Ubi11 > 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio del GR-Nac en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")} else if (Ubi11 < 0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio del GR-Nac en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs INSE para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<grafica12,results=tex,echo=false>>=
+graf12Name <- file.path(
+                         paste("grafico12",
+                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+postscript(file.path(runPath, graf12Name), width = 6.0, height = 6.0)
+
+MinX <- min(Todos[, "M_inse"])
+  MaxX <- max(Todos[, "M_inse"])
+  MinY <- min(Todos[, "M_post"])
+  MaxY <- max(Todos[, "M_post"])
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+     plot(Todos[, "M_inse"], Todos[, "M_post"], col = Todos[, 'col'],
+          pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO \n Razonamiento cuantitativo",
+     xlab="Promedio INSE")
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "M_inse"], Todos[, "M_post"], col = Todos[, 'col'],
+       pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO \n Razonamiento cuantitativo",
+     xlab="Promedio INSE")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=MediaINSE, col="red", lty=2)
+
+cerrar <- dev.off()
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Gráfica de SABER PRO vs INSE para Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico12,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+    "\\caption{Promedio del nivel socioecon\\'omico (INSE) y promedio en
+      razonamiento Cuantitativo de SABER PRO 2013-2014 por
+      instituciones.}\n",
+      '\\vspace{-15mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = 270]{',
+      graf12Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:ProINSERC}\n',
+      '\\vspace{-10mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\scriptsize{
+
+\begin{center}
+\framebox{$\mathbin{\textcolor{red}{\blacksquare}}$ IGR \hspace{3mm}
+$\mathbin{\textcolor{blue}{\bigcirc}}$ Vecindad \hspace{3mm}
+$\mathbin{\textcolor{black}{\blacklozenge}}$ GR-Nac \hspace{3mm}
+\textcolor{red}{- - - - -} Valor promedio para el GR-NAC}
+\end{center}
+}
+
+\normalsize
+Situaci\'on de las instituciones de acuerdo a su ubicaci\'on en el
+gr\'afico anterior:
+
+\scriptsize{
+\begin{center}
+  \begin{tabular}{|m{7cm}|m{7cm}|}
+    \hline
+\textbf{Cuadrante II.} Instituciones cuyo grupo de estudiantes presenta un nivel
+socioecon\'omico por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por encima del promedio del grupo de referencia a nivel
+nacional en la prueba de razonamiento
+cuantitativo de SABER PRO. & \textbf{Cuadrante I.} Instituciones cuyo
+grupo de estudiantes presenta un nivel socioecon\'omico por encima del
+promedio del grupo de referencia a nivel nacional, y finalizan el nivel
+universitario con estudiantes cuyos puntajes est\'an por encima del promedio del grupo de referencia a nivel nacional en la prueba de razonamiento
+cuantitativo de SABER PRO. \\
+\hline
+
+\textbf{Cuadrante III.} Instituciones cuyo grupo de estudiantes presenta un nivel socioecon\'omico por debajo del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por debajo del promedio en la prueba de razonamiento
+cuantitativo de SABER PRO. &
+\textbf{Cuadrante IV.} Instituciones cuyo grupo de estudiantes presenta un nivel
+socioecon\'mico por encima del promedio del grupo de referencia a nivel
+nacional, y finalizan el nivel universitario con estudiantes cuyos
+puntajes est\'an por debajo del promedio en la prueba de razonamiento
+cuantitativo de SABER PRO. \\
+\hline
+\end{tabular}
+\end{center}
+}
+
+\normalsize
+
+%\textbf{Principales resultados} \\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios del gráfico de SABER PRO vs INSE para 
+  %% Lectura crítica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico12,results=hide,echo=false>>=
+UbiPro <- Todos[isFoc, "M_post"] - MediaPro
+UbiINSE <- Todos[isFoc, "M_inse"] - MediaINSE
+
+if (UbiINSE>0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del INSE y superior al promedio del GR-Nac en los resultados en la prueba
+de razonamiento cuantitativo en SABER PRO.")} else if (UbiINSE < 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del INSE e inferior al promedio del GR-Nac en los resultados en la prueba
+de razonamiento cuantitativo en SABER PRO.")} else if (UbiINSE > 0 & UbiPro < 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio del GR-Nac
+del INSE e inferior al promedio del GR-Nac en los resultados en la prueba
+de razonamiento cuantitativo en SABER PRO.")} else if (UbiINSE < 0 & UbiPro > 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio del GR-Nac
+del INSE y superior al promedio del GR-Nac en los resultados en la prueba
+de razonamiento cuantitativo en SABER PRO.")}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Resultados de SABER PRO en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\newpage
+
+<<grafica13,results=tex,echo=false>>=
+graf13Name <- file.path(
+                         paste("grafico13",
+                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf13Name), width = 6.0, height = 6.0)
+
+TamanoEfecto13 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == 'RAZONAMIENTO CUANTITATIVO'))
+
+OrdenPRO <- order(tmp[["M_post"]])
+tmp <- tmp[OrdenPRO,]
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+  limInfP <- min(tmp$M_post)
+  limSupP <- max(tmp$M_post)
+ plot(x = seq(1,nrow(tmp)), y = tmp$M_post,
+       cex = tmp[, 'tam'], pch = tmp[, 'pch'], xaxt = "n",
+       col = tmp[, 'color'], ylim = c(limInfP,limSupP), las = 1,
+       xlab="Instituciones", ylab="Promedio SABER PRO \n Razonamiento cuantitativo")
+  limInfPRO <- tmp[isFoc, 'M_post'] - TamanoEfecto14
+  limSupPRO <- tmp[isFoc, 'M_post'] + TamanoEfecto14
+  rect(0 , limInfPRO, 17, limSupPRO,
+         col = "pink", border = "transparent")
+  par (new = TRUE)
+  plot(x = seq(1,nrow(tmp)), y = tmp$M_post,
+       cex = tmp[, 'tam'], pch = tmp[, 'pch'], xaxt = "n",
+       col = tmp[, 'color'], ylim = c(limInfP,limSupP), las = 1,
+       xlab="Instituciones", ylab="Promedio SABER PRO \n Razonamiento cuantitativo")
+  axis(side = 1, at = seq(1,nrow(tmp)), labels = tmp[, 'simbolo'], cex =
+       0.8)
+  abline(h=tmp[isFoc, 'M_post'], col="red", lty=1)
+
+cerrar <-  dev.off()
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Resultados de SABER PRO en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico13,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+    "\\caption{Promedio de razonamiento cuantitativo en SABER PRO para
+      las instituciones de la vecindad para estudiantes del estudio de Aporte
+      Relativo 2013-2014.}\n",
+      '\\vspace{-15mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf13Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:ProVARC}\n',
+      '\\vspace{-10mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\begin{center}
+\framebox{$\mathbin{\textcolor{red}{\blacksquare}}$ IGR \hspace{3mm}
+$\mathbin{\textcolor{blue}{\bigcirc}}$ Vecindad}
+\end{center}
+
+\textbf{Principales resultados} \\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Resultados de SABER PRO en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentGraf13,results=tex,echo=false>>=
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == 'RAZONAMIENTO CUANTITATIVO'))
+
+ValorInst <- tmp[isFoc, 'M_post']
+Otras <- tmp[!isFoc, ]
+Otras[, 'Dif'] <- Otras[, 'M_post'] - ValorInst
+x1 <- subset(Otras[, 'simbolo'], Otras[, 'Dif'] > TamanoEfecto14)
+if (length(x1) == 1) {
+cat("\\noindent En la prueba de razonamiento cuantitativo se tiene que la
+    instituci\\'on ", x1, "(Ver Tabla 1) tiene promedios mayores al de la IGR con diferencias
+    importantes. \n")} else if(length(x1) > 1) {
+cat("\\noindent En la prueba de razonamiento cuantitativo se tiene que las
+    instituciones ",
+    paste(c(paste(head(x1, -1), collapse=', '), tail(x1, 1)), collapse =
+     " y "), "(Ver Tabla 1) tienen promedios mayores al de la
+    IGR con diferencias
+    importantes. \n")}
+x2 <- subset(Otras[, 'simbolo'], Otras[, 'Dif'] < -TamanoEfecto14)
+if (length(x2) == 1) {
+    cat("\\noindent En la prueba de razonamiento cuantitativo se tiene que la
+    instituci\\'on ", x2, "(Ver Tabla 1) tiene promedios menores al de la
+    IGR con diferencias
+    importantes. \n")} else if(length(x2) > 1) {
+cat("\\noindent En la prueba de razonamiento cuantitativo se tiene que las
+    instituciones ", paste(c(paste(head(x2, -1), collapse=', '), tail(x2, 1)),
+    collapse = " y "), "(Ver Tabla 1) tienen promedios
+menores al de la
+    IGR con diferencias importantes. \\\\\n")}
+if((length(x1) == 0) & (length(x2) == 0)) {
+cat("\\noindent En la prueba de razonamiento cuantitativo se tiene que no hay
+    instituciones dentro de la vecindad de comparaci\\'on que tengan
+    diferencias importantes en los puntajes promedio. \n")}
+@
+
+A continuaci\'on se presentan los resultados de la medida de Aporte Relativo en
+razonamiento cuantitativo de la IGR, de las instituciones de su
+vecindad y del grupo de referencia de \textbf{\Sexpr{GrupRefer[refGr]}} para los
+a\~{n}os \Sexpr{Annos}.
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+\newpage
+
+\textbf{Medida de Aporte Relativo: controlando por resultados individuales en SABER
+11$^\text{o}$} \vspace{2mm}
+
+Las estimaciones de Aporte Relativo se encuentra centradas en la IGR, es
+decir, a cada una de las medidas de Aporte Relativo de las diferentes
+instituciones de la vecindad se les resta el valor de la estimaci\'on de
+la IGR del reporte. De esta forma, se tiene un valor de cero para la
+IGR, el cual sirve como referencia para comparar si las dem\'as
+instituciones tienen un Aporte Relativo mayor o menor que el de la
+instituci\'on a la cual se le reporta. La escala no tiene
+interpretaci\'on directa, solamente sirve para indicar la magnitud de las diferencias entre las estimaciones.
+
+\vspace{2mm}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<grafica14,results=tex,echo=false>>=
+graf14Name <- file.path(
+                         paste("grafico14",
+                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf14Name), width = 7.0, height = 6.0)
+
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+for (val in c("base", "inse", "sb11")) {
+  tmp[, paste(val, "_025", sep = '')] <- tmp[, paste(val, "_025", sep = '')] - tmp[isFoc, val]
+  tmp[, paste(val, "_975", sep = '')] <- tmp[, paste(val, "_975", sep = '')] - tmp[isFoc, val]
+    tmp[, val] <- tmp[, val] - tmp[isFoc, val]
+}
+
+nm = 'base'
+    Ordennm <- order(tmp[[nm]])
+    tmp <- tmp[Ordennm,]
+    range(tmp[[nm]])->ran
+    ran[2]-ran[1]->L
+    ran[1]-.1*L->ran[1]
+    ran[2]+.1*L->ran[2]
+  limInfnm <- min(tmp[, paste(nm, "_025", sep = '')])
+  limSupnm <- max(tmp[, paste(nm, "_975", sep = '')])
+
+    isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+       varsPer <- grep(paste(nm, "_", sep = ""),
+                    names(foc), value = TRUE)
+    radio <- max(abs(foc[, varsPer]-foc[, nm]))
+    tmp[, "pch"] <- 1
+    tmp[, "tam"] <- 1.9
+    tP025 <- paste(nm, "_025", sep = '')
+    tP975 <- paste(nm, "_975", sep = '')
+
+    isAbove <- tmp[isFoc, tP975] < tmp[, tP025]
+    isBelow <- tmp[isFoc, tP025] > tmp[, tP975]
+    isSimil <- !isAbove & !isBelow
+
+    tmp[isAbove, 'pch'] <- 24
+    tmp[isAbove, 'tam'] <- 1.4
+    tmp[isBelow, 'pch'] <- 25
+    tmp[isBelow, 'tam'] <- 1.4
+    tmp[isFoc, 'pch'] <- 15
+    tmp[isFoc, 'tam'] <- 1.2
+
+    tmp[, 'cod'] <- substr(tmp[, 'inst_by_ref'], 1, 4)
+    tabla <- data.frame(Descripcion = c('Inst con diferencias sig por encima',
+                                        'Inst similares',
+                                        'Inst con diferencias sig por debajo'),
+                        Instituciones = c(paste(tmp[isAbove, 'simbolo'],
+                                                collapse = ', '),
+                                          paste(tmp[isSimil, 'simbolo'],
+                                                collapse = ', '),
+                                          paste(tmp[isBelow, 'simbolo'],
+                                                collapse = ', ')))
+        isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+    plot(x = seq(1,nrow(tmp)), y = tmp[, nm],
+         col = tmp[, 'color'],
+         ylab="Aporte Relativo", xlab="Instituciones",
+         cex = tmp[, 'tam'],
+         ylim=c(limInfnm, limSupnm),
+         pch = tmp[, 'pch'], xaxt="n", las = 1)
+    Perc25 <- paste(nm, "_025", sep = '')
+    Perc75 <- paste(nm, "_975", sep = '')
+    rect(0 , tmp[isFoc, Perc25], 17,
+         tmp[isFoc, Perc75],
+         col = rgb(0.67,0.9,0.93), density = 20, border = "transparent")
+    par (new = TRUE)
+    plot(x = seq(1,nrow(tmp)), y = tmp[, nm],
+         col = tmp[, 'color'],
+         ylab="Aporte Relativo", xlab="Instituciones",
+cex = tmp[, 'tam'],
+         ylim=c(limInfnm, limSupnm),
+         pch = tmp[, 'pch'], xaxt="n", las = 1)
+    axis(side = 1, at = seq(1,nrow(tmp)), labels = tmp[, 'simbolo'])
+  abline(h = tmp[isFoc, nm], col="red", lty=1)
+    for (k in 1:nrow(tmp)) {
+      segments(k, tmp[[nm]][k], k, tmp[[paste(nm, "_025", sep = '')]][k],
+               col = tmp[k, 'color'], lty=1)
+      segments(k, tmp[[nm]][k], k, tmp[[paste(nm, "_975", sep = '')]][k],
+               col = tmp[k, 'color'], lty=1)
+}
+
+cerrar <- dev.off()
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico14,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+    "\\caption{Medida de Aporte Relativo, razonamiento cuantitativo
+      2013-2014.}\n",
+      '\\vspace{-12mm}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=10.5cm, angle = 270]{',
+      graf14Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:ARRC1}\n',
+      '\\vspace{-8mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\scriptsize{
+\begin{center}
+  \fbox{
+  \parbox[0.4cm]{\textwidth}{
+\begin{center}
+$\mathbin{\textcolor{blue}{\vartriangle}}$ Diferencias
+positivas estad\i{}sticamente signif. \hspace{2mm}
+$\mathbin{\textcolor{blue}{\triangledown}}$ Diferencias
+negativas estad\i{}sticamente signif. \vspace{1mm}
+
+$\mathbin{\textcolor{blue}{\circ}}$ No hay diferencias
+estad\i{}sticamente significativas.
+\end{center}}}
+\end{center}
+
+}
+
+\normalsize
+
+\textbf{Principales resultados} \\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Medidas de Aporte Relativo en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentGraf14,results=tex,echo=false>>=
+nm = 'base'
+ValorAR1InstInf <- tmp[isFoc, paste(nm, "_025", sep = '')]
+ValorAR1InstSup <- tmp[isFoc, paste(nm, "_975", sep = '')]
+OtrasAR1 <- tmp[!isFoc, ]
+# OtrasAR1[, 'DifAR1'] <- OtrasAR1[, paste(nm, "_025", sep = '')] - ValorAR1Inst
+x1 <- subset(OtrasAR1[, 'simbolo'],
+             OtrasAR1[, paste(nm, "_975", sep = '')] < ValorAR1InstInf)
+if (length(x1) == 1) {
+cat("\\noindent Se encuentra que la
+    instituci\\'on ", x1, "(Ver Tabla 1) tiene un menor Aporte Relativo al de la
+    IGR. \n \n")} else if(length(x1) > 1) {
+cat("\\noindent Se encuentra que las
+    instituciones ", paste(c(paste(head(x1, -1), collapse=', '),
+    tail(x1, 1)), collapse=" y "), "(Ver Tabla 1) tienen un menor Aporte Relativo al
+de la
+    IGR. \n")}
+x2 <- subset(OtrasAR1[, 'simbolo'],
+             OtrasAR1[, paste(nm, "_025", sep = '')] > ValorAR1InstSup)
+if (length(x2) == 1) {
+cat("\\noindent La
+    instituci\\'on ", x2, "(Ver Tabla 1) tiene un mayor Aporte Relativo al de la
+    IGR. \n \n")} else if(length(x2) > 1) {
+cat("\\noindent Las
+    instituciones ", paste(c(paste(head(x2, -1), collapse=', '),
+    tail(x2, 1)), collapse=" y "), "(Ver Tabla 1) tienen un mayor Aporte Relativo al
+de la
+    IGR. \n")}
+if((length(x1) == 0) & (length(x2) == 0)) {
+cat("\\noindent Se encuentra que no hay ninguna
+    instituci\\'on, dentro de la vecindad de comparaci\\'on, que tenga
+    diferencias estad\\'\\i{}sticamente significativas con el
+    Aporte Relativo de la IGR. \n")
+}
+
+@
+
+
+
