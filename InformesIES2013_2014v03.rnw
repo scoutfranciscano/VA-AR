@@ -4,6 +4,11 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 @
 
 \documentclass[11pt,doc,babel,spanish,noapacite]{icfesdocapa}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % Construccion base de valor agregado 2011-2 y 2012
 % %
