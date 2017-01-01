@@ -5,13 +5,13 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 
 \documentclass[11pt,doc,babel,spanish,noapacite]{icfesdocapa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % Construccion base de valor agregado 2011-2 y 2012
+% % Generación de reportes de Aporte Relativo para el período 2013-2014
+% % VERSIÓN 1
 % %
-% % Autor(es): Edwin Cuellar y Alvaro Uzaheta
+% % Autor(es): Edwin Cuellar 
 % %
-% % Descripcion: Procedimiento para la construccion de la base de datos
-% de Valor Agregado 2012 y 2013
-% %
+% % Descripcion: Procedimiento para la generación de reportes de Aporte Relativo
+% % VERSIÓN 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % <<< Preambulo no modificable por el usuario
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,6 +33,7 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 \usepackage{color,array,verbatim,multirow,lscape}
 \usepackage{csquotes,longtable}
 \usepackage[style=apa]{biblatex}
+\usepackage{tabularx,ctable}
 \usepackage[colorlinks=TRUE,allcolors=black,breaklinks]{hyperref}
 \usepackage{breakurl}
 \usepackage{makecell}
@@ -40,7 +41,6 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 \usepackage{chngcntr}
 \usepackage{fancyref}
 \usepackage{tikz}
-\usepackage{tabularx,ctable}
 \usepackage{wasysym}
 %\usepackage{landscape}
 
@@ -50,12 +50,12 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 
 % % Modificaciones al paquete biblatex
 
-
-%\renewcommand{\blxauxsuffix}{}
+\renewcommand{\blxauxsuffix}{}
 \setcounter{smartand}{0}
 \DefineBibliographyStrings{spanish}{
   andothers = {et al.},
 }
+
 
 % % Definicion del flotante ``cuadro'' (paquete float)
 
@@ -134,9 +134,9 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 % % <<< Preambulo modificable por el usuario
 
 \usepackage{longtable}
-\chead{\includegraphics[width=8.8cm]{../logonuevo.eps}}
-%\scriptsize \textit{\Sexpr{GrupRefer[refGr]}} \\
-%\textit{\Sexpr{NombreUniv}}}
+\chead{\includegraphics[width=8.8cm]{../logonuevo.eps} \\
+\scriptsize \textit{\Sexpr{GrupRefer[refGr]}} \\
+\textit{\Sexpr{NombreUniv}}}
 \renewcommand{\headrulewidth}{0pt}
 \cfoot{\footnotesize{\thepage}}
 \headinglevels{five} % one two three four or five
@@ -149,9 +149,9 @@ Superior \vspace{8mm}}
 \author{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on - ICFES}
 
 % % Insertar la fecha del documento en la siguiente linea
-\date{Noviembre de 2016}
+\date{Mayo de 2015}
 
-\affiliation{Oficina de Gesti\'on de Proyectos de Investigaci\'on}
+\affiliation{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on}
 
 % % Archivos de bibliografia e idioma de esta
 \bibliography{apa-es,jourlong,arts,soft,buks,R}
@@ -192,9 +192,13 @@ InstGR <- paste(Inst, refGr, sep = "__")
 
 tab <- table(dat[, 'inst_by_ref'])
 
+## En los siguientes data.frames se guarda lo correspondiente al grupo de
+## referencia y a la IGR
+
 GR <- subset(AgregCompPunta, RefGrp == refGr)
 foc <- subset(GR, INST_BY_REF == InstGR)
 
+## Definicion de si lleva o no Valor Agregado y si se le define o no vecindad.
 preFlag <- subset(TablaANEXO,
                   INST_BY_REF %in% foc[, 'INST_BY_REF'])
 
@@ -214,26 +218,36 @@ if (nrow(preFlag) == 0){
 ## vecindad se escoge entre instituciones que tienen las condiciones
 ## para tener Aporte Relativo
 
+if(is.na(flagVA)){ flagVA <- FALSE}
+
   if (flagVA) {
     instHasVA <- TablaANEXO[TablaANEXO[, 'hasVA'], 'INST_BY_REF']
     resto <- subset(GR, INST_BY_REF != InstGR &
                     INST_BY_REF %in% instHasVA)
     resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+    nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
     resto <- resto[order(resto[, 'dist']),]
+    comparables <- resto[seq(nParcial), ]
+    comparables <- comparables[comparables[, 'dist'] < .3, ]
 	TodasComparables <- resto[resto[, 'dist'] < .3, ]
+    nComparables <- nrow(comparables)
 
 ## Para las instituciones que no tienen la sección de Aporte Relativo
 ## pero si tienen vecindad, esta se escoge entre instituciones con
 ## vecindad
 
   } else if (nrow(foc) > 0){
+  if(is.na(preFlag[, 'has15Vec'])){preFlag[, 'has15Vec'] <- FALSE}
   if(preFlag[, 'has15Vec']) {
     instHas15Vec <- TablaANEXO[TablaANEXO[, 'has15Vec'], 'INST_BY_REF']
     resto <- subset(GR, INST_BY_REF != InstGR)
     nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
     resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
     resto <- resto[order(resto[, 'dist']),]
+    comparables <- resto[seq(nParcial), ]
+    comparables <- comparables[comparables[, 'dist'] < .3, ]
 	TodasComparables <- resto[resto[, 'dist'] < .3, ]
+    nComparables <- nrow(comparables)
   } else{
     nComparables <- 0
 }
@@ -248,102 +262,6 @@ nComparables <- 0
 
  if (nrow(foc) == 0){
   flag2 <- FALSE
-}
-
-if(nrow(foc) > 0){
-if(preFlag[, 'has15Vec']){
-Vectores13_14Vec <- list()
-
-cuantas<-2
-
-for(s in 1:cuantas){
-set.seed(s)
-tmpAgreg <- subset(dat, inst_by_ref == InstGR)
-
-TamMuestra <- round((0.95*dim(tmpAgreg)[1]))
-
-tmpAgreg <- sample(tmpAgreg[sample(nrow(tmpAgreg), TamMuestra), ])
-
-GR13_14 <- subset(AgregCompPunta, RefGrp == refGr)
-foc13_14 <- aggregate(tmpAgreg[, c('IndicadorPuntajes')],
-                    list(tmpAgreg$inst_by_ref), mean,
-                    na.rm = TRUE)
-names(foc13_14) <- c('INST_BY_REF', 'IndicadorPuntajes_va')
-foc13_14[, 'Inst'] <- gsub("(.*)__.*", "\\1", 
-                          foc13_14[, 'INST_BY_REF'])
-foc13_14[, 'RefGrp'] <- gsub(".*__(.*)", "\\1", 
-                          foc13_14[, 'INST_BY_REF'])	
-foc13_14 <- merge(foc13_14, TablaANEXO, by = 'INST_BY_REF')
-
-# # definicion si lleva o no AR
-preFlag <- subset(TablaANEXO,
-                  INST_BY_REF %in% foc13_14[, 'INST_BY_REF'])
-
-comparables <- NULL
-
-## Para las instituciones que tienen la sección de Aporte Relativo, su
-## vecindad se escoge entre instituciones que tienen las condiciones
-## para tener Aporte Relativo
-
-  if (flagVA) {
-    instHasVA <- TablaANEXO[TablaANEXO[, 'hasVA'], 'INST_BY_REF']
-    resto <- subset(GR13_14, INST_BY_REF != InstGR & INST_BY_REF %in% instHasVA)
-	nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
-    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc13_14$IndicadorPuntajes_va)
-	resto <- resto[order(resto[, 'dist']),]
-	tmpVec <- resto[seq(nParcial), ]
-	tmpVec <- tmpVec[tmpVec[, 'dist'] < .3, ]
-	Vectores13_14Vec[[s]] <- tmpVec[, c('INST_BY_REF', 'dist')]
-
-## Para las instituciones que no tienen la sección de Aporte Relativo
-## pero si tienen vecindad, esta se escoge entre instituciones con
-## vecindad
-
-  } else if (nrow(foc13_14) > 0 & nrow(preFlag) > 0){
-  if(preFlag[, 'has15Vec']) {
-    instHas15Vec <- TablaANEXO[TablaANEXO[, 'has15Vec'], 'INST_BY_REF']
-    resto <- subset(GR13_14, INST_BY_REF != InstGR & INST_BY_REF %in% instHas15Vec)
-	nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
-    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc13_14$IndicadorPuntajes_va)
-	resto <- resto[order(resto[, 'dist']),]
-	tmpVec <- resto[seq(nParcial), ]
-	tmpVec <- tmpVec[tmpVec[, 'dist'] < .3, ]
-	Vectores13_14Vec[[s]] <- tmpVec[, c('INST_BY_REF', 'dist')]} else {
-}
-  }
-
-  flag2 <- TRUE
-
- if (nrow(foc13_14) == 0){
-  flag2 <- FALSE
-}
-}
-}
-}
-
-if(nrow(foc) > 0){
-if(preFlag[, 'has15Vec']){
-if(nrow(TodasComparables)>0){
-ListaComp13_14Vec <- data.frame()
-#for(i in seq(1,100)){
-for(i in seq(1,2)){
-tmp <- Vectores13_14Vec[[i]][,c('INST_BY_REF', 'dist')]
-ListaComp13_14Vec <- rbind(ListaComp13_14Vec,tmp) 
-}
-AgregVecindad13_14 <- ddply(ListaComp13_14Vec, .(INST_BY_REF), summarize,
-						   dist = mean(dist))
-#ListaComp13_14Vec <- listaToDataframe(Vectores13_14Vec)
-#ListaComp13_14Vec <- as.matrix(ListaComp13_14Vec)
-#AgregVecindad13_14 <- as.data.frame(table(ListaComp13_14Vec))
-OrdenAgreg13_14 <- order(AgregVecindad13_14[, 'dist'], decreasing = TRUE)
-AgregVecindad13_14 <- AgregVecindad13_14[OrdenAgreg13_14,]
-AgregVecindad13_14 <- subset(AgregVecindad13_14, AgregVecindad13_14[, 'dist'] < 0.3)
-nParcial13_14Vec <- ifelse(nrow(AgregVecindad13_14) > 15, 15, nrow(AgregVecindad13_14))
-AgregVecindad13_14 <- AgregVecindad13_14[seq(nParcial13_14Vec),]
-nComparables <- nrow(AgregVecindad13_14)
-comparables <- subset(resto, INST_BY_REF %in% AgregVecindad13_14[, 'INST_BY_REF'])
-} else if (nrow(TodasComparables)==0){nComparables <- 0}
-}
 }
 
 if (nComparables > 0) {
@@ -418,30 +336,26 @@ AgregadosPruebasVec  <- merge(AgregadosPruebasVec, NivelesVec,
 \begin{center}
 \textbf{Reporte de resultados en SABER PRO, medidas de Aporte Relativo y
 otros indicadores de calidad de las Instituciones de Educaci\'on
-Superior 2014-2015\vspace{32mm}}
+Superior 2013-2014\vspace{62mm}}
 \end{center}
 }
 
 \Large{
 \begin{center}
-\textbf{\Sexpr{GrupRefer[refGr]}} \\
-\textbf{\Sexpr{NombreUniv}}
-\end{center}} \vspace{30mm}
-
-\Large{
-\begin{center}
-\textbf{Oficina de Gesti\'on de Proyectos de Investigaci\'on}
+\textbf{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on y
+\\
+Direcci\'on de Evaluaci\'on}
 
 \vspace{3mm}
 \textbf{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on -
 ICFES}
-\vspace{45mm}
+\vspace{65mm}
 \end{center}
 }
 
 \Large{
 \begin{center}
-  \textbf{Noviembre de 2016}
+  \textbf{Junio de 2015}
 \end{center}
 }
 \normalsize
@@ -468,11 +382,11 @@ ICFES}
 
 <<Compilado,results=hide,echo=false>>=
 if(flag2){
-Sweave('ResPRO2013_2014v03.rnw', encoding = "latin1")
+Sweave('ResPRO2013_2014v01.rnw', encoding = "latin1")
     if (flagVA & nComparables > 0) {
       Sweave('AR2013_2014v01.rnw', encoding = "latin1")
     }
-    Sweave('OCalidad2013_2014v02.rnw', encoding = "latin1")
+    Sweave('OCalidad2013_2014v01.rnw', encoding = "latin1")
     if (flagVec & nComparables > 0) {
       Sweave('anexoAR2013_2014v01.rnw', encoding = "latin1")
 	  Sweave('anexoCompAR2013_2014v01.rnw', encoding = "latin1")
@@ -484,11 +398,11 @@ Sweave('ResPRO2013_2014v03.rnw', encoding = "latin1")
 
 <<Armado,results=tex,echo=false>>=
 if(flag2){
-    cat('\\input{ResPRO2013_2014v03}\n')
+    cat('\\input{ResPRO2013_2014v01}\n')
     if (flagVA & nComparables > 0) {
       cat('\\input{AR2013_2014v01}\n')
     }
-    cat('\\input{OCalidad2013_2014v02}\n')
+    cat('\\input{OCalidad2013_2014v01}\n')
     if (flagVec & nComparables > 0) {
       cat('\\input{anexoAR2013_2014v01}\n')
 	  cat('\\input{anexoCompAR2013_2014v01}\n')

@@ -1,0 +1,2354 @@
+%\begin{changemargin}{2cm}{2cm}
+
+\\\\
+\vspace{2cm}
+
+\begin{center}
+\textbf{Resumen ejecutivo del reporte de resultados en SABER PRO,
+medidas de Aporte Relativo y otros indicadores de calidad 2013-2014.}
+\end{center}
+
+\\\\
+\vspace{1cm}
+
+Con el objetivo de proveer herramientas que permitan ampliar la
+informaci\'on disponible para el an\'alisis de la calidad de los
+programas acad\'emicos de educaci\'on superior, apoyar los procesos de
+autoevaluaci\'on institucional y estimular el di\'alogo con distintos
+sectores acad\'emicos sobre la calidad educativa en el pa\'\i{}s, el
+Instituto Colombiano para la Evaluaci\'on de la Educaci\'on, ICFES, pone a disposici\'on de la comunidad acad\'emica el presente reporte en el cual se exponen e
+integran los resultados de SABER PRO con los resultados de SABER
+11$^\text{o}$, a trav\'es de la generaci\'on de medidas de Aporte
+Relativo de los grupos de referencia\footnote{En este reporte se utiliza el t\'ermino Aporte Relativo, por algunas consideraciones que se hacen m\'as adelante, para referirse a lo que en literatura de investigaci\'on en educaci\'on se
+conoce como Valor Agregado.}. Reconociendo que la calidad educativa comprende dimensiones adicionales a las que pueden mostrar a trav\'es de las pruebas de estado y sus medidas de Aporte Relativo, esta informaci\'on se complementa con
+una recopilaci\'on de otros indicadores de calidad disponibles a
+trav\'es de los sistemas de informaci\'on del Ministerio de Educaci\'on.
+\vspace{3mm}
+
+Este resumen ejecutivo presenta informaci\'on relevante asociada con
+las cuatro partes del reporte de resultados, esto es: panorama general
+de instituciones comparables, resultados en SABER PRO, medidas de Aporte Relativo y otros indicadores de calidad. Para ampliar esta
+informaci\'on lo invitamos a consultar el citado reporte de
+resultados en su versi\'on completa. La estructura del resumen ejecutivo es la siguiente: despu\'es de esta breve introducci\'on se presenta un conjunto de aspectos a tener en cuenta para la lectura de
+resultados y el listado de programas acad\'emicos asociados a la
+informaci\'on reportada. Lo que sigue del resumen ejecutivo es consistente
+con la estructura del reporte y se divide en cuatro partes. La primera
+de ellas est\'a dedicada a presentar un panorama general de las
+instituciones comparables con algunas caracter\'\i{}sticas de inter\'es.
+En la segunda, los resultados en las pruebas de competencias gen\'ericas
+de SABER PRO. La tercera, presenta una medida de Aporte Relativo para
+las competencias de lectura cr\'\i{}tica y razonamiento cuantitativo,
+que se calcula como la diferencia entre lo que el estudiante obtiene en
+SABER PRO y lo que se estima que obtendr\'\i{}a, usando como
+informaci\'on el puntaje obtenido en SABER 11$^\text{o}$. Esta medida es
+resultado de una investigaci\'on del ICFES que se ha desarrollado desde
+el a\~{n}o 2012, apoyada por expertos nacionales e internacionales y
+basada en los modelos de Valor Agregado. La cuarta secci\'on presenta otros indicadores complementarios de calidad educativa, tales como la demanda efectiva de estudiantes por programa, acreditaci\'on, deserci\'on, y
+vinculaci\'on laboral. \vspace{3mm}
+
+%\end{changemargin}
+
+\newpage
+
+%\begin{changemargin}{2cm}{2cm}
+
+\\\\
+\vspace{3cm}
+
+\textbf{Lista de abreviaturas}
+
+\begin{itemize}
+
+  \item \textbf{AR:} Aporte Relativo.
+  \item \textbf{CINE:} Clasificaci\'on Internacional de la Educaci\'on
+    Superior.
+  \item \textbf{GR-Nac.} Grupo de Referencia a nivel nacional.
+  \item \textbf{IES:} Instituci\'on de Educaci\'on Nacional.
+  \item \textbf{IGR:} Instituci\'on - Grupo de Referencia.
+  \item \textbf{INSE:} Indicador de Nivel Socio-Econ\'omico.
+  \item \textbf{MEN:} Ministerio de Educaci\'on Nacional.
+  \item \textbf{SNIES:} Sistema Nacional de Informaci\'on de la Educación
+    Superior.
+  \item \textbf{SPADIES:} Sistema para la Prevenci\'on de la Deserci\'on de
+    la Educaci\'on Superior.
+
+\end{itemize}
+
+%\end{changemargin}
+
+\newpage
+
+%\fbox{
+%  \parbox{\textwidth}{
+\textbf{Tenga en cuenta la siguiente informaci\'on para la lectura del
+presente reporte:}
+\begin{enumerate}
+  \item Un grupo de referencia es una agrupaci\'on de programas
+    acad\'emicos con caracter\'\i{}sticas similares. Los grupos de
+    referencia se definieron teniendo en cuenta la clasificaci\'on de
+    programas del Sistema Nacional de Informaci\'on de la Educaci\'on
+    Superior (SNIES) del Ministerio de Educaci\'on Nacional (MEN) y la
+    Clasificaci\'on Internacional Normalizada de la Educaci\'on (CINE)
+    de la Unesco. Los resultados de los presentes reportes se muestran por grupos de referencia, debido a que:
+\begin{itemize}
+  \item La formaci\'on acad\'emica de los estudiantes difiere sustancialmente de un grupo a otro.
+  \item Las acciones y actividades relacionadas con la ense\~{n}anza y el aprendizaje, por lo general, se particularizan en este nivel y no en el nivel institucional.
+  \item El n\'umero de estudiantes de algunos programas acad\'emicos no es suficiente para producir resultados estad\'\i{}sticos confiables.
+\end{itemize}
+    \item Las medidas de Aporte Relativo son obtenidas usando modelos lineales
+jer\'arquicos. Estos modelos permiten tomar en cuenta la estructura
+anidada de los datos, en este caso la que existe entre los
+estudiantes y los grupos de referencia dentro de instituciones. Esto permite que
+la estimaci\'on y el an\'alisis de estas medidas se oriente al nivel de
+grupos de referencia dentro de instituciones y no a nivel individual,
+reconociendo que es a ese nivel que los resultados son de mayor
+inter\'es con el fin de emprender acciones para el mejoramiento de la
+calidad de la educaci\'on superior. En el modelo utilizado se predice el
+resultado de SABER PRO a trav\'es de los resultados en SABER
+11$^\text{o}$ en 4 de las \'areas de conocimiento evaluadas: matem\'aticas,
+lenguaje, qu\'\i{}mica y ciencias sociales, las cuales se ha estudiado que
+ tienen un mayor poder de predecir los resultados en educaci\'on
+ superior (Para m\'as informaci\'on consulte el
+ informe t\'ecnico).
+\item Con el objetivo de proporcionar un referente para la lectura y
+an\'alisis de los resultados presentados en este reporte, se presenta un
+conjunto de Instituciones de Educaci\'on Superior (IES) que son
+similares al grupo de referencia de \textbf{\Sexpr{GrupRefer[refGr]}} de la
+instituci\'on \Sexpr{NombreUniv} en t\'erminos del promedio de sus
+estudiantes en el examen SABER 11$^\text{o}$. Esto permite comparar el Aporte Relativo institucional s\'olo entre aquellas
+instituciones que atienden estudiantes de condiciones acad\'emicas de
+entrada similares. Para la definici\'on de la vecindad de comparaci\'on
+se consideran \'unicamente instituciones con un n\'umero m\'\i{}nimo de
+15 estudiantes por grupo de referencia y al menos un 30\% de porcentaje
+de cruce entre las pruebas SABER 11$^\text{o}$ y SABER PRO.
+\item Las seccionales de una instituci\'on, al tener asignados c\'odigos SNIES distintos al que identifica a la sede principal, son consideradas como IES
+independientes. Esto favorece la lectura de resultados para cada seccional al
+considerarla como una IES con caracter\'\i{}sticas particulares, que
+pueden ser distintas a las caracter\'\i{}sticas de la sede principal.
+\item De acuerdo con la anterior definici\'on, existen instituciones que
+  no tienen vecindad de comparaci\'on, es decir, que no hay
+  instituciones similares en t\'erminos de los resultados de sus
+  estudiantes en el examen SABER 11$^\text{o}$. Para estas
+  instituciones, los resultados correspondientes a la vecindad, en los
+  diferentes gr\'aficos y tablas, aparecen vac\'\i{}os. En esta medida,
+  no todos los reportes contienen las partes correspondientes a Aporte
+  Relativo.
+\item Se incluyen algunas ayudas para determinar si la diferencia entre
+  promedios censales son importantes. El c\'alculo de la importancia de
+  estas diferencias se hace mediante el uso de umbrales del tama\~{n}o
+  del efecto cuyo c\'alculo se detalla en el \'ultimo anexo del informe.
+  Estas ayudas se componen de dos aspectos:
+  \begin{itemize}
+  \item En las tablas se presenta un s\'\i{}mbolo
+    $\mathbin{\textcolor{OliveGreen}{\blacktriangle}}$ cuando
+    las diferencias son importantes y positivas y un s\'\i{}mbolo
+    $\mathbin{\textcolor{red}{\blacktriangledown}}$ cuando
+    las diferencias son importantes y negativas. Si las diferencias
+    entre los resultados no son importantes el espacio correspondiente
+    aparece vac\'\i{}o. Adicionalmente se incluye un
+    s\'\i{}mbolo $\bullet$ cuando las desviaciones est\'andar son
+    mayores a 1,2, lo cual es una evidencia de heterogeneidad en los
+    resultados correspondientes.
+
+  \item En los gr\'aficos donde se comparan instituciones se presentan
+    unas franjas en color rosado. Las instituciones ubicadas por fuera
+    de esas franjas tienen diferencias importantes. En los gr\'aficos
+    correspondientes a las medidas de Aporte Relativo, esas franjas
+    indican cuando las diferencias son significativas, debido a que se trata
+    de resultados estad\'\i{}sticos.
+  \end{itemize}
+\end{enumerate}
+%}}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Se calculan algunos datos para caracterizar las instituciones de 
+  %% la vecindad y la IGR
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<DatosImportantes,results=hide,echo=false>>=
+## Cálculo del número de instituciones acreditadas.
+
+Tabla6tmp <- subset(tabla6, tabla6[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+Tabla6tmpVec <- subset(Tabla6tmp, !(Tabla6tmp[, 'INST_BY_REF'] %in% foc[,
+                 'INST_BY_REF']))
+
+Tabla6tmpVec <- merge(Tabla6tmpVec, universidades, by.x = "CodInstitucion",
+                               by.y = "INST_ID")
+
+Tabla6tmpVec[, 'INST_BY_REF'] <- NULL
+
+Tabla6tmpVec <-Tabla6tmpVec[, c('UNIV_NOMBREREDUCIDO', 'ProgAcred', 'TotalProg',
+                     'Acreditada', 'FechaAcreditacion')]
+
+acreditadasVec <- sum(Tabla6tmpVec[, 'Acreditada'] == 'SI')
+
+## Cálculo del número de programas académicos asociados con las
+## instituciones de la vecindad de comparación
+
+TotalProgramVec <- sum(Tabla6tmpVec[, 'TotalProg'])
+
+## Cálculo del número de programas académicos asociados con las
+## instituciones de la vecindad de comparación
+
+ProgramAcreditVec <- sum(Tabla6tmpVec[, 'ProgAcred'])
+
+Tabla6tmpIGR <- subset(tabla6, tabla6[, 'INST_BY_REF'] %in% foc[,
+                 'INST_BY_REF'])
+
+Tabla6tmpIGR <- merge(Tabla6tmpIGR, universidades, by.x = "CodInstitucion",
+                               by.y = "INST_ID")
+
+Tabla6tmpIGR[, 'INST_BY_REF'] <- NULL
+
+Tabla6tmpIGR <- Tabla6tmpIGR[, c('UNIV_NOMBREREDUCIDO', 'ProgAcred',
+                                 'TotalProg','Acreditada', 'FechaAcreditacion')]
+
+acreditadasIGR <- sum(Tabla6tmpIGR[, 'Acreditada'] == 'SI')
+
+## Cálculo del número de programas académicos asociados con la IGR
+
+TotalProgramIGR <- sum(Tabla6tmpIGR[, 'TotalProg'])
+
+## Cálculo del número de programas académicos asociados con las
+## instituciones de la vecindad de comparación
+
+ProgramAcreditIGR <- sum(Tabla6tmpIGR[, 'ProgAcred'])
+
+TotalTodosProgramAcred <- ProgramAcreditVec + ProgramAcreditIGR
+
+TotalTodosProgram <- TotalProgramVec + TotalProgramIGR
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Se incluyen algunos datos para caracterizar las instituciones de 
+  %% la vecindad y la IGR
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ResultVecind1,results=tex,echo=false>>=
+if (nComparables > 1) {
+  if(acreditadasVec == 1){
+  tienenacred <- 'tiene'} else if (acreditadasVec == 0 | acreditadasVec > 1){
+  tienenacred <- 'tienen'}
+cat( '\\newpage\n',
+'\\begin{center}\n',
+"\\textbf{Listado de los programas acad\\'emicos de las instituciones
+de la vecindad de comparaci\\'on para el grupo de referencia de \\textbf{
+",GrupRefer[refGr],"}.}\n",
+"\\end{center}\n",
+"\\begin{itemize}\n",
+"\\item En el caso de la instituci\\'on" ,as.character(NombreUniv), " la vecindad de
+    comparaci\\'on cuenta con un total de ",nComparables," instituciones
+para el grupo de referencia de \\textbf{",GrupRefer[refGr],"}. Entre las
+instituciones de la vecindad, un total de ",acreditadasVec,"
+",tienenacred," acreditaci\\'on institucional. \n",
+"\\item En adelante se usa la sigla IGR
+    para hacer referencia a la Instituci\\'on - Grupo de referencia a la
+    cual se le est\\'an reportandoresultados, es decir al grupo de
+    referencia de \\textbf{",GrupRefer[refGr],"} de la instituc\\'on ",as.character(NombreUniv),". \n",
+"\\item Las instituciones de la vecindad se asocian con un total de
+",TotalProgramVec," programas acad\\'emicos, de los cuales
+",ProgramAcreditVec," son acreditados. Por su parte, la IGR cuenta con
+",TotalProgramIGR," programas acad\\'emicos, entre los cuales
+",ProgramAcreditIGR," son acreditados. Los ",TotalTodosProgram,"
+programas acad\\'emicos de la IGR y de
+la vecindad de comparaci\\'on se listan en la siguiente tabla.\n",
+"\\item Informaci\\'on relevante de otros indicadores de calidad de las
+    instituciones de la vecindad de comparaci\\'on se presentan en las
+    tablas \\ref{TablaOC1} y \\ref{TablaOC2} de este resumen ejecutivo.\n",
+    "\\end{itemize}\n",
+"\\item Los c\\'odigos que aparecen en la primera columna de la
+tabla 1 son usados como convenciones en las gr\\'aficas incluidas en la secci\\'on de Aporte Relativo. \n",
+    sep = '')}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Se incluyen algunos datos para caracterizar las instituciones de 
+  %% la vecindad y la IGR
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ResultVecind1,results=tex,echo=false>>=
+if (nComparables == 1) {
+cat( '\\newpage\n',
+'\\begin{center}\n',
+"\\textbf{Listado de los programas acad\\'emicos de las instituciones
+de la vecindad de comparaci\\'on para el grupo de referencia de \\textbf{
+",GrupRefer[refGr],"}.}\n",
+"\\end{center}\n",
+"\\begin{itemize}\n",
+"\\item En el caso de la instituci\\'on ",as.character(NombreUniv)," la
+vecindad de comparaci\\'on cuenta con ",nComparables,"
+instituci\\'on, para el grupo de referencia de
+\\textbf{",GrupRefer[refGr],"}. Entre las instituciones de la vecindad, un total de ",acreditadasVec,"
+    tiene acreditaci\\'on institucional. \n",
+"\\item En adelante se usa la sigla IGR
+    para hacer referencia a la Instituci\\'on - Grupo de referencia a la
+    cual se le est\\'an reportandoresultados, es decir al grupo de
+    referencia de \\textbf{",GrupRefer[refGr],"} de la instituc\\'on ",as.character(NombreUniv),". \n",
+"\\item La instituci\\'on de la vecindad cuenta con un total de
+",TotalProgramVec," programas acad\\'emicos en el grupo de referencia de \\textbf{
+",GrupRefer[refGr],"} de los cuales ",ProgramAcreditVec," son acreditados.
+Por su parte, la instituci\\'on ",as.character(NombreUniv)," cuenta con
+",TotalProgramIGR," programas acad\\'emicos para este grupo de referencia, entre
+los cuales ",ProgramAcreditIGR," son acreditados. La totalidad de ",TotalTodosProgram," programas acad\\'emicos se listan en la siguiente tabla.\n",
+"\\item Informaci\\'on relevante de otros indicadores de calidad de las
+    instituci\\'on de la vecindad de comparaci\\'on se presentan en las
+    tablas \\ref{TablaOC1} y \\ref{TablaOC2} de este resumen ejecutivo.\n",
+"\\item Los c\\'odigos que aparecen en la primera columna de la
+tabla 1 son usados como convenciones en las gr\\'aficas incluidas en la secci\\'on de Aporte Relativo. \n",
+"\\item En cuanto a la metodolog\\'\\i{}a
+del programa es importante aclarar que se diferencian dos tipos de
+modalidades a distancia: Virtual (V) y Tradicional (T).\n",
+    "\\end{itemize}\n", sep = '')}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Construcción de tabla de programas académicos de la IGR y vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<TablaProgramas,results=tex,echo=false>>=
+if (nComparables > 0){
+
+tmp <- matrix(unlist(strsplit(as.character(AgregadosVecindad2$INST_BY_REF),
+                              '__')), ncol=2, byrow=TRUE)
+
+tmp  <-  as.data.frame(tmp)
+
+names(tmp) <- c('Inst', 'RefGrp')
+
+AgregadosVecindad2 <- cbind(AgregadosVecindad2, tmp)
+
+OrdenLet <- order(AgregadosVecindad2014[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- AgregadosVecindad2014[OrdenLet,]
+isFoc <- tmp[, 'INST_BY_REF'] %in% foc[, 'INST_BY_REF']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+
+Tabla1 <- tmp[, c('simbolo', 'UNIV_NOMBREREDUCIDO')]
+ } else{
+ tmp <- preFlag[, c('INST_BY_REF', 'INST_COD_INSTITUCION')]
+ tmp[, 'simbolo'] <- '*'
+ tmp <- merge(tmp, universidades, by.x = "INST_COD_INSTITUCION",
+                               by.y = "INST_ID")
+Tabla1 <- tmp[, c('simbolo', 'UNIV_NOMBREREDUCIDO')]
+
+rownames(Tabla1) <- NULL
+}
+
+AgregTabA2 <- melt(AgregadosTablaProgr2014[, c('INST_BY_REF',
+                                              'PRAC_ID',
+                                              'NombrePrueba',
+                                              'DesvEstand',
+                                              'Promedio')],
+                  id.vars = c('INST_BY_REF', 'PRAC_ID', 'NombrePrueba'),
+                  measure.vars = c('Promedio', 'DesvEstand'),
+                  variable_name = 'valor', na.rm = FALSE
+                  )
+
+AgregTabA2[, 'value'] <- ifelse(AgregTabA2[, 'valor'] == 'Promedio',
+                          formatC(AgregTabA2[, 'value'], digits = 2,
+                          width = 4, format = 'f',
+                          decimal.mark = ',', big.mark = '.'),
+                          paste('(', formatC(AgregTabA2[, 'value'], digits = 2,
+                          width = 4, format = 'f',
+                          decimal.mark = ',', big.mark = '.'),
+                          ')', sep = ''))
+
+AgregTabA20 <- cast(AgregTabA2, INST_BY_REF + PRAC_ID + valor ~ NombrePrueba)
+
+AgregTabA20 <- subset(AgregTabA20, valor == 'Promedio')
+
+AgregTabA20[, 'valor'] <- NULL
+
+AgregTabA20 <- subset(AgregTabA20, AgregTabA20[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+AgregTabA21 <- ddply(AgregadosTablaProgr2014, .(PRAC_ID),
+                    summarize, n = Tamano[which.max(Tamano)])
+
+AgregTabA20 <- merge(AgregTabA20, AgregTabA21, by = 'PRAC_ID',
+                    all.x = TRUE)
+
+AgregTabA20 <- merge(AgregTabA20, ProgramasNombresAnexo, by = 'PRAC_ID', all.x
+                                = TRUE)
+
+AgregTabA20 <- merge(AgregTabA20, PRAC_SNIES, by = 'PRAC_ID', all.x
+                                 = TRUE)
+
+AgregTabA20 <- merge(AgregTabA20, Programa_Metodologia,
+                     by = 'PRAC_CONSECUTIVOSNIES', all.x = TRUE)
+
+## Se identificaron programas que en 2014 cambiaron de código ICFES
+## Se eliminan los duplicados en terminos de Código SNIES					 
+					 
+Orden <- order(AgregTabA20[, 'PRAC_CONSECUTIVOSNIES'])
+
+AgregTabA20 <- AgregTabA20[Orden,]
+
+Logic <- c("FALSE")
+
+Duplicados <- duplicated(AgregTabA20[,'PRAC_CONSECUTIVOSNIES'], fromLast =
+                         TRUE) %in% Logic
+
+AgregTabA20 <- AgregTabA20[which(Duplicados),]					 					 
+					 
+AgregTabA20[, 'Inst'] <- gsub("\\D", "", AgregTabA20[,
+                      'INST_BY_REF'])
+
+AgregTabA20 <- merge(AgregTabA20, universidades, by.x = 'Inst', by.y =
+                     'INST_ID')
+
+AgregTabA20 <- merge(AgregTabA20, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+
+AgregTabA20 <- AgregTabA20[, c('simbolo', 'UNIV_NOMBREREDUCIDO',
+                               'PRAC_CONSECUTIVOSNIES',
+                               'PRAC_NOMBRE_REDUCIDO', 'METO_NOMBRE')]
+
+rleUnivNomb <- rle(as.character(AgregTabA20[, 'UNIV_NOMBREREDUCIDO']))
+
+hline <- character(nrow(AgregTabA20))
+
+hline[cumsum(rleUnivNomb$lengths)] <- '\\hline '
+
+AgregTabA20[, 'UNIV_NOMBREREDUCIDO'] <- MakeMultiRow(as.character(AgregTabA20[,
+                                      'UNIV_NOMBREREDUCIDO']), texto = '*')
+
+rleCodigo <- rle(as.character(AgregTabA20[, 'simbolo']))
+
+hline <- character(nrow(AgregTabA20))
+
+hline[cumsum(rleCodigo$lengths)] <- '\\hline '
+
+AgregTabA20[, 'simbolo'] <- MakeMultiRow(as.character(AgregTabA20[,
+                                      'simbolo']), texto = '*')
+
+titulo <- paste("Programas acad\\'emicos de las instituciones de la vecindad
+                para el grupo de referencia de ", GrupRefer[refGr], sep = "")
+
+encabezado <- paste(
+"\\hline
+C\\'odigo & Nombre IES & C\\'odigo & Nombre programa & Metodolog\\'\\i{}a\\\\
+ &  & SNIES & acad\\'emico & \\\\
+\\hline
+\\endfirsthead
+\\multicolumn{5}{p{15cm}}
+{\\tablename\\ \\thetable\\ -- \\textit{", titulo, "(Continuaci\\'on\\dots)}} \\\\
+\\hline
+C\\'odigo & Nombre IES & C\\'odigo & Nombre programa & Metodolog\\'\\i{}a\\\\
+ &  & SNIES & acad\\'emico & \\\\
+\\hline
+\\endhead
+\\hline
+\\multicolumn{5}{p{15cm}}{\\textit{Contin\\'ua en la siguiente p\\'agina\\ldots}} \\\\
+\\endfoot
+\\hline
+\\endlastfoot
+")
+
+cuales <- which(head(hline, -1) != '')
+addRows <- list(pos = as.list(c(-1, cuales, nrow(AgregTabA20))),
+                command = c(encabezado,
+                            hline[cuales],
+                            '\\thickline\n')
+                )
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación de tabla de programas académicos de la IGR y vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<TablaProgramas,results=tex,echo=false>>=
+tabla <- xtable(AgregTabA20)
+align(tabla)   <- c('l', 'p{0.5cm}', 'p{6.5cm}', 'p{0.5cm}', 'p{7.5cm}',
+                    'p{2cm}')
+caption(tabla) <- titulo
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, sanitize.rows.function = identity,
+      size = 'tiny', floating = FALSE,
+      tabular.environment="longtable")
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Texto anterior a gráfico de panorama general de resultados en 
+  %% SABER PRO vs índice de SABER 11
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<PanorGener,results=tex,echo=false>>=
+if (flagVec & nComparables > 0) {
+
+cat("\\newpage \n",
+    "\\textbf{Informaci\\'on relevante de los estudiantes que conforman la
+poblaci\\'on de estudio de Aporte Relativo.} \\\\ \n",
+    "Las siguientes gr\\'aficas corresponden a las correlaciones entre
+    el promedio del \\'\\i{}ndice SABER 11$^\\text{o}$ y
+#SABER PRO, para cada una de las competencias gen\\'ericas incluidas en
+    la secci\\'on de Aporte Relativo, esto es, lectura cr\\'\\i{}tica y
+    razonamiento cuantitativo. Estos resultados permiten, por un
+    lado, tener un panorama general del comportamiento de las
+    instituciones en cuanto a las variables consideradas para esos
+    an\\'alisis, y por otro lado, entender c\\'omo se encuentra
+    conformada la vecindad de comparaci\\'on para la IGR. \\\\ \n",
+    "Las l\\'\\i{}neas punteadas corresponden a la media del grupo de
+    referencia en cada uno de los indicadores y sirven como referencia
+    para identificar la posici\\'on relativa de la IGR y de la vecindad de
+    comparaci\\'on. A partir de estas l\\'\\i{}neas se identifican los cuadrantes en los
+    gr\\'aficos (I, II, III y IV).", sep = '')
+
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Texto anterior a gráfico de panorama general de resultados en 
+  %% SABER PRO vs índice de SABER 11
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Grafico de panorama general de resultados en SABER PRO vs
+  %% índice de SABER 11
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<GraficaPanorGene,results=hide,echo=false>>=
+if (flagVec & nComparables > 0) {
+
+## Valores previos para que los gráficos queden en la misma escala.
+## outcomes[2] corresponde a Lectura Crítica
+out <- outcomes[2]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+## En estos data.frames se conserva la información necesaria para los gráficos
+  focGraf5 <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  focGraf5 <- merge(focGraf5, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(focGraf5)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(focGraf5, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% focGraf5[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimaciones13_14[[out]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+
+MinXLC <- min(Todos[, "IndicadorPuntajes_va"])
+  MaxXLC <- max(Todos[, "IndicadorPuntajes_va"])
+  MinYLC <- min(Todos[, "M_post"])
+  MaxYLC <- max(Todos[, "M_post"])
+
+## outcomes[1] corresponde a Razonamiento Cuantitativo
+out <- outcomes[1]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+## En estos data.frames se conserva la información necesaria para los gráficos
+  focGraf5 <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  focGraf5 <- merge(focGraf5, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(focGraf5)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(focGraf5, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% focGraf5[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimaciones13_14[[out]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+
+MinXRC <- min(Todos[, "IndicadorPuntajes_va"])
+  MaxXRC <- max(Todos[, "IndicadorPuntajes_va"])
+  MinYRC <- min(Todos[, "M_post"])
+  MaxYRC <- max(Todos[, "M_post"])
+
+MinX <- min(MinXRC, MinXLC)
+MaxX <- max(MaxXRC, MaxXLC)
+MinY <- min(MinYRC, MinYLC)
+MaxY <- max(MaxYRC, MaxYLC)
+
+## Aquí comienzan los gráficos
+
+graf5Name <- file.path(
+                         paste("grafico5",
+                               ".eps", sep = ""))
+
+postscript(file.path(runPath,graf5Name), width = 9.0, height = 5.5)
+
+par(mfrow =c(1,2))
+
+options(OutDec= ",")
+
+## outcomes[2] corresponde a Lectura Crítica
+out <- outcomes[2]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+## En estos data.frames se conserva la información necesaria para los gráficos
+  focGraf5 <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  focGraf5 <- merge(focGraf5, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(focGraf5)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(focGraf5, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% focGraf5[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimaciones13_14[[out]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+Todos[, 'col']  <- "black"
+isCom <- Todos[, 'inst_by_ref'] %in% MatrizComparab[, 'inst_by_ref']
+isFoc <- Todos[, 'inst_by_ref'] %in% focGraf5[, 'inst_by_ref']
+Todos[isCom, 'col']  <- "blue"
+Todos[isFoc, 'col']  <- "red"
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+MediaPro <- mean(Todos[, 'M_post'])
+Media11 <- mean(Todos[, 'IndicadorPuntajes_va'])
+MediaINSE <- mean(Todos[, 'M_inse'])
+
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+     col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'],
+     ylab="Promedio SABER PRO", xlab="Promedio Indice SABER 11", main =
+     "Lectura crítica", xlim = c(MinX, MaxX), ylim = c(MinY, MaxY))
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+       col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO",
+     xlab="Promedio Indice SABER 11",
+     main = "Lectura crítica", xlim = c(MinX, MaxX), ylim = c(MinY, MaxY))
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+## Valores para generar comentarios sobre ubicación de la IGR en el gráfico	 
+UbiProLC <- Todos[isFoc, "M_post"] - MediaPro
+Ubi11LC <- Todos[isFoc, "IndicadorPuntajes_va"] - Media11
+
+## outcomes[1] corresponde a Razonamiento cuantitativo
+out <- outcomes[1]
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimaciones13_14[[out]])), 'nombre')
+names(VAEstimaciones13_14[[out]]) <- nombres
+
+VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimaciones13_14[[out]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimaciones13_14[[out]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+## En estos data.frames se conserva la información necesaria para los gráficos
+  focGraf5 <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  focGraf5 <- merge(focGraf5, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimaciones13_14[[out]][[refGr]],
+                VAEstimaciones13_14[[out]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(focGraf5)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(focGraf5, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% focGraf5[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimaciones13_14[[out]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+Todos[, 'col']  <- "black"
+isCom <- Todos[, 'inst_by_ref'] %in% MatrizComparab[, 'inst_by_ref']
+isFoc <- Todos[, 'inst_by_ref'] %in% focGraf5[, 'inst_by_ref']
+Todos[isCom, 'col']  <- "blue"
+Todos[isFoc, 'col']  <- "red"
+
+MediaPro <- mean(Todos[, 'M_post'])
+Media11 <- mean(Todos[, 'IndicadorPuntajes_va'])
+MediaINSE <- mean(Todos[, 'M_inse'])
+
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+     col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'],
+     ylab="Promedio SABER PRO", xlab="Promedio Indice SABER 11", main =
+     "Razonamiento cuantitativo", xlim = c(MinX, MaxX), ylim = c(MinY, MaxY))
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+       col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab="Promedio SABER PRO",
+     xlab="Promedio Indice SABER 11", main =
+     "Razonamiento cuantitativo", xlim = c(MinX, MaxX), ylim = c(MinY, MaxY))
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+cerrar <- dev.off()
+
+## Valores para generar comentarios sobre ubicación de la IGR en el gráfico
+UbiProRC <- Todos[isFoc, "M_post"] - MediaPro
+Ubi11RC <- Todos[isFoc, "IndicadorPuntajes_va"] - Media11
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Grafico de panorama general de resultados en SABER PRO vs
+  %% índice de SABER 11 cuando no hay vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación de grafico de panorama general de resultados en 
+  %% SABER PRO vs índice de SABER 11 
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<GraficoPanorGeneral,results=tex,echo=false>>=
+if (flagVec & nComparables > 0) {
+cat('\\begin{figure}[H]\n',
+      "\\caption{Promedio del \\'\\i{}ndice en SABER 11$^\\text{o}$ y promedio
+      de lectura Cr\\'\\i{}tica y razonamiento cuantitativo en SABER PRO.}\n",
+      '\\vspace{-15mm} \n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=12cm, angle = -90]{',
+      graf5Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:Pro11LC}\n',
+      '\\end{figure}\n',
+      '\\vspace{-10mm} \n',
+      '\\begin{center}\n',
+      '\\framebox{$\\mathbin{\\textcolor{red}{\\blacksquare}}$ IGR
+      \\hspace{3mm}\n',
+      '$\\mathbin{\\textcolor{blue}{\\bigcirc}}$ Vecindad \\hspace{3mm}\n',
+      '$\\mathbin{\\textcolor{black}{\\blacklozenge}}$ GR-Nac \\hspace{3mm}\n',
+      '\\textcolor{red}{- - - - -} Valor promedio para el GR-NAC} \n',
+      '\\end{center}\n',
+      '\\textbf{Principales resultados} \\\\ \n',
+      sep = '')
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación de grafico de panorama general de resultados en 
+  %% SABER PRO vs índice de SABER 11 cuando no hay vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comenatios del grafico de panorama general de resultados en 
+  %% SABER PRO vs índice de SABER 11 
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentGraficoPanorGeneral,results=tex,echo=false>>=
+if (flagVec & nComparables > 0) {
+if (Ubi11LC >0 & UbiProLC > 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio nacional en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO. \\\\")} else if (Ubi11LC < 0 & UbiProLC < 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio nacional en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO. \\\\")} else if (Ubi11LC > 0 & UbiProLC < 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio nacional en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO. \\\\")} else if (Ubi11LC < 0 & UbiProLC > 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio nacional en los
+resultados en la prueba de lectura cr\\'\\i{}tica en SABER PRO. \\\\")}
+
+if (Ubi11RC >0 & UbiProRC > 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio nacional en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")} else if (Ubi11RC < 0 & UbiProRC < 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio nacional en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")} else if (Ubi11RC > 0 & UbiProRC < 0) {
+cat("\\noindent La IGR tiene un promedio superior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ e inferior al promedio nacional en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")} else if (Ubi11RC < 0 & UbiProRC > 0) {
+cat("\\noindent La IGR tiene un promedio inferior al promedio nacional
+del \\'\\i{}ndice de SABER 11$^\\text{o}$ y superior al promedio nacional en los
+resultados en la prueba de razonamiento cuantitativo en SABER PRO.")}
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comenatios del grafico de panorama general de resultados en 
+  %% SABER PRO vs índice de SABER 11 cuando no hay vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+%\end{landscape}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Armado de tablas sobre información de caracterización 
+  %% socio-demográfica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<<ArmadoInfSocioDemo,results=tex,echo=false>>=
+if (nComparables > 0) {
+
+InfoAgregSocioEcon <- subset(AgregInfoSocioEcon,
+                             AgregInfoSocioEcon[, 'Group.1'] %in%
+                             VecComp[, 'INST_BY_REF'])
+
+InfoAgregSocioEcon <- merge(InfoAgregSocioEcon, universidades,
+                            by.x = "Inst", by.y = "INST_ID")
+
+InfoAgregSocioEcon[, 'inse'] <- CambiarFormato(InfoAgregSocioEcon[,
+                                               'inse'], digits = 1)
+
+InfoAgregSocioEcon[, 'IndicadorPuntajes'] <- CambiarFormato(InfoAgregSocioEcon[,
+                                               'IndicadorPuntajes'], digits = 2)
+
+InfoAgregSocioEcon[, 'ESTU_EDAD'] <- CambiarFormato(InfoAgregSocioEcon[,
+                                               'ESTU_EDAD'], digits = 1)
+
+InfoAgregSocioEcon[, 'EsFemenino'] <-
+  CambiarFormato(InfoAgregSocioEcon[, 'EsFemenino'],
+                                      mult = 100, digits = 2, textPost = '\\%')
+
+InfoAgregSocioEcon <- InfoAgregSocioEcon[, c('UNIV_NOMBREREDUCIDO', 'IndicadorPuntajes', 'inse', 'ESTU_EDAD', 'EsFemenino')]
+
+Tabla_TipoZona <- subset(TablaTipoZona, TablaTipoZona[, 'INST_BY_REF'] %in%
+                             VecComp[, 'INST_BY_REF'])
+
+
+Tabla_TipoZona <- merge(Tabla_TipoZona, universidades,
+                            by.x = "Inst", by.y = "INST_ID")
+
+
+Tabla_TipoZona <- Tabla_TipoZona[, c('UNIV_NOMBREREDUCIDO', 'OR', 'OU',
+                                     'NR', 'NU')]
+
+row.names(Tabla_TipoZona) <- NULL
+
+cat("\\newpage \n",
+"La tabla 2 contiene informaci\\'on de 4 indicadores relacionados con las
+caracter\\'\\i{}sticas socioecon\\'omicas de la vecindad de comparaci\\'on de la
+instituci\\'on ",as.character(NombreUniv)," para el grupo de referencia
+de \\textbf{",GrupRefer[refGr],"}. \\\\ \n",
+"El \\'\\i{}ndice de nivel socio-econ\\'omico (INSE) es un \\'\\i{}ndice
+calculado por el ICFES para sintetizar el conjunto de
+caracter\\'\\i{}sticas sociales y econ\\'omicas de los individuos. Este
+\\'\\i{}ndice sigue una metodolog\\'\\i{}a similar a la propuesta por el
+Programa de las Naciones Unidas para el Desarrollo (PNUD) y el
+Departamento de Planeaci\\'on Nacional (DNP) para calcular el
+\\'\\i{}ndice de condiciones de vida. La escala del INSE tiene media 50
+y desviaci\\'on est\\'andar de 10. Entre mayor sea el INSE mejores son
+las condiciones socioecon\\'omicas. Actualmente este \\'\\i{}ndice se calcula
+con la informaci\\'on socio-econ\\'omica recolectada en SABER PRO debido
+a que durante los a\\~{n}os 2005 a 2007
+no se recogi\\'o informaci\\'on de este tipo en los formularios de SABER
+11$^\\text{o}$. \n",
+'\\vspace{3mm} \n',
+sep = '')
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Tabla con primera parte de la información de caracterización 
+  %% socio-demográfica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<InfSocioDemo1,results=tex,echo=false>>=
+if (flagVec & nComparables > 0) {
+if (nrow(InfoAgregSocioEcon) > 0) {
+
+addRows1 <- list(pos = as.list(c(-1, 1, nrow(InfoAgregSocioEcon))),
+                command = c("Nombre IES & \\'Indice & INSE$^2$
+                            & Edad & Porcentaje  \\\\
+              & SABER 11$^\\text{o 1}$ &  & promedio$^1$ & de mujeres$^1$ \\\\
+             \\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(InfoAgregSocioEcon)
+align(tabla)   <- c('l', 'l{10cm}', 'c{1.5cm}', 'c{1cm}', 'c{1cm}',
+                    'c{1.5cm}')
+caption(tabla) <- "Resumen de las características socio-económicas de
+las instituciones"
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows1, caption.placement = 'top',
+      sanitize.text.function = force, size = 'ssmall')
+}
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Introducción a información de caracterización 
+  %% socio-demográfica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<IntroInfSocioDemo,results=tex,echo=false>>=
+if (nComparables > 0) {
+cat("La tabla 3 presenta la distribuci\\'on de los estudiantes de la
+    vecindad de comparaci\\'on de la instituci\\'on
+    ",as.character(NombreUniv)," para el grupo de referencia de \\textbf{
+      ",GrupRefer[refGr],"}, de acuerdo al car\\'acter (oficial o no
+    oficial) y la zona (rural o urbana) de las instituciones de
+educaci\\'on media. \n",
+sep = '')
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Tabla con segunda parte de la información de caracterización 
+  %% socio-demográfica
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<InfSocioDemo2,results=tex,echo=false>>=
+if (flagVec & nComparables > 0) {
+if (nrow(Tabla_TipoZona) > 0) {
+
+addRows2 <- list(pos = as.list(c(-1, 1, nrow(Tabla_TipoZona))),
+                command = c("Nombre IES & \\multicolumn{2}{c}{Oficial$^1$}
+                             & \\multicolumn{2}{c}{No oficial$^1$}
+                             & &  \\\\
+              & Rural & Urbano & Rural & Urbano \\\\
+             \\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(Tabla_TipoZona)
+label(tabla) <- 'Tabla_TipoZona'
+align(tabla)   <- c('l', 'l{10cm}', 'c{1cm}', 'c{1cm}', 'c{1cm}', 'c{1cm}')
+caption(tabla) <- "Caracterización de los estudiantes de acuerdo a la
+zona y el car\\'acter de las instituciones de educación media "
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows2, caption.placement = 'top',
+      sanitize.text.function = force, size = 'ssmall')
+}
+}
+@
+
+<<PieDePagina,results=tex,echo=false>>=
+if (flagVec & nComparables > 0) {
+if (nrow(Tabla_TipoZona) > 0 & nrow(InfoAgregSocioEcon) > 0) {
+cat( '\\tiny{\n',
+"\\footnotetext[1]{Fuente: C\\'alculos propios con base en
+informaci\\'on socioecon\\'omica recolectada en SABER 11$^\\text{o}.}
+\\\\ \n",
+"\\footnotetext[2]{Fuente: C\\'alculos propios con base en
+informaci\\'on socioecon\\'omica recolectada en SABER PRO$^\\text{o}.}\n",
+sep = '')
+}
+}
+@
+
+\newpage
+
+\normalsize
+
+\textbf{I. Resultados en SABER PRO}
+
+\fbox{
+  \parbox{0.9\textwidth}{
+\textbf{Tenga en cuenta que todos los resultados que se presentan en
+esta secci\'on corresponden a la totalidad de
+los estudiantes que presentaron el examen SABER PRO en los a\~{n}os
+2013-2014.}
+}}
+
+\normalsize
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Se construye la tabla 1
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<<Tabla1,results=hide,echo=false>>=
+if (nComparables > 0){
+
+tmp <- matrix(unlist(strsplit(as.character(AgregadosVecindad2$INST_BY_REF),
+                              '__')), ncol=2, byrow=TRUE)
+
+tmp  <-  as.data.frame(tmp)
+
+names(tmp) <- c('Inst', 'RefGrp')
+
+AgregadosVecindad2 <- cbind(AgregadosVecindad2, tmp)
+
+OrdenLet <- order(AgregadosVecindad2014[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- AgregadosVecindad2014[OrdenLet,]
+isFoc <- tmp[, 'INST_BY_REF'] %in% foc[, 'INST_BY_REF']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+
+Tabla1 <- tmp[, c('simbolo', 'UNIV_NOMBREREDUCIDO')]
+
+rownames(Tabla1) <- NULL
+
+addRows <- list(pos = as.list(c(-1, nrow(Tabla1))),
+                command = c(
+"\\thickline\nC\\'odigo & Nombre de la IES\\\\
+\\hline",
+                            '\\thickline'))
+
+tabla <- xtable(Tabla1, "Instituciones de la vecindad de comparaci\\'on",
+                align = c('l', 'c', 'p{12cm}'))
+label(tabla) <- 'Tabla1'
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force)
+ } else{
+ tmp <- preFlag[, c('INST_BY_REF', 'INST_COD_INSTITUCION')]
+ tmp[, 'simbolo'] <- '*'
+ tmp <- merge(tmp, universidades, by.x = "INST_COD_INSTITUCION",
+                               by.y = "INST_ID")
+Tabla1 <- tmp[, c('simbolo', 'UNIV_NOMBREREDUCIDO')]
+
+rownames(Tabla1) <- NULL
+
+   cat("La IGR no cuenta con instituciones comparables y por tal
+            raz\\'on los resultados correspondientes a la vecindad de
+            comparaci\\'on aparecen vac\\'\\i{}'os.")}
+@
+
+\vspace{3mm}
+
+\begin{center}
+\textbf{Resultados promedios y desviaciones est\'andar 2013-2014 por
+nivel de desagregaci\'on.}
+\end{center}
+
+La siguiente tabla presenta los resultados promedios y desviaciones
+est\'andar 2013 y 2014 para cada una de las competencias gen\'ericas y
+los niveles de agregaci\'on (GR-Nac, Vecindad, IGR). Los s\'\i{}mbolos
+ $\mathbin{\textcolor{OliveGreen}{\blacktriangle}}$ y
+    $\mathbin{\textcolor{red}{\blacktriangledown}}$ son inclu\'\i{}dos
+    cuando existen diferencias importantes entre 2013 y 2014 para la
+    misma prueba y nivel de agregaci\'on. Adicionalmente se incluye un
+    s\'\i{}mbolo $\bullet$ cuando las desviaciones est\'andar son
+    mayores a 1,2, lo cual es una evidencia de heterogeneidad en los
+    resultados correspondientes.
+
+	
+	
+<<grafica1,results=tex,echo=false>>=
+ options(OutDec= ".", digits = 2)
+
+tmp0 <- subset(Agregados, RefGrp == refGr
+                 & Instit == Inst)
+
+## Se arman los data.frames para generar el gráfico 1. Es necesario conservar los
+## resultados de la IGR, de la vecindad y del grupo de referencia.
+				 
+tmp0[, 'Prueba'] <- factor(tmp0[, 'Prueba'], levels = c('LECTURA CRÍTICA',
+                            'RAZONAMIENTO CUANTITATIVO',
+                            'COMPETENCIAS CIUDADANAS',
+                            'INGLÉS', 'COMUNICACIÓN ESCRITA'), ordered = TRUE)
+
+tmp0 <- tmp0[order(tmp0[, 'Prueba']), ]
+
+  tmp1 <- subset(AgregadosPruebas, RefGrp == refGr)
+
+tmp1[, 'Prueba'] <- factor(tmp1[, 'Prueba'], levels = c('LECTURA CRÍTICA',
+                            'RAZONAMIENTO CUANTITATIVO',
+                            'COMPETENCIAS CIUDADANAS',
+                            'INGLÉS', 'COMUNICACIÓN ESCRITA'), ordered = TRUE)
+
+tmp1 <- tmp1[order(tmp1[, 'Prueba']), ]
+
+  if (nComparables == 0) {
+    tmp2 <- tmp1
+    tmp2[, -c(1:3)] <- lapply(tmp2[, -c(1:3)],
+                              function(x)
+                                x <- NA)
+  } else {
+  tmp2 <- subset(AgregadosPruebasVec, RefGrp == refGr)
+
+  tmp2[, 'Prueba'] <- factor(tmp2[, 'Prueba'], levels = c('LECTURA CRÍTICA',
+                            'RAZONAMIENTO CUANTITATIVO',
+                            'COMPETENCIAS CIUDADANAS',
+                            'INGLÉS', 'COMUNICACIÓN ESCRITA'), ordered = TRUE)
+
+tmp2 <- tmp2[order(tmp2[, 'Prueba']), ]
+  }
+
+## Este data.frame reúne los resultados de los 3 niveles de agregación 
+
+  tmp3 <- rbind(
+                data.frame(Agregado = 'GR-Nac', tmp1),
+                data.frame(Agregado = 'Vecindad', tmp2[,
+                           names(AgregadosPruebas)]),
+                data.frame(Agregado = 'IGR',
+                           tmp0[, names(AgregadosPruebas)])
+                )
+
+  tmp3[, 'otro'] <- interaction(tmp3[, 'Ano'], tmp3[, 'Prueba'],
+                                sep = ' ')
+
+  tmp3IGR <- melt(tmp3[, c('Agregado', 'Prueba', 'Ano', 'DesvEstand',
+                     'Promedio', 'Tamano')],
+                 id.vars = c('Agregado', 'Prueba', 'Ano'),
+                 measure.vars = c('Promedio', 'DesvEstand', 'Tamano'),
+                 variable_name = 'valor', na.rm = FALSE
+                 )
+
+  tmp3IGR <- subset(tmp3IGR, Agregado == 'IGR' & Ano == '2014')
+
+  for(s in 1:nrow(tmp3IGR)){
+  if(tmp3IGR[s, 'valor'] == 'Promedio'){
+      tmp3IGR[s, 'value'] <- CambiarFormato(as.numeric(tmp3IGR[s, 'value']), digits = 2, valorNA = '')} else if(tmp3IGR[s, 'valor'] == 'DesvEstand'){
+      tmp3IGR[s, 'value'] <- CambiarFormato(as.numeric(tmp3IGR[s, 'value']), digits = 2, textPre = '(', textPost = ')', valorNA = '')} else if
+          (tmp3IGR[s, 'valor'] == 'DesvEstand'){
+          tmp3IGR[s, 'value'] <- CambiarFormato(as.numeric(tmp3IGR[s,
+                                                           'value']),
+                                                digits = 0, valorNA = '')}}
+
+## Se establecen los márgenes del gráfico pensando en que estos no exageren
+## diferencias pequeñas por una escala demasiado pequeña.												
+												
+Min <- min(tmp3[, 'Promedio'], na.rm = TRUE)
+Max <- max(tmp3[, 'Promedio'], na.rm = TRUE)
+Dif <- Max-Min
+if (Dif < 1){
+MinG <- Min - (Dif*1)
+MaxG <- Max + (Dif*1)} else if (Dif >= 1 & Dif < 2){
+MinG <- Min - (Dif*0.5)
+MaxG <- Max + (Dif*0.5)} else if (Dif >= 2){
+MinG <- Min - (Dif*0.3)
+MaxG <- Max + (Dif*0.3)}
+
+options(OutDec= ",", digits = 2)
+
+## Armado de la grafica 1 usando ggplot2
+
+  grafica1 <- ggplot(tmp3, aes(x=Ano, y=Promedio, shape = Agregado,
+                              colour = Agregado, linetype= Agregado))
+  grafica1 <- grafica1 + geom_point(size = 3) + geom_line() + scale_linetype_manual(values=c("solid", "longdash", "dashed") )
+  grafica1 <- grafica1 + scale_shape_manual(values = c(18, 16, 15))
+  grafica1 <- grafica1 + scale_color_manual(values = c("black", "blue",
+                                                       "red")) +
+     labs(colour = "") + labs(shape = "") + labs(linetype = '')
+  grafica1 <- grafica1 + xlab("Años") + ylab("Puntajes promedio")
+  grafica1 <- grafica1 +
+             theme(title = element_text(size=18, face = "bold"))
+  grafica1 <- grafica1 + theme(legend.text = element_text(size = 14,
+                                                        face = "bold"))
+    grafica1 <- grafica1 + theme(strip.text.x = element_text(face="bold",
+                                                       size=12))
+  grafica1 <- grafica1 +
+             theme(axis.text.x = element_text(size=14, face = "bold"))
+  grafica1 <- grafica1 +
+            theme(axis.title.x = element_text(size = 14, face = "bold"))
+  grafica1 <- grafica1 +
+            theme(axis.text.y = element_text(size = 14, face = "bold"))
+  grafica1 <- grafica1 +
+            theme(axis.title.y = element_text(size = 14, face = "bold"))
+  grafica1 <- grafica1 + facet_grid(. ~ Prueba)
+  grafica1 <- grafica1 + scale_x_continuous(limits = c(2012.75, 2014.25),
+                                          breaks = 2013:2014)
+  grafica1 <- grafica1 + scale_y_continuous(limits = c(MinG, MaxG),
+                                            labels=CambiarFormato)
+
+  graf1Name <- file.path(
+                         paste("grafico1",
+                               ".eps", sep = ""))
+
+  ggsave(filename = file.path(runPath, graf1Name), plot = grafica1,
+         width = 16, height = 10)
+
+### Se arma la tabla con los resultados correspondientes
+
+  tmp3P0 <- melt(tmp3[, c('Agregado', 'Prueba', 'Ano', 'DesvEstand',
+                     'Promedio')],
+                 id.vars = c('Agregado', 'Prueba', 'Ano'),
+                 measure.vars = c('Promedio', 'DesvEstand'),
+                 variable_name = 'valor', na.rm = FALSE
+                 )
+
+  tmp3P0[, 'value'] <- ifelse(tmp3P0[, 'valor'] == 'Promedio',
+                              CambiarFormato(tmp3P0[, 'value'], digits = 2,
+                                             valorNA = ''),
+                              CambiarFormato(tmp3P0[, 'value'], digits = 2,
+                                             textPre = '(', textPost =
+                                             ')',
+                                             valorNA = ''))
+
+  tmp3P1 <- cast(tmp3P0, Prueba + Ano + valor ~ Agregado)
+
+AgregadosTabla <- c('GR-Nac', 'Vecindad', 'IGR')
+
+## Se calcula si las diferencias entre años son importantes y se 
+## incluyen los correspondientes símbolos
+
+for (yy in AgregadosTabla){
+
+kaux <- -1
+
+for (md in Modulos){
+kaux <- kaux + 4
+
+TamanoEfecto13 <-  0.2*(subset(Desviac2013GR[, 'DesvEstand'], Desviac2013GR[,
+                          'Prueba'] == PrueGraf1[md]))
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == PrueGraf1[md]))
+
+if(length(TamanoEfecto14) == 1 & length(TamanoEfecto13) == 1){
+if(TamanoEfecto14 > TamanoEfecto13){
+  TamanoEfecto13_14 <- TamanoEfecto14} else if
+  (TamanoEfecto14 <= TamanoEfecto13){
+    TamanoEfecto13_14 <- TamanoEfecto13}}
+
+Valor1 <- as.numeric(as.character(sub(',', '.', subset(tmp3P1[, yy],
+          tmp3P1[, 'valor'] == 'Promedio' & tmp3P1[, 'Prueba'] == md
+          & tmp3P1[, 'Ano'] == '2013'))))
+
+Valor2 <- as.numeric(as.character(sub(',', '.', subset(tmp3P1[, yy],
+          tmp3P1[, 'valor'] == 'Promedio' & tmp3P1[, 'Prueba'] == md
+          & tmp3P1[, 'Ano'] == '2014'))))
+
+if (!is.na(Valor1) & !is.na(Valor2)){
+
+tmp3P1[, yy] <- as.character(tmp3P1[, yy])
+
+if (Valor1 - Valor2 > TamanoEfecto13_14){
+tmp3P1[kaux, yy] <- paste(as.character(tmp3P1[kaux, yy]),
+                          '\\mathbin{\\textcolor{red}{\\blacktriangledown}}',
+                          sep = '')} else if (Valor1 - Valor2 <
+                          -TamanoEfecto13_14){tmp3P1[kaux, yy] <-
+                            paste(as.character(tmp3P1[kaux, yy]),
+                          '\\mathbin{\\textcolor{OliveGreen}{\\blacktriangle}}',
+                          sep = '')} else if (Valor1 - Valor2 >=
+                          - TamanoEfecto13_14 & Valor1 - Valor2 <=
+                          TamanoEfecto13_14){tmp3P1[kaux, yy] <-
+                            paste(as.character(tmp3P1[kaux, yy]), '',
+                                  sep = '')}}}}
+
+AgregadosTabla <- c('GR-Nac', 'Vecindad', 'IGR')
+
+for (yy in AgregadosTabla){
+
+kaux1 <- 0
+
+while(kaux1 <= nrow(tmp3P1)){
+kaux1 <- kaux1 + 2
+
+## Se incluyen los símbolos cuando hay evidencia de heterogeneidad 
+## entre los resultados (desv. estand. mayor a 1,2)
+
+ValorDesvEst <- round(as.numeric(as.character(gsub("\\((\\d+),(\\d+)\\)",
+                                         "\\1\\.\\2", tmp3P1[kaux1, yy]))),2)
+
+if (!is.na(ValorDesvEst)){
+
+tmp3P1[, yy] <- as.character(tmp3P1[, yy])
+
+if (ValorDesvEst >= UmbDesvEst){
+tmp3P1[kaux1, yy] <- paste(as.character(tmp3P1[kaux1, yy]),
+                          '\\bullet', sep = '')} else {tmp3P1[kaux1, yy] <-
+                            paste(as.character(tmp3P1[kaux1, yy]), '',
+                                  sep = '')}}
+
+                        }
+}
+
+tmp3P00 <- subset(tmp3P1, valor == 'Promedio')
+
+tmp3P00 <- tmp3P00[, c('Prueba', 'Ano', 'GR-Nac', 'Vecindad', 'IGR')]
+
+tmp3P00[, 'PruebaAno'] <- paste(tmp3P00[, 'Prueba'], tmp3P00[, 'Ano'], sep = '')
+
+tmp3P00 <- tmp3P00[, c('PruebaAno', 'GR-Nac', 'Vecindad', 'IGR')]
+
+tmp3P00 <- setNames(data.frame(t(as.data.frame(tmp3P00[,-1]))), tmp3P00[,1])
+
+ tmp3P00 <- as.data.frame(tmp3P00)
+
+tmp3P00[, 'Agregado']<-rownames(tmp3P00)
+
+ for(mm in 1: ncol(tmp3P00)){
+  tmp3P00[, mm] <- as.numeric(as.character(sub(',', '.', tmp3P00[, mm])))}
+
+  tmp3P1[, 'valor'] <- NULL
+
+  tmp3P2 <- ddply(tmp3, .(Agregado, Ano), summarize,
+                  n = Tamano[which.max(Tamano)])
+
+  if (nComparables == 0){
+    tmp3P22 <- subset(tmp3P2, Agregado == 'GR-Nac')
+    tmp3P22[, 'Agregado'] <- 'Vecindad'
+    tmp3P22[, 'n'] <- NA
+   tmp3P2 <- rbind(tmp3P2, tmp3P22)
+  }
+
+   tmp3P2[, 'AgregadoAno'] <- paste(tmp3P2[, 'Agregado'], tmp3P2[, 'Ano'], sep = "")
+  
+  tmp3P2[, 'AgregadoAno'] <- factor(tmp3P2[, 'AgregadoAno'], levels = c('GR-Nac2013', 'GR-Nac2014', 'Vecindad2013',
+  'Vecindad2014', 'IGR2013', 'IGR2014'), ordered = TRUE) 
+  
+  tmp3P2 <- tmp3P2[order(tmp3P2[, 'AgregadoAno']), ]
+  
+  tmp3P2[, 'AgregadoAno'] <- NULL
+
+AgregTab3 <- melt(AgregadosTablaProgr2014[, c('INST_BY_REF',
+                                              'PRAC_ID',
+                                              'NombrePrueba',
+                                              'DesvEstand',
+                                              'Promedio')],
+                  id.vars = c('INST_BY_REF', 'PRAC_ID', 'NombrePrueba'),
+                  measure.vars = c('Promedio', 'DesvEstand'),
+                  variable_name = 'valor', na.rm = FALSE
+                  )
+
+AgregTab3[, 'value'] <- ifelse(AgregTab3[, 'valor'] == 'Promedio',
+                          formatC(AgregTab3[, 'value'], digits = 2,
+                          width = 4, format = 'f',
+                          decimal.mark = ',', big.mark = '.'),
+                          paste('(', formatC(AgregTab3[, 'value'], digits = 2,
+                          width = 4, format = 'f',
+                          decimal.mark = ',', big.mark = '.'),
+                          ')', sep = ''))
+
+AgregTab30 <- cast(AgregTab3, INST_BY_REF + PRAC_ID + valor ~ NombrePrueba)
+
+AgregTab30 <- subset(AgregTab30, AgregTab30[, 'INST_BY_REF'] == InstGR)
+
+AgregTab30[, 'valor'] <- NULL
+
+AgregTab30[, 'INST_BY_REF'] <- NULL
+
+AgregTab31 <- ddply(AgregadosTablaProgr2014, .(PRAC_ID),
+                    summarize, n = Tamano[which.max(Tamano)])
+
+AgregTab30 <- merge(AgregTab30, AgregTab31, by = 'PRAC_ID',
+                    all.x = TRUE)
+					
+AgregTab3_13 <- melt(AgregadosTablaProgr2013[, c('INST_BY_REF',
+                                              'PRAC_ID',
+                                              'NombrePrueba',
+                                              'DesvEstand',
+                                              'Promedio')],
+                  id.vars = c('INST_BY_REF', 'PRAC_ID', 'NombrePrueba'),
+                  measure.vars = c('Promedio', 'DesvEstand'),
+                  variable_name = 'valor', na.rm = FALSE
+                  )
+
+AgregTab3_13[, 'value'] <- ifelse(AgregTab3_13[, 'valor'] == 'Promedio',
+                          formatC(AgregTab3_13[, 'value'], digits = 2,
+                          width = 4, format = 'f',
+                          decimal.mark = ',', big.mark = '.'),
+                          paste('(', formatC(AgregTab3[, 'value'], digits = 2,
+                          width = 4, format = 'f',
+                          decimal.mark = ',', big.mark = '.'),
+                          ')', sep = ''))
+
+AgregTab30_13 <- cast(AgregTab3_13, INST_BY_REF + PRAC_ID + valor ~ NombrePrueba)
+
+AgregTab30_13 <- subset(AgregTab30_13, AgregTab30_13[, 'INST_BY_REF'] == InstGR)
+
+AgregTab30_13[, 'valor'] <- NULL
+
+AgregTab30_13[, 'INST_BY_REF'] <- NULL
+
+AgregTab31_13 <- ddply(AgregadosTablaProgr2013, .(PRAC_ID),
+                    summarize, n = Tamano[which.max(Tamano)])
+
+AgregTab30_13 <- merge(AgregTab30_13, AgregTab31_13, by = 'PRAC_ID',
+                    all.x = TRUE)					
+
+options(scipen=50)
+
+## Fue necesario incluir las siguientes líneas de código para garantizar
+## que el tamaño de muestra (máximo entre estudiantes por pruebas) fuera
+## igual para la tabla por programas y la tabla agregada.
+
+if(!is.na(tmp3P2[5, 'n'])){
+tmp3P2[5, 'n'] <-  round((sum(AgregTab30_13[, 'n'])/2), 0)
+}
+
+if(!is.na(tmp3P2[6, 'n'])){
+tmp3P2[6, 'n'] <-  round((sum(AgregTab30[, 'n'])/2), 0)
+}
+  
+  tmp3P2[, 'n'] <- CambiarFormato(tmp3P2[, 'n'],
+                                 digits = 0, textPre = '$\\mathbf{',
+                                 textPost = '}$', valorNA = '')
+
+  tmp3P3 <- cast(tmp3P2, Ano ~ Agregado, value = 'n')
+
+  tmp3P3[, 'Prueba'] <- "\\textbf{N\\'umero de evaluados}"
+
+  tmp3P2[, 'Ano'] <- paste('$\\mathbf{', tmp3P2[, 'Ano'], '}$',
+                           sep = '')
+
+  tmp3P1 <- rbind(tmp3P1, tmp3P3)
+
+  rlePrueba <- rle(as.character(tmp3P1[, 'Prueba']))
+  rleAno    <- rle(as.character(tmp3P1[, 'Ano']))
+
+  hline <- character(nrow(tmp3P1))
+  hline[cumsum(rleAno$lengths)] <- '\\cline{2-5}'
+  hline[cumsum(rlePrueba$lengths)] <- '\\hline'
+
+  tmp3P1[, 'Prueba'] <- MakeMultiRow(as.character(tmp3P1[, 'Prueba']),
+                                     texto = '5cm')
+
+  tmp3P1[, 'Ano'] <- MakeMultiRow(as.character(tmp3P1[, 'Ano']))
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación del gráfico 1
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico1,results=tex,echo=false>>=
+
+  cat('\\begin{figure}[H]\n',
+      '\\caption{Promedio en SABER PRO ', Annos, '}\n',
+      '\\vspace{-15mm} \n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=16cm]{', graf1Name, '}\n',
+      '\\end{center}\n',
+      '\\label{fig:prom}\n',
+      '\\vspace{-10mm} \n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación de la tabla 2 que incluye los resultados del gráfico 1.
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Tabla2,results=tex,echo=false>>=
+
+ cuales <- which(head(hline, -1) != '')
+ addRows <- list(pos = as.list(c(-1, cuales, nrow(tmp3P1))),
+                command = c(
+            "\\thickline\n & A\\~{n}o & GR-Nac & Vecindad & IGR\\\\
+ \\hline",
+                             hline[cuales],
+                             '\\thickline\n'))
+
+ tabla <- xtable(tmp3P1)
+ label(tabla) <- 'Tabla3'
+ align(tabla)   <- c('l', 'p{8cm}', 'c', rep('r', 3))
+ caption(tabla) <- paste("Promedio y desviaci\\'on est\\'andar para el
+                         grupo de referencia
+                         ",GrupRefer[refGr]," en las
+                         competencias gen\\'ericas de la prueba SABER PRO
+                         ",Annos, ".", sep = '')
+ print(tabla, include.rownames = FALSE,
+       include.colnames = FALSE,
+       hline.after = 0,
+       add.to.row = addRows, caption.placement = 'top',
+       sanitize.text.function = force)
+@
+
+\begin{center}
+\fbox{
+  \parbox{0.75\textwidth}{
+\begin{center}
+$\mathbin{\textcolor{OliveGreen}{\blacktriangle}}$ Diferencias
+positivas importantes entre 2013 y 2014. \\
+
+$\mathbin{\textcolor{red}{\blacktriangledown}}$ Diferencias
+negativas importantes entre 2013 y 2014.
+
+$\mathbin{\textcolor{black}{\bullet}}$ Heterogeneidad entre los
+resultados.
+\end{center}}}
+\end{center}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Esta tabla se había preparado para hacer las comparaciones entre 
+  %% años para los diferentes niveles de agregación
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Tabla2_00Cons,results=hide,echo=false>>=
+
+options(OutDec= ".", digits = 2)
+
+for (md in Modulos){
+
+TamanoEfecto13 <-  0.2*(subset(Desviac2013GR[, 'DesvEstand'], Desviac2013GR[,
+                          'Prueba'] == PrueGraf1[md]))
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == PrueGraf1[md]))
+
+if(length(TamanoEfecto14) == 1 & length(TamanoEfecto13) == 1){
+if(TamanoEfecto14 > TamanoEfecto13){
+  TamanoEfecto13_14 <- TamanoEfecto14} else if
+  (TamanoEfecto14 <= TamanoEfecto13){
+  TamanoEfecto13_14 <- TamanoEfecto13}
+
+mdDif <- paste(md, 'Dif', sep = '')
+md2013 <- paste(md, '2013', sep = '')
+md2014 <- paste(md, '2014', sep = '')
+
+tmp3P00[, mdDif] <- tmp3P00[, md2014] - tmp3P00[, md2013]
+
+for(l in 1:nrow(tmp3P00)){
+  if(is.na(tmp3P00[l, mdDif]))
+  {tmp3P00[l, mdDif] <- ''} else if(as.numeric(tmp3P00[l, mdDif]) > TamanoEfecto13_14){
+  tmp3P00[l, mdDif] <- "+"} else if(as.numeric(tmp3P00[l, mdDif]) < -TamanoEfecto13_14){
+ tmp3P00[l, mdDif] <- "-"} else if((as.numeric(tmp3P00[l, mdDif]) >=
+ -TamanoEfecto13_14) & (as.numeric(tmp3P00[l, mdDif]) <= TamanoEfecto13_14)) {
+   tmp3P00[l, mdDif] <- ''}
+}
+}
+}
+
+Tabla2_0 <- tmp3P00[, c('COMPETENCIAS CIUDADANASDif', 'COMUNICACIÓN ESCRITADif', 'INGLÉSDif', 'LECTURA CRÍTICADif', 'RAZONAMIENTO CUANTITATIVODif')]
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Introducción de resultados para promedios de las instituciones de 
+  %% la vecindad de comparación
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ResultVecind1,results=tex,echo=false>>=
+if (nComparables > 0) {
+cat( "\\newpage\n",
+"\\thispagestyle{empty}\n",
+"\\begin{landscape}\n",
+"\\begin{center}\n",
+"\\textbf{Comparaciones de promedios por competencias gen\\'ericas
+entre la IGR y su vecindad para 2014.}\n",
+"\\end{center}\n",
+"La siguiente tabla resume las comparaciones de la instituci\\'on
+",as.character(NombreUniv),", con cada una de las instituciones de la vecindad, para
+los programas acad\\'emicos del grupo de referencia de
+\\textbf{",GrupRefer[refGr],"}.", sep = '')
+}
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Armado de tabla con resumen de comparaciones entre resultados de
+  %% la IGR y de las instituciones de la vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Tabla2_1,results=tex,echo=false>>=
+  if (nComparables > 0) {
+options(OutDec= ".", digits = 2)
+
+tmp000 <- tmp
+
+for (md in Modulos){
+
+  tmp000[, md] <- as.numeric(as.character(sub(',', '.', tmp000[, md])))
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == PrueGraf1[md]))
+
+ValorFoc <- subset(tmp, color == 'red', select = md)
+for(l in 1: (nComparables+1)){
+Difmd <- paste('Dif', md, sep = "")
+tmp[l, Difmd] <- ValorFoc - tmp[l, md]
+}
+for(l in 1: (nComparables+1)){
+  if(is.na(tmp[l, Difmd])) {tmp[l, Difmd] <- ''}
+   if(!is.na(tmp[l, Difmd]) & tmp[l, Difmd] != '') {
+  if(as.numeric(tmp[l, Difmd]) < -TamanoEfecto14)
+  {tmp[l, Difmd] <- '\\mathbin{\\textcolor{red}{\\blacktriangledown}}'
+  } else if(as.numeric(tmp[l, Difmd]) > TamanoEfecto14)
+  {tmp[l, Difmd] <- '\\mathbin{\\textcolor{OliveGreen}{\\blacktriangle}}'
+  } else if(as.numeric(tmp[l, Difmd]) >= -TamanoEfecto14 &
+            as.numeric(tmp[l, Difmd]) <= TamanoEfecto14)
+  {tmp[l, Difmd] <- ''}}
+}
+}
+
+tmp <- subset(tmp, color != 'red')
+
+Orden <- order(tmp[,'simbolo'])
+tmp <- tmp[Orden,]
+
+tmp[, 'UNIV_NOMBREREDUCIDO'] <- paste('IGR vs. ', tmp[,
+                                      'UNIV_NOMBREREDUCIDO'], sep = '')
+
+Tabla2_1 <- tmp[, c('simbolo', 'UNIV_NOMBREREDUCIDO',
+                    'DifLECTURA CRÍTICA',
+                    'DifRAZONAMIENTO CUANTITATIVO',
+                    'DifCOMPETENCIAS CIUDADANAS',
+                    'DifINGLÉS', 'DifCOMUNICACIÓN ESCRITA')]
+
+  }
+@
+
+\thispagestyle{empty}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación de tabla con resumen de comparaciones entre resultados 
+  %% de la IGR y de las instituciones de la vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Tabla2,results=tex,echo=false>>=
+  if (nComparables > 0) {
+addRows <- list(pos = as.list(c(-1, 1, nrow(Tabla2_1))),
+                command = c("Código & Nombre IES &
+             Lectura & Razonamiento & Competencias & Ingl\\'es &
+             Comunicaci\\'on  \\\\
+              & & cr\\'\\i{}tica & cuantitativo & ciudadanas & & escrita
+              \\\\
+             \\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(Tabla2_1)
+label(tabla) <- 'Tabla2_1'
+align(tabla)   <- c('c', 'p{1cm}', 'l{7cm}', 'c{1cm}', 'c{1cm}',
+                    'c{1cm}', 'c{1cm}', 'c{1cm}')
+caption(tabla) <- "Resumen comparaciones entre resultados
+                        promedios de la IGR con las instituciones de la
+                        vecindad"
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = seq(1, nrow(Tabla2_1)),
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, size = "small")}
+@
+
+<<SimbolosTabla2,results=tex,echo=false>>=
+if (nComparables > 0) {
+cat( '\\begin{center}\n',
+'\\framebox{$\\mathbin{\\textcolor{OliveGreen}{\\blacktriangle}}$ Diferencias
+positivas importantes \\hspace{3mm}',
+'$\\mathbin{\\textcolor{red}{\\blacktriangledown}}$ Diferencias
+negativas importantes \\hspace{4mm}\n',
+'No hay diferencias importantes}\n',
+'\\end{center}\n', sep = '')}
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios sobre tabla con resumen de comparaciones entre resultados 
+  %% de la IGR y de las instituciones de la vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<ComentTabla2_1,results=tex,echo=false>>=
+  if (nComparables > 0) {
+
+for (md in Modulos){
+
+Difmd <- paste('Dif', md, sep = "")
+valor <- sum(Tabla2_1[, Difmd] == '\\mathbin{\\textcolor{OliveGreen}{\\blacktriangle}}')
+if(valor == 1 & nComparables > 1) {
+  cat("\\noindent En ", PruebasMin1[md],", la IGR obtuvo mejor
+      resultado promedio que ",valor," de las
+      ",nComparables," instituciones de la vecindad de
+      comparaci\\'on.\\\\ \n", sep = '')} else if(valor == 1
+      & nComparables == 1) {
+  cat("\\noindent En ", PruebasMin1[md],", la IGR obtuvo mejor
+      resultado promedio que la instituci\\'on de la vecindad de
+      comparaci\\'on.\\\\ \n", sep = '')} else if(valor > 1) {
+  cat("\\noindent En ",PruebasMin1[md],", la IGR obtuvo mejor
+      resultado promedio que ",valor," de las
+      ",nComparables," instituciones de la vecindad de
+      comparaci\\'on.\\\\ \n", sep = '')}
+  }
+  cat('\\end{landscape}\n')}
+@
+
+
+\newpage
+
+\begin{center}
+\textbf{Resultados por niveles de desempe\~{n}o}
+\end{center}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Versión anterior de los comentarios de la tabla con resumen 
+  %% de comparaciones entre resultados de la IGR y de las instituciones 
+  %% de la vecindad
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<grafica4,results=tex,echo=false>>=
+
+## Los siguientes data.frame conservan los agregados para la IGR, la
+## vecindad y el GR
+
+graf4Name <- file.path(
+                         paste("grafico4",
+                               ".eps", sep = ""))
+
+postscript(file.path(runPath,graf4Name), width = 13.0, height = 12.0)
+
+  tmp10 <- subset(Agregados, RefGrp == refGr
+                 & Instit == Inst)
+
+  tmp11 <- subset(AgregadosPruebas, RefGrp == refGr)
+
+  if (nComparables == 0) {
+    tmp21 <- tmp11
+    tmp21[, -c(1:3)] <- lapply(tmp2[, -c(1:3)],
+                              function(x)
+                                x <- NA)
+  } else {
+  tmp21 <- subset(AgregadosPruebasVec, RefGrp == refGr)
+  }
+  tmp31 <- rbind(
+                data.frame(Agregado = 'GR-Nac', tmp11),
+                data.frame(Agregado = 'Vecindad', tmp21[,
+                           names(AgregadosPruebas)]),
+                data.frame(Agregado = 'IGR',
+                           tmp10[, names(AgregadosPruebas)]))
+
+  names(tmp31) <- c('Agregado', 'RefGrp', 'Prueba', 'Ano', 'DesvEstand',
+                    'Promedio', 'Tamano', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5',
+                    'A-', 'A1', 'A2', 'B1', 'B+', '1', '2', '3', '4', '5',
+                    '6', '7', '8')
+
+  tmp41 <- melt(tmp31,
+               id.vars = c('Agregado', 'Prueba', 'Ano'),
+               measure.vars = c('A-', 'A1', 'A2', 'B1', 'B+', '1',
+                                    '2', '3', '4', '5', '6', '7', '8'),
+               variable_name = 'q', na.rm = FALSE)
+
+  tmp41[is.na(tmp41[, 'value']), 'value'] <- 0
+
+  tmp41 <- ddply(tmp41, .(Prueba, Agregado, Ano), transform,
+                p = value / sum(value))
+
+tmp41[, 'Agregado'] <- ordered(tmp41[, 'Agregado'],
+                               labels = c("GR-Nac", "Vecindad", "IGR"))
+
+## A continuación se genera cada gráfico de distribución de niveles de
+## desempeño con sus correspondientes comentarios 							   
+							   
+# # No se considera la prueba de Competencias Ciudadanas ya que en el
+# # momento no se han determinado niveles de desempe\\'Ino
+
+for (pr in pruebas) {
+
+  #pr <- as.character(pr)
+  datosGr <- subset(tmp41, Prueba == pr & q %in% nivelPrPro[[pr]])
+  datosGr <- droplevels(datosGr)
+
+  datosGr[, 'text'] <- sprintf('%.0f%%', datosGr[, 'p'] * 100)
+
+## Definición de los niveles altos para cada una de las pruebas  
+  
+    if (pr == pruebas[4]) {
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'1'='Bajo';'2'='Bajo';'3'='Bajo';'4'='Bajo';
+                       '5'='Bajo';'6'='Alto';'7'='Alto';'8'='Alto'")
+
+datosComenNDCE <- aggregate(datosGr[, 'p'], datosGr[, c('Agregado',
+                              'Prueba', 'Ano', 'q2')], sum, na.rm = TRUE)
+  }
+
+  if (pr == pruebas[3]) {
+    datosGr[, 'q'] <- ordered(datosGr[, 'q'],
+                      labels = c("A-", "A1", "A2", "B1", "B+"))
+    datosGr <- arrange(datosGr, Agregado, Prueba, Ano, q)
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'A-'='Bajo';'A1'='Bajo';'A2'='Bajo';
+                       'B1'='Alto';'B+'='Alto'")
+
+datosComenNDIng <- aggregate(datosGr[, 'p'], datosGr[, c('Agregado',
+                              'Prueba', 'Ano', 'q2')], sum, na.rm = TRUE)
+  }
+
+  if (pr == pruebas[1]) {
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'1'='Bajo';'2'='Bajo';'3'='Alto'")
+
+datosComenNDLC <- aggregate(datosGr[, 'p'], datosGr[, c('Agregado',
+                              'Prueba', 'Ano', 'q2')], sum, na.rm = TRUE)
+  }
+
+  if (pr == pruebas[2]) {
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'1'='Bajo';'2'='Bajo';'3'='Alto'")
+
+datosComenNDRC <- aggregate(datosGr[, 'p'], datosGr[, c('Agregado',
+                              'Prueba', 'Ano', 'q2')], sum, na.rm = TRUE)
+  }
+
+ isLevel <- datosGr[, 'q'] %in% nivelPos[[pr]]
+
+  datosGrNeg <- ddply(datosGr[!isLevel, ], .(Agregado, Prueba, Ano),
+                      summarize,
+                pLim = sum(p))
+  datosGrPos <- ddply(datosGr[isLevel, ], .(Agregado, Prueba, Ano),
+                      summarize,
+                pLim = sum(p))
+
+  datosGr1 <- subset(datosGr, !isLevel)
+  datosGr1 <- arrange(datosGr1, Agregado, Prueba, Ano, desc(q))
+  datosGr1 <- ddply(datosGr1, .(Agregado, Prueba, Ano), transform,
+      pAcum = -Reduce('+', list(p/2,cumsum(c(0, head(p, -1))))),
+      p = -p)
+  datosGr1 <- arrange(datosGr1, Agregado, Prueba, Ano, q)
+
+  if (pr == pruebas[4]) {
+    isLastLevel  <- datosGr1[, 'q'] == '1'
+    datosGr1[isLastLevel, 'pAcum'] <- datosGr1[isLastLevel, 'pAcum'] -
+    kAjusteGraf4 }
+
+  datosGr2 <- subset(datosGr, isLevel)
+  datosGr2 <- arrange(datosGr2, Agregado, Prueba, Ano, q)
+  datosGr2 <- ddply(datosGr2, .(Agregado, Prueba, Ano), transform,
+      pAcum = Reduce('+', list(p/2,cumsum(c(0, head(p, -1))))))
+
+  if (pr ==  pruebas[4]) {
+    isLastLevel  <- datosGr2[, 'q'] == '8'
+    datosGr2[isLastLevel, 'pAcum'] <-
+      datosGr2[isLastLevel, 'pAcum'] + kAjusteGraf4
+  }
+
+  ylim <- c(((-max(datosGrNeg[, 'pLim']) * 10) %/% 2) * 0.2,
+            ((max(datosGrPos[, 'pLim']) * 10) %/% 2 + 1) * 0.2)
+
+  if (nComparables > 0){
+    cortes <- seq(ylim[1], ylim[2], .2)
+  etiquetas <- sprintf('%0.f%%', abs(cortes * 100))
+  }
+
+## Definición de colores para hacer el semáforo   
+  
+  colores <- c('#F8696B', '#FA8E72', '#FCB379', '#FED880', '#E9E583',
+               '#BDD881', '#90CB7E', '#63BE7B',
+               '#4AB578', '#F7484D', '#F7E377'
+               )
+
+## Armado del gráfico 4 con ayuda de ggplot				   
+			   
+  grafico4 <- ggplot() + geom_bar(data = datosGr2, aes(x = Agregado,
+                                 y = p, fill = q,
+                                 colour = Agregado,
+                                 order = as.numeric(q)), stat = "identity")
+
+  if(nComparables >0){
+  grafico4 <- grafico4 + scale_colour_manual(values = c('black', 'blue',
+                                                        'red'))
+  }
+  if(nComparables == 0){
+grafico4 <- grafico4 + scale_colour_manual(values = c('red', 'black', 'red'))
+  }
+  grafico4 <- grafico4 + facet_grid(. ~ Ano)
+  grafico4 <- grafico4 +
+             scale_y_continuous(breaks = NULL)
+
+colores1 <- brewer.pal(5, 'Purples')
+
+if (pr == pruebas[4]){
+  grafico4 <- grafico4 + scale_fill_manual(values =
+                                        colores[c(10,1,2,5,11,7,8,9)])
+
+  } else if (pr == pruebas[3]) {
+     grafico4 <- grafico4 + scale_fill_manual(values =
+                                              colores[c(10,1,4,8,7)],
+                                       breaks=c("A-", "A1", "A2", "B1", "B+"))
+
+   } else if (pr == pruebas[1]) {
+      grafico4 <- grafico4 + scale_fill_manual(values = colores[c(1, 4, 8)])
+
+}  else if (pr == pruebas[2]) {
+   grafico4 <- grafico4 + scale_fill_manual(values = colores[c(1, 4,8)])}
+
+  grafico4 <- grafico4 + labs(title = pr, x = '', y = '')
+  grafico4 <- grafico4 + theme(plot.title = element_text(face="bold",
+                             size=12),
+                             panel.grid.minor = element_blank(),
+                             panel.grid.major.x = element_blank(),
+                             axis.text.y=element_text(size=10),
+                             axis.text.x=element_text(size=10),
+                             strip.text.x = element_text(face = 'bold',
+                             size = 12),
+                             legend.text=element_text(size=8))
+  grafico4 <- grafico4 +
+            geom_text(data = datosGr2, aes(x = Agregado, y = pAcum,
+                                           ymax = pAcum,
+                                           label = text, hjust = 0.5,
+                                           colour = Agregado),
+                                           size = 3)
+
+    if (nrow(datosGr1) != 0) {
+      grafico4 <- grafico4 + geom_bar(data = datosGr1, aes(x = Agregado,
+                                y = p, fill = q,
+                                colour = Agregado,
+                                order = -as.numeric(q)), stat = "identity")
+      grafico4 <- grafico4 + geom_text(data = datosGr1, aes(x = Agregado,
+                                     y = pAcum, ymax = pAcum,
+                                     label = text, hjust = 0.5,
+                                     colour = Agregado),
+                                    size = 3)
+
+    }
+
+  grafico4 <- grafico4 + guides(colour = 'none',
+                              fill = guide_legend("Niveles", reverse =
+                                                  TRUE))
+
+  grafico4 <- grafico4 + geom_hline(yintercept=0, colour = 'black', size =
+                                    1)
+  prNomb <- substr(pr, 1, 4)
+
+if (pr == pruebas[4]) {
+  graficoCE <- grafico4} else if (pr == pruebas[3]){
+  graficoIn <- grafico4} else if (pr == pruebas[1]){
+  graficoLC <- grafico4} else if (pr == pruebas[2]){
+  graficoRC <- grafico4}
+
+}
+
+arrange_ggplot2(graficoCE,graficoIn,graficoLC,graficoRC, ncol=2)
+
+cerrar <- dev.off()
+
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Generación del gráfico de niveles de desempeño
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<grafica4Gen,results=tex,echo=false>>=
+
+ cat('\\begin{figure}[H]\n',
+"\\caption{Distribuci\\'on de estudiantes por niveles de desempe\\~{n}o
+para las competencias gen\\'ericas en los a\\~{n}os 2013 y 2014 }\n",
+      '\\vspace{-13mm} \n',
+      '\\label{fig:NivDes}\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=14cm, angle = -90]{', graf4Name, '}\n',
+      '\\end{center}\n',
+      '\\vspace{-10mm} \n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Comentarios del gráfico de niveles de desempeño
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Comentgrafica4,results=tex,echo=false>>=
+
+tmp10 <- subset(Agregados, RefGrp == refGr
+                 & Instit == Inst)
+
+  tmp11 <- subset(AgregadosPruebas, RefGrp == refGr)
+
+  if (nComparables == 0) {
+    tmp21 <- tmp11
+    tmp21[, -c(1:3)] <- lapply(tmp2[, -c(1:3)],
+                              function(x)
+                                x <- NA)
+  } else {
+  tmp21 <- subset(AgregadosPruebasVec, RefGrp == refGr)
+  }
+  tmp31 <- rbind(
+                data.frame(Agregado = 'GR-Nac', tmp11),
+                data.frame(Agregado = 'Vecindad', tmp21[,
+                           names(AgregadosPruebas)]),
+                data.frame(Agregado = 'IGR',
+                           tmp10[, names(AgregadosPruebas)]))
+
+  names(tmp31) <- c('Agregado', 'RefGrp', 'Prueba', 'Ano', 'DesvEstand',
+                    'Promedio', 'Tamano', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5',
+                    'A-', 'A1', 'A2', 'B1', 'B+', '1', '2', '3', '4', '5',
+                    '6', '7', '8')
+
+  tmp41 <- melt(tmp31,
+               id.vars = c('Agregado', 'Prueba', 'Ano'),
+               measure.vars = c('A-', 'A1', 'A2', 'B1', 'B+', '1',
+                                    '2', '3', '4', '5', '6', '7', '8'),
+               variable_name = 'q', na.rm = FALSE)
+
+  tmp41[is.na(tmp41[, 'value']), 'value'] <- 0
+
+  tmp41 <- ddply(tmp41, .(Prueba, Agregado, Ano), transform,
+                p = value / sum(value))
+
+tmp41[, 'Agregado'] <- ordered(tmp41[, 'Agregado'],
+                               labels = c("GR-Nac", "Vecindad", "IGR"))
+
+# # No se considera la prueba de Competencias Ciudadanas ya que en el
+# # momento no se han determinado niveles de desempeño
+
+prejem <- c('RAZONAMIENTO CUANTITATIVO', 'COMUNICACIÓN ESCRITA')
+
+for (pr in prejem) {
+
+  #pr <- as.character(pr)
+  datosGr <- subset(tmp41, Prueba == pr & q %in% nivelPrPro[[pr]])
+  datosGr <- droplevels(datosGr)
+
+    if (pr == pruebas[4]) {
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'1'='Bajo';'2'='Bajo';'3'='Bajo';'4'='Medio';
+                       '5'='Medio';'6'='Alto';'7'='Alto';'8'='Alto'")
+
+  }
+
+  if (pr == pruebas[3]) {
+    datosGr[, 'q'] <- ordered(datosGr[, 'q'],
+                      labels = c("A-", "A1", "A2", "B1", "B+"))
+    datosGr <- arrange(datosGr, Agregado, Prueba, Ano, q)
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'A-'='Bajo';'A1'='Bajo';'A2'='Medio';
+                       'B1'='Alto';'B+'='Alto'")
+  }
+
+  if (pr == pruebas[1]) {
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'1'='Bajo';'2'='Medio';'3'='Alto'")
+
+  }
+
+  if (pr == pruebas[2]) {
+    datosGr[, 'q2'] <- recode(datosGr[, 'q'],
+                       "'1'='Bajo';'2'='Medio';'3'='Alto'")
+  }
+
+datosGr <- aggregate(datosGr[, 'p'], datosGr[, c('Agregado',
+                              'Prueba', 'Ano', 'q2')], sum, na.rm = TRUE)
+
+datosGr[, 'text'] <- sprintf('%.0f%%', datosGr[, 'x'] * 100)
+
+datosGr[, 'text2'] <- paste(round(datosGr[, 'x']*100, digits = 1),
+                            '\\%', sep = '')
+
+ValNac13 <- subset(datosGr[, 'x'], datosGr[, 'Agregado'] == 'GR-Nac' &
+                   datosGr[, 'Ano'] == '2013' & datosGr[, 'q2'] == 'Alto')
+
+ValNac14 <- subset(datosGr[, 'x'], datosGr[, 'Agregado'] == 'GR-Nac' &
+                   datosGr[, 'Ano'] == '2014' &  datosGr[, 'q2'] == 'Alto')
+
+ValVec13 <- subset(datosGr[, 'x'], datosGr[, 'Agregado'] == 'Vecindad' &
+                   datosGr[, 'Ano'] == '2013' &  datosGr[, 'q2'] == 'Alto')
+
+ValVec14 <- subset(datosGr[, 'x'], datosGr[, 'Agregado'] == 'Vecindad' &
+                   datosGr[, 'Ano'] == '2014' &  datosGr[, 'q2'] == 'Alto')
+
+ValIGR13 <- subset(datosGr[, 'x'], datosGr[, 'Agregado'] == 'IGR' &
+                   datosGr[, 'Ano'] == '2013' &  datosGr[, 'q2'] == 'Alto')
+
+ValIGR14 <- subset(datosGr[, 'x'], datosGr[, 'Agregado'] == 'IGR' &
+                   datosGr[, 'Ano'] == '2014' &  datosGr[, 'q2'] == 'Alto')
+
+PorIGR13 <- subset(datosGr[, 'text2'], datosGr[, 'Agregado'] == 'IGR' &
+                   datosGr[, 'Ano'] == '2013' &  datosGr[, 'q2'] == 'Alto')
+
+PorIGR14 <- subset(datosGr[, 'text2'], datosGr[, 'Agregado'] == 'IGR' &
+                   datosGr[, 'Ano'] == '2014' &  datosGr[, 'q2'] == 'Alto')
+
+if(pr == prejem[1]){
+
+cat("\\noindent \\textbf{Ejemplo de lectura para razonamiento
+    cuantitativo.}\\\\ \n")
+
+cat("\\noindent En la prueba de ", PruebasMin1[pr], " en el a\\~{n}o 2013, la
+    IGR cuenta con un porcentaje de ", PorIGR13 ," en el nivel de
+    desempe\\~{n}o alto (nivel 3). Este porcentaje corresponde a ",
+    PorIGR14 ," en el 2014. \\\\ \n")
+
+  if (nComparables > 0 & length(ValIGR13) == 1 & length(ValVec13) == 1) {
+if (ValIGR13 - ValVec13 > 0.1){
+cat("\\noindent En ", PruebasMin1[pr], " en el a\\~{n}o 2013, la IGR
+    tiene una diferencia del 10\\% o m\\'as en el porcentaje de estudiantes
+    en  el nivel de desempe\\~{n}o alto (nivel 3), con respecto a
+    las instituciones de la vecindad de comparaci\\'on. \\\\ \n")}}
+  if (length(ValIGR13) == 1 & length(ValNac13) == 1) {
+if (ValIGR13 - ValNac13 > 0.1){
+cat("\\noindent En ", PruebasMin1[pr], " en el a\\~{n}o 2013, la
+    IGR tiene una diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en el nivel de desempe\\~{n}o alto (nivel 3),
+    con respecto al GR-Nac (grupo de referencia a nivel nacional). \\\\ \n")
+  }}
+
+  if (nComparables > 0 & length(ValIGR14) == 1 & length(ValVec14) == 1) {
+if (ValIGR14 - ValVec14 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " en el a\\~{n}o
+    2014, la IGR tiene una diferencia del 10\\% o m\\'as en el porcentaje de estudiantes en  el nivel de desempe\\~{n}o alto (nivel 3), con respecto a
+    las instituciones de la vecindad de comparaci\\'on. \\\\ \n")}}
+
+  if (length(ValIGR14) == 1 & length(ValNac14) == 1) {
+  if (ValIGR14 - ValNac14 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " en el a\\~{n}o
+    2014, la IGR tiene una diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en  el nivel de desempe\\~{n}o alto (nivel 3),
+    con respecto al GR-Nac (grupo de referencia a nivel nacional). \\\\ \n")}
+}
+
+if(length(ValIGR14) == 1 & length(ValIGR13) == 1){
+if (ValIGR14 - ValIGR13 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " la IGR tiene una
+    diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en  el nivel de desempe\\~{n}o alto (nivel 3),
+    en el a\\~{n}o 2014 con respecto al 2013. \\\\ \n")}}
+
+if(length(ValIGR14) == 1 & length(ValIGR13) == 1){
+if (ValIGR13 - ValIGR14 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " la IGR tiene una
+    diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en  el nivel de desempe\\~{n}o alto (nivel 3),
+    en el a\\~{n}o 2013 con respecto al 2014. \\\\ \n")}
+}
+}
+
+if(pr == prejem[2]){
+
+cat("\\noindent \\textbf{Ejemplo de lectura para comunicaci\\'on escrita.}\\\\ \n")
+
+cat("\\noindent En la prueba de ", PruebasMin1[pr], " en el a\\~{n}o 2013, la
+    IGR cuenta con un porcentaje de ", PorIGR13 ," en los niveles de
+    desempe\\~{n}o altos (6, 7 y 8). Este porcentaje corresponde a ",
+    PorIGR14 ," en el 2014. \\\\ \n")
+
+  if (nComparables > 0 & length(ValIGR13) == 1 & length(ValVec13) == 1) {
+if (ValIGR13 - ValVec13 > 0.1){
+cat("\\noindent En ", PruebasMin1[pr], " en el a\\~{n}o 2013, la IGR
+    tiene una diferencia del 10\\% o m\\'as en el porcentaje de estudiantes
+    en los niveles de desempe\\~{n}o altos (6, 7 y 8), con respecto a
+    las instituciones de la vecindad de comparaci\\'on. \\\\ \n")}}
+
+ if (length(ValIGR13) == 1 & length(ValNac13) == 1) {
+    if (ValIGR13 - ValNac13 > 0.1){
+cat("\\noindent En ", PruebasMin1[pr], " en el a\\~{n}o 2013, la
+    IGR tiene una diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en los niveles de desempe\\~{n}o altos (6, 7 y 8),
+    con respecto al GR-Nac (grupo de referencia a nivel nacional). \\\\ \n")}}
+
+  if (nComparables > 0 & length(ValIGR14) == 1 & length(ValVec14) == 1) {
+if (ValIGR14 - ValVec14 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " en el a\\~{n}o
+    2014, la IGR tiene una diferencia del 10\\% o m\\'as en el
+    porcentaje de estudiantes en los niveles de desempe\\~{n}o altos (6, 7 y 8), con respecto a
+    las instituciones de la vecindad de comparaci\\'on. \\\\ \n")}}
+
+if (length(ValIGR14) == 1 & length(ValNac14) == 1) {
+if (ValIGR14 - ValNac14 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " en el a\\~{n}o
+    2014, la IGR tiene una diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en los niveles de desempe\\~{n}o altos (6, 7 y 8),
+    con respecto al GR-Nac (grupo de referencia a nivel nacional). \\\\ \n")}}
+
+    if (length(ValIGR14) == 1 & length(ValIGR13) == 1) {
+if (ValIGR14 - ValIGR13 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " la IGR tiene una
+    diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en los niveles de desempe\\~{n}o altos (6, 7 y 8),
+    en el a\\~{n}o 2014 con respecto al 2013. \\\\ \n")}}
+
+ if (length(ValIGR13) == 1 & length(ValIGR14) == 1) {
+if (ValIGR13 - ValIGR14 > 0.1){
+cat("\\noindent Para la prueba de ", PruebasMin1[pr], " la IGR tiene una
+    diferencia del 10\\% o m\\'as en el porcentaje
+    de estudiantes en los niveles de desempe\\~{n}o altos (6, 7 y 8),
+    en el a\\~{n}o 2013 con respecto al 2014. \\\\ \n")}
+}}
+
+}
+
+@
+
+\clearpage
+
+\newpage
+\normalsize
+

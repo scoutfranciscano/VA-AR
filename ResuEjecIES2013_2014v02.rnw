@@ -3,14 +3,13 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
                      universidades[, 'INST_ID'] == Inst)
 @
 
+%\documentclass[paperheight=10cm,paperwidth=27cm,margin=1cm]{icfesdocapa}
+
 \documentclass[11pt,doc,babel,spanish,noapacite]{icfesdocapa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% % Construccion base de valor agregado 2011-2 y 2012
+% % Construccion de resúmenes ejecutivos
 % %
-% % Autor(es): Edwin Cuellar y Alvaro Uzaheta
-% %
-% % Descripcion: Procedimiento para la construccion de la base de datos
-% de Valor Agregado 2012 y 2013
+% % Autor(es): Edwin Cuellar 
 % %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % <<< Preambulo no modificable por el usuario
@@ -33,16 +32,16 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 \usepackage{color,array,verbatim,multirow,lscape}
 \usepackage{csquotes,longtable}
 \usepackage[style=apa]{biblatex}
+\usepackage{tabularx,ctable}
 \usepackage[colorlinks=TRUE,allcolors=black,breaklinks]{hyperref}
 \usepackage{breakurl}
 \usepackage{makecell}
 \usepackage[none]{hyphenat}
 \usepackage{chngcntr}
 \usepackage{fancyref}
-\usepackage{tikz}
-\usepackage{tabularx,ctable}
-\usepackage{wasysym}
+\usepackage{xcolor}
 %\usepackage{landscape}
+\usepackage{moresize}
 
 \definecolor{OliveGreen}{RGB}{55,139,46}
 
@@ -51,11 +50,12 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 % % Modificaciones al paquete biblatex
 
 
-%\renewcommand{\blxauxsuffix}{}
+\renewcommand{\blxauxsuffix}{}
 \setcounter{smartand}{0}
 \DefineBibliographyStrings{spanish}{
   andothers = {et al.},
 }
+
 
 % % Definicion del flotante ``cuadro'' (paquete float)
 
@@ -121,12 +121,22 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 % % Incluir el logo del ICFES y el pie (paquete fancyhdr)
 
 \pagestyle{fancy}
-%% Esta línea permite modificar los márgenes de las páginas
-\headheight 53pt
+\headheight 50pt
 \fancyhead{}
 \fancyfoot{}
 \addtolength{\headheight}{\baselineskip}
 \newcommand{\ffont}{\fontsize{9}{9}\selectfont}
+\textheight = 23cm
+\textwidth = 18cm
+\hoffset = - 1.5cm
+\voffset = - 2cm
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % % >>>
@@ -134,24 +144,13 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 % % <<< Preambulo modificable por el usuario
 
 \usepackage{longtable}
-\chead{\includegraphics[width=8.8cm]{../logonuevo.eps}}
+\chead{\includegraphics[width=8.8cm]{../logonuevo.eps}} \\
 %\scriptsize \textit{\Sexpr{GrupRefer[refGr]}} \\
 %\textit{\Sexpr{NombreUniv}}}
 \renewcommand{\headrulewidth}{0pt}
 \cfoot{\footnotesize{\thepage}}
 \headinglevels{five} % one two three four or five
 \decimalpoint
-
-\title{Reporte de resultados en SABER PRO, medidas de Aporte Relativo y
-otros indicadores de calidad de las Instituciones de Educaci\'on
-Superior \vspace{8mm}}
-
-\author{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on - ICFES}
-
-% % Insertar la fecha del documento en la siguiente linea
-\date{Noviembre de 2016}
-
-\affiliation{Oficina de Gesti\'on de Proyectos de Investigaci\'on}
 
 % % Archivos de bibliografia e idioma de esta
 \bibliography{apa-es,jourlong,arts,soft,buks,R}
@@ -166,17 +165,12 @@ Superior \vspace{8mm}}
 
 <<Preparacion,results=hide,echo=false>>=
 ################################################################################
-# # Preparación para la generación de reportes
+# # Algunos valores importantes
 ################################################################################
-
-## A continuación se definen algunos valores relacionados con los reportes que 
-## se esten generando
 
 Annos  <- '2013 y 2014'
 AnnoActual <- '2014'
 kAjusteGraf4 <- 0.02
-
-## Calculo de desviacionesn para 2013 y 2014 a nivel del Grupo de referencia
 
 Desviac2013GR <- subset(Desviaciones[, c('Prueba', 'DesvEstand')],
                         Desviaciones[, 'RefGrp'] == refGr
@@ -186,8 +180,6 @@ Desviac2014GR <- subset(Desviaciones[, c('Prueba', 'DesvEstand')],
                         Desviaciones[, 'RefGrp'] == refGr
                         & Desviaciones[, 'Ano'] == '2014')
 
-## Definición de la institución-grupo de referencia (IGR) (unidad de análisis)						
-						
 InstGR <- paste(Inst, refGr, sep = "__")
 
 tab <- table(dat[, 'inst_by_ref'])
@@ -254,9 +246,7 @@ if(nrow(foc) > 0){
 if(preFlag[, 'has15Vec']){
 Vectores13_14Vec <- list()
 
-cuantas<-2
-
-for(s in 1:cuantas){
+for(s in 1: 100){
 set.seed(s)
 tmpAgreg <- subset(dat, inst_by_ref == InstGR)
 
@@ -325,8 +315,7 @@ if(nrow(foc) > 0){
 if(preFlag[, 'has15Vec']){
 if(nrow(TodasComparables)>0){
 ListaComp13_14Vec <- data.frame()
-#for(i in seq(1,100)){
-for(i in seq(1,2)){
+for(i in seq(1,100)){
 tmp <- Vectores13_14Vec[[i]][,c('INST_BY_REF', 'dist')]
 ListaComp13_14Vec <- rbind(ListaComp13_14Vec,tmp) 
 }
@@ -348,8 +337,6 @@ comparables <- subset(resto, INST_BY_REF %in% AgregVecindad13_14[, 'INST_BY_REF'
 
 if (nComparables > 0) {
 VecComp <- rbind.fill(foc, comparables)
-
-## En esta sección del código se calculan y guardan todos los agregados de la vecindad
 
 AgregadosVecindad  <- subset(Agregados, Agregados[, 'INST_BY_REF'] %in%
                   VecComp[, 'INST_BY_REF'])
@@ -374,6 +361,9 @@ AgregadosVecindad2014 <- merge(tmp2, universidades, by.x = "Inst",
                                by.y = "INST_ID")
 
 rownames(AgregadosVecindad2014) <- tmp2[, 'rowname']
+
+##Aqu\'\i{} va la construcci\'on del grafico 2 que se incluye en el archivo
+## "InformesIES.rnw"
 
 PromedioPondVec <- ddply(AgregadosVecindad,
                      .(RefGrp, Prueba, Ano), summarize,
@@ -416,9 +406,9 @@ AgregadosPruebasVec  <- merge(AgregadosPruebasVec, NivelesVec,
 
 \LARGE{
 \begin{center}
-\textbf{Reporte de resultados en SABER PRO, medidas de Aporte Relativo y
+\textbf{Resumen ejecutivo del reporte de resultados en SABER PRO, medidas de Aporte Relativo y
 otros indicadores de calidad de las Instituciones de Educaci\'on
-Superior 2014-2015\vspace{32mm}}
+Superior 2013-2014\vspace{42mm}}
 \end{center}
 }
 
@@ -426,11 +416,13 @@ Superior 2014-2015\vspace{32mm}}
 \begin{center}
 \textbf{\Sexpr{GrupRefer[refGr]}} \\
 \textbf{\Sexpr{NombreUniv}}
-\end{center}} \vspace{30mm}
+\end{center}} \vspace{40mm}
 
 \Large{
 \begin{center}
-\textbf{Oficina de Gesti\'on de Proyectos de Investigaci\'on}
+\textbf{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on y
+\\
+Direcci\'on de Evaluaci\'on}
 
 \vspace{3mm}
 \textbf{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on -
@@ -441,7 +433,7 @@ ICFES}
 
 \Large{
 \begin{center}
-  \textbf{Noviembre de 2016}
+  \textbf{Agosto de 2015}
 \end{center}
 }
 \normalsize
@@ -457,44 +449,25 @@ ICFES}
 
 \newpage
 
-\tableofcontents
-
-% % Lista de tablas y de cuadros, descomentar si se desea incluir
- \listoftables
-% \listofcuadros
-\listoffigures
-
 \newpage
 
 <<Compilado,results=hide,echo=false>>=
 if(flag2){
-Sweave('ResPRO2013_2014v03.rnw', encoding = "latin1")
+Sweave('REResPRO2013_2014v02.rnw', encoding = "latin1")
     if (flagVA & nComparables > 0) {
-      Sweave('AR2013_2014v01.rnw', encoding = "latin1")
+      Sweave('REAR2013_2014v01.rnw', encoding = "latin1")
     }
-    Sweave('OCalidad2013_2014v02.rnw', encoding = "latin1")
-    if (flagVec & nComparables > 0) {
-      Sweave('anexoAR2013_2014v01.rnw', encoding = "latin1")
-	  Sweave('anexoCompAR2013_2014v01.rnw', encoding = "latin1")
-}
-    Sweave('anexoDetalles2013_2014v01.rnw', encoding = "latin1")
-    Sweave('anexoGrupRef2013_2014v01.rnw', encoding = "latin1")
+    Sweave('REOCalidad2013_2014v01.rnw', encoding = "latin1")
 }
 @
 
 <<Armado,results=tex,echo=false>>=
 if(flag2){
-    cat('\\input{ResPRO2013_2014v03}\n')
+    cat('\\input{REResPRO2013_2014v02}\n')
     if (flagVA & nComparables > 0) {
-      cat('\\input{AR2013_2014v01}\n')
+      cat('\\input{REAR2013_2014v01}\n')
     }
-    cat('\\input{OCalidad2013_2014v02}\n')
-    if (flagVec & nComparables > 0) {
-      cat('\\input{anexoAR2013_2014v01}\n')
-	  cat('\\input{anexoCompAR2013_2014v01}\n')
-}
-      cat('\\input{anexoDetalles2013_2014v01}\n')
-      cat('\\input{anexoGrupRef2013_2014v01}\n')
+    cat('\\input{REOCalidad2013_2014v01}\n')
 }
 @
 

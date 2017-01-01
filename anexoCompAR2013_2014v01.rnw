@@ -96,9 +96,9 @@ nm = 'base'
     isBelow <- tmpLC[isFoc, tP025] > tmpLC[, tP975]
     isSimil <- !isAbove & !isBelow
 
-	tmpLC[isAbove, 'LC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangle}}'
-	tmpLC[isSimil, 'LC_AR'] <- '\\mathbin{\\textcolor{blue}{\\ocircle}}'
-    tmpLC[isBelow, 'LC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangledown}}'
+	tmpLC[isAbove, 'LC_AR'] <- '$\\mathbin{\\textcolor{blue}{\\triangle}}$'
+	tmpLC[isSimil, 'LC_AR'] <- '$\\mathbin{\\textcolor{blue}{\\ocircle}}$'
+    tmpLC[isBelow, 'LC_AR'] <- '$\\mathbin{\\textcolor{blue}{\\triangledown}}$'
     
 out <- outcomes[1]
 
@@ -174,9 +174,9 @@ nm = 'base'
     isBelow <- tmpRC[isFoc, tP025] > tmpRC[, tP975]
     isSimil <- !isAbove & !isBelow
 
-    tmpRC[isAbove, 'RC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangle}}'
-	tmpRC[isSimil, 'RC_AR'] <- '\\mathbin{\\textcolor{blue}{\\ocircle}}'
-    tmpRC[isBelow, 'RC_AR'] <- '\\mathbin{\\textcolor{blue}{\\triangledown}}'
+    tmpRC[isAbove, 'RC_AR'] <- '$\\mathbin{\\textcolor{blue}{\\triangle}}$'
+	tmpRC[isSimil, 'RC_AR'] <- '$\\mathbin{\\textcolor{blue}{\\ocircle}}$'
+    tmpRC[isBelow, 'RC_AR'] <- '$\\mathbin{\\textcolor{blue}{\\triangledown}}$'
     
 	tmp <- merge(tmpLC, tmpRC, by = 'CodInst')
 	

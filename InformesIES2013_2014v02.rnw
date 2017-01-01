@@ -33,6 +33,7 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 \usepackage{color,array,verbatim,multirow,lscape}
 \usepackage{csquotes,longtable}
 \usepackage[style=apa]{biblatex}
+\usepackage{tabularx,ctable}
 \usepackage[colorlinks=TRUE,allcolors=black,breaklinks]{hyperref}
 \usepackage{breakurl}
 \usepackage{makecell}
@@ -40,7 +41,6 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 \usepackage{chngcntr}
 \usepackage{fancyref}
 \usepackage{tikz}
-\usepackage{tabularx,ctable}
 \usepackage{wasysym}
 %\usepackage{landscape}
 
@@ -51,11 +51,12 @@ NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
 % % Modificaciones al paquete biblatex
 
 
-%\renewcommand{\blxauxsuffix}{}
+\renewcommand{\blxauxsuffix}{}
 \setcounter{smartand}{0}
 \DefineBibliographyStrings{spanish}{
   andothers = {et al.},
 }
+
 
 % % Definicion del flotante ``cuadro'' (paquete float)
 
@@ -149,9 +150,9 @@ Superior \vspace{8mm}}
 \author{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on - ICFES}
 
 % % Insertar la fecha del documento en la siguiente linea
-\date{Noviembre de 2016}
+\date{Mayo de 2015}
 
-\affiliation{Oficina de Gesti\'on de Proyectos de Investigaci\'on}
+\affiliation{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on}
 
 % % Archivos de bibliografia e idioma de esta
 \bibliography{apa-es,jourlong,arts,soft,buks,R}
@@ -254,9 +255,7 @@ if(nrow(foc) > 0){
 if(preFlag[, 'has15Vec']){
 Vectores13_14Vec <- list()
 
-cuantas<-2
-
-for(s in 1:cuantas){
+for(s in 1: 100){
 set.seed(s)
 tmpAgreg <- subset(dat, inst_by_ref == InstGR)
 
@@ -325,8 +324,7 @@ if(nrow(foc) > 0){
 if(preFlag[, 'has15Vec']){
 if(nrow(TodasComparables)>0){
 ListaComp13_14Vec <- data.frame()
-#for(i in seq(1,100)){
-for(i in seq(1,2)){
+for(i in seq(1,100)){
 tmp <- Vectores13_14Vec[[i]][,c('INST_BY_REF', 'dist')]
 ListaComp13_14Vec <- rbind(ListaComp13_14Vec,tmp) 
 }
@@ -418,7 +416,7 @@ AgregadosPruebasVec  <- merge(AgregadosPruebasVec, NivelesVec,
 \begin{center}
 \textbf{Reporte de resultados en SABER PRO, medidas de Aporte Relativo y
 otros indicadores de calidad de las Instituciones de Educaci\'on
-Superior 2014-2015\vspace{32mm}}
+Superior 2013-2014\vspace{32mm}}
 \end{center}
 }
 
@@ -430,7 +428,9 @@ Superior 2014-2015\vspace{32mm}}
 
 \Large{
 \begin{center}
-\textbf{Oficina de Gesti\'on de Proyectos de Investigaci\'on}
+\textbf{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on y
+\\
+Direcci\'on de Evaluaci\'on}
 
 \vspace{3mm}
 \textbf{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on -
@@ -441,7 +441,7 @@ ICFES}
 
 \Large{
 \begin{center}
-  \textbf{Noviembre de 2016}
+  \textbf{Agosto de 2015}
 \end{center}
 }
 \normalsize
@@ -468,11 +468,11 @@ ICFES}
 
 <<Compilado,results=hide,echo=false>>=
 if(flag2){
-Sweave('ResPRO2013_2014v03.rnw', encoding = "latin1")
+Sweave('ResPRO2013_2014v02.rnw', encoding = "latin1")
     if (flagVA & nComparables > 0) {
       Sweave('AR2013_2014v01.rnw', encoding = "latin1")
     }
-    Sweave('OCalidad2013_2014v02.rnw', encoding = "latin1")
+    Sweave('OCalidad2013_2014v01.rnw', encoding = "latin1")
     if (flagVec & nComparables > 0) {
       Sweave('anexoAR2013_2014v01.rnw', encoding = "latin1")
 	  Sweave('anexoCompAR2013_2014v01.rnw', encoding = "latin1")
@@ -484,11 +484,11 @@ Sweave('ResPRO2013_2014v03.rnw', encoding = "latin1")
 
 <<Armado,results=tex,echo=false>>=
 if(flag2){
-    cat('\\input{ResPRO2013_2014v03}\n')
+    cat('\\input{ResPRO2013_2014v02}\n')
     if (flagVA & nComparables > 0) {
       cat('\\input{AR2013_2014v01}\n')
     }
-    cat('\\input{OCalidad2013_2014v02}\n')
+    cat('\\input{OCalidad2013_2014v01}\n')
     if (flagVec & nComparables > 0) {
       cat('\\input{anexoAR2013_2014v01}\n')
 	  cat('\\input{anexoCompAR2013_2014v01}\n')

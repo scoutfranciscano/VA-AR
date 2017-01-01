@@ -1,0 +1,380 @@
+\thispagestyle{fancy}
+
+\begin{landscape}
+
+\thispagestyle{empty}
+
+\begin{changemargin}{-0.7cm}{-0.7cm}
+
+<<NombreEncab,results=hide,echo=false>>=
+NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
+                     universidades[, 'INST_ID'] == Inst)
+@
+
+\begin{center}
+  \textbf{\Sexpr{NombreUniv}}
+\end{center}
+
+\textbf{Reporte general de la instituci\'on por grupo de referencia para
+los a\~{n}os 2013-2014.}
+
+<<ComentINSE,results=tex,echo=false>>=
+tabRepInstPREP <- tabRepInst[ ,c('GrupoReferencia', 'Tamano.x',
+                                 'Tamano.y', 'PropTotAR', 'hasVA')]
+@
+
+<<ComentINSE1,results=tex,echo=false>>=
+addRows <- list(pos = as.list(c(-1, 1, nrow(tabRepInstPREP))),
+                command = c("Grupo de & N\\'umero de & N\\'umero de
+                            & Proporci\\'on de estudiantes & ¿Incluye\\\\
+              referencia & estudiantes en & estudiantes en &
+                de Aporte Relativo en & resultados de \\\\
+               & SABER PRO & Aporte Relativo &
+              relaci\\'on con & Aporte Relativo? \\\\
+               & 2013-2014 & 2013-2014 &
+              SABER PRO & \\\\
+             \\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(tabRepInstPREP)
+align(tabla)   <- c('c', 'l{7cm}', 'c', 'c', 'c', 'c')
+#caption(tabla) <- "Resumen de las características socio-económicas de
+#las instituciones"
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows,
+      sanitize.text.function = force)
+@
+
+La poblaci\'on del estudio de Aporte Relativo corresponde a los
+estudiantes que presentaron SABER PRO entre 2013 y 2014 para los cuales
+fue posible encontrar el correspondiente resultado en SABER
+11$^\text{o}$. Se incluyen los registros en donde hay una diferencia
+entre 4 y 6 a\~{n}os entre los dos ex\'amenes. Para m\'as informaci\'on
+consulte el anexo 2 de la gu\'\i{}a para la interpretaci\'on de
+resultados. Un grupo de referencia recibe los resultados de Aporte Relativo
+cuando se cumplen las dos siguientes condiciones:
+
+\begin{itemize}
+  \item Fue posible encontrar los resultados en SABER 11$^\text{o}$, con
+    una diferencia entre 4 y 6 a\~{n}os atr\'as, de al menos 30
+    estudiantes que hubieran presentado la prueba SABER PRO entre los
+    a\~{n}os 2013 y 2014.
+  \item El n\'umero de estudiantes con los dos puntajes (SABER
+11$^\text{o}$ y SABER PRO) representa el 30\% o m\'as de los estudiantes
+que presentaron el SABER PRO en los a\~{n}os 2013 y 2014.
+\end{itemize}
+
+%\end{changemargin}
+
+% \end{landscape}
+
+% \newpage
+
+\thispagestyle{empty}
+
+% \begin{landscape}
+
+%\begin{changemargin}{-0.5cm}{-0.5cm}
+
+<<TablaResInst1,results=tex,echo=false>>=
+tabResInst1 <- subset(TablaResInst1, TablaResInst1[, 'Instit'] == Inst)
+tabResInst1[, 'Instit'] <- NULL
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Administración y afines"] <- 
+  "ADMINISTRACION Y AFINES"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Arquitectura y Urbanismo"] <- 
+  "ARQUITECTURA Y URBANISMO "
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Bellas Artes y Diseño"] <- 
+  "BELLAS ARTES Y DISENNO"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Ciencias Agropecuarias"] <- 
+  "CIENCIAS AGROPECUARIAS "
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Ciencias Militares y Navales"] <- 
+  "CIENCIAS MILITARES Y NAVALES"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Ciencias Naturales y exactas"] <-
+  "CIENCIAS NATURALES Y EXACTAS"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Ciencias Sociales"] <- "CIENCIAS SOCIALES"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+   "Comunicación, Periodismo y Publicidad"] <-
+    "COMUNICACION, PERIODISMO Y PUBLICIDAD" 
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp == "Contaduría y afines"] <- "CONTADURIA Y AFINES"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Derecho"] <- "DERECHO" 
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Economía"] <- "ECONOMIA" 
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Educación"] <- "EDUCACION" 
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Enfermería"] <- "ENFERMERIA" 
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Humanidades"] <- "HUMANIDADES" 
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Ingeniería"] <- "INGENIERIA"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Medicina"] <- "MEDICINA"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Psicología"] <- "PSICOLOGIA"
+
+tabResInst1$RefGrp0[tabResInst1$RefGrp ==
+          "Salud"] <- "SALUD"
+
+tabResInstGR <- subset(TabResInstGR, TabResInstGR[, 'RefGrp'] %in% tabResInst1[, 'RefGrp'])
+
+tabResInstGR[, 'RefGrp'] <- NULL
+
+names(tabResInstGR)[2] <- 'RefGrp'
+
+tabResInst1 <- rbind(tabResInst1, tabResInstGR)
+
+tabResInst1 <- tabResInst1[order(tabResInst1$RefGrp),]
+
+for(bb in seq(1, nrow(tabResInst1), by=2)) {
+
+refGr <- tabResInst1[bb, 'RefGrp0']
+
+for (md in Modulos){
+
+Desviac2014GR <- subset(Desviaciones[, c('Prueba', 'DesvEstand')],
+                        Desviaciones[, 'RefGrp'] == refGr
+                        & Desviaciones[, 'Ano'] == '2014')
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == PrueGraf1[md]))
+
+mdDif <- paste(md, 'Dif', sep = '')
+mdProm <- paste(md, 'Prom', sep = '')
+
+tabResInst1[bb, mdDif] <- as.numeric(as.character(sub(',', '.', tabResInst1[bb, mdProm]))) -
+                          as.numeric(as.character(sub(',', '.', tabResInst1[bb+1, mdProm])))
+
+if(!is.na(tabResInst1[bb, mdDif])){				  
+if(as.numeric(tabResInst1[bb, mdDif]) > TamanoEfecto14){
+  tabResInst1[bb, mdProm] <- paste(tabResInst1[bb, mdProm], '$\\mathbin{\\textcolor{OliveGreen}{\\blacktriangle}}$', sep = '')} 
+else if (as.numeric(tabResInst1[bb, mdDif]) < -TamanoEfecto14){
+  tabResInst1[bb, mdProm] <- paste(tabResInst1[bb, mdProm], '$\\mathbin{\\textcolor{red}{\\blacktriangledown}}$', sep = '')}
+}
+}
+}
+  
+tabResInst1 <- tabResInst1[, c('RefGrp', 'n', 'LECTURA CRÍTICAProm', 'LECTURA CRÍTICADesE',
+								'RAZONAMIENTO CUANTITATIVOProm',
+								'RAZONAMIENTO CUANTITATIVODesE',
+								'COMPETENCIAS CIUDADANASProm',
+								'COMPETENCIAS CIUDADANASDesE',
+								'INGLÉSProm', 'INGLÉSDesE',
+								'COMUNICACIÓN ESCRITAProm',
+								'COMUNICACIÓN ESCRITADesE')]					
+for(cc in seq(2, nrow(tabResInst1), by = 2)){
+tabResInst1[cc, 'RefGrp'] <- paste('\\textbf{', tabResInst1[cc, 'RefGrp'], '}', sep="") 
+}
+								
+@
+
+\newpage
+\thispagestyle{empty}
+
+\textbf{Resumen de resultados en SABER PRO 2014 para los grupos de referencia
+de la institución \Sexpr{NombreUniv}.}
+
+A continuaci\'on se presentan los promedios, desviaciones est\'andar y n\'umero de 
+evaluados en cada uno de los grupos de referencia de la instituc\'on. Adicionalmente se 
+presentan los resultados para los grupos de referencia a nivel nacional. En caso de que los 
+resultados del grupo de referencia dentro de la institución tenga diferencias importantes 
+con los resultados a nivel nacional, se incluye un símbolo $\mathbin{\textcolor{OliveGreen}{\blacktriangle}}$ 
+para diferencias positivas y $\mathbin{\textcolor{red}{\blacktriangledown}}$ cuando existen diferencias negativas.
+
+<<TablaResInst1,results=tex,echo=false>>=
+encabezado = paste("\\textbf{Grupo de referencia} &
+                            \\textbf{N\\'umero de} &
+                            \\multicolumn{2}{c}{\\textbf{Lectura}} &
+                            \\multicolumn{2}{c}{\\textbf{Razonamiento}} &
+                            \\multicolumn{2}{c}{\\textbf{Competencias}} &
+                            \\multicolumn{2}{c}{\\textbf{Ingl\\'es}} &
+                            \\multicolumn{2}{c}{\\textbf{Comunicaci\\'on}}
+                            & & & & & \\\\
+                            & \\textbf{estudiantes} &
+                             \\multicolumn{2}{c}{\\textbf{cr\\'\\i{}tica}} &
+                             \\multicolumn{2}{c}{\\textbf{cuantitativo}} &
+                             \\multicolumn{2}{c}{\\textbf{ciudadanas}} &
+                            \\multicolumn{2}{c}{ } &
+                            \\multicolumn{2}{c}{\\textbf{escrita}}
+                            & & & & & \\\\ \\hline
+                            & & \\textbf{Promedio} & \\textbf{Desv.} &
+                            \\textbf{Promedio} & \\textbf{Desv.} &
+                            \\textbf{Promedio} & \\textbf{Desv.} &
+                            \\textbf{Promedio} & \\textbf{Desv.} &
+                            \\textbf{Promedio} & \\textbf{Desv.} \\\\
+                            & & & \\textbf{Est\\'and.} & &
+                            \\textbf{Est\\'and} & & \\textbf{Est\\'and} &
+                            & \\textbf{Est\\'and} & &
+                            \\textbf{Est\\'and} \\\\
+             \\hline")
+
+hline <- character(nrow(tabResInst1))			 
+			 
+hline[seq(0, nrow(tabResInst1), by = 2)] <- '\\hline '			 
+addRows <- list(pos = as.list(c(-1, seq(0, nrow(tabResInst1), by = 2)), nrow(tabResInst1)),
+                command = c(encabezado, hline[seq(0, nrow(tabResInst1), by = 2)],
+                            '\\thickline\n'))
+							
+tabla <- xtable(tabResInst1)
+align(tabla)   <- c('c', 'l{7cm}', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c',
+                    'c', 'c', 'c')
+caption(tabla) <- "Promedios y desviaciones estándar para los diferentes
+grupos de referencia de la institución en las competencias genéricas de SABER PRO 2014"
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H",
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, size = 'tiny')
+@
+
+%\end{changemargin}
+
+% \end{landscape}
+
+%\newpage
+
+\thispagestyle{empty}
+
+A continuaci\'on se presenta informaci\'on relevante para la
+interpretaci\'on de los resultados de las tablas 2 y 3. Para mayor claridad
+acerca de las definiciones de los niveles de desempe\~{n}o, consulte la
+gu\'\i{}a para la interpretaci\'on de resultados.
+
+\begin{itemize}
+ \item \textbf{Lectura cr\'\i{}tica:} la prueba establece 3 niveles de
+   desempe\~{n}o. El nivel 3 es de alto desempe\~{n}o, mientras que el
+   nivel 1 se define como desempe\~{n}o bajo.
+ \item \textbf{Razonamiento cuantitativo:} la prueba determina 3 niveles de
+   desempe\~{n}o. El nivel 3 es de alto desempe\~{n}o, mientras que el
+   nivel 1 se define como desempe\~{n}o bajo.
+ \item \textbf{Ingl\'es:} para esta prueba se cuenta con un total de 5
+   niveles de desempe\~{n}o. Los niveles B1 y B+ son de desempe\~{n}o
+   alto y los niveles A- y A1 son de bajo desempe\~{n}o.
+ \item \textbf{Comunicaci\'on escrita:} En esta prueba se han definido 8
+   niveles de desempe\~{n}o. Los niveles 6, 7 y 8 corresponden a alto
+   desempe\~{n}o y los niveles 1, 2 y 3 son de desempe\~{n}o bajo.
+ \end{itemize}
+
+% \begin{landscape}
+
+%\begin{changemargin}{-0.5cm}{-0.5cm}
+
+\thispagestyle{empty}
+
+<<TablaResInst2,results=tex,echo=false>>=
+tabResInst2 <- subset(TablaResInst2, TablaResInst2[, 'InstitN1'] == Inst)
+tabResInst2[, 'InstitN1'] <- NULL
+tabResInst2 <- tabResInst2[, c('RefGrpN1', 'n', 'LECTURA CRÍTICAN1',
+                               'LECTURA CRÍTICAN2', 'LECTURA CRÍTICAN3',
+                               'INGLÉSA-', 'INGLÉSA1', 'INGLÉSA2',
+                               'INGLÉSB1', 'INGLÉSB+')]
+@
+
+<<TablaResInst2,results=tex,echo=false>>=
+addRows <- list(pos = as.list(c(-1, 1, nrow(tabResInst2))),
+                command = c("\\textbf{Grupo de referencia} &
+                            \\textbf{N\\'umero de} &
+                            \\multicolumn{3}{c}{\\textbf{Lectura}} &
+                            \\multicolumn{5}{c}{\\textbf{Ingl\\'es}} &
+                            & & & & & & \\\\
+                            & \\textbf{estudiantes} &
+                             \\multicolumn{3}{c}{\\textbf{cr\\'\\i{}tica}} &
+                            \\multicolumn{5}{c}{ } &
+                            & & & & & &  \\\\ \\hline
+                            & & N1 & N2 & N3 & A- & A1 &
+                            A2 & B1 & B+ \\\\
+
+             \\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(tabResInst2)
+align(tabla)   <- c('c', 'l{7cm}|', 'c', 'c', 'c|', 'c', 'c', 'c', 'c', 'c',
+                    'c')
+caption(tabla) <- "Distribución de estudiantes por niveles de desempeño
+para las pruebas genéricas de SABER PRO 2014 - Parte I"
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H",
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, size = 'ssmall')
+@
+
+%\end{changemargin}
+
+%\begin{changemargin}{-0.5cm}{-0.5cm}
+\thispagestyle{empty}
+
+<<TablaResInst3,results=tex,echo=false>>=
+tabResInst3 <- subset(TablaResInst2, TablaResInst2[, 'InstitN1'] == Inst)
+tabResInst3[, 'InstitN1'] <- NULL
+tabResInst3 <- tabResInst3[, c('RefGrpN1', 'n',
+                               'RAZONAMIENTO CUANTITATIVON1',
+                               'RAZONAMIENTO CUANTITATIVON2',
+                               'RAZONAMIENTO CUANTITATIVON3',
+                               'COMUNICACIÓN ESCRITAN1',
+                               'COMUNICACIÓN ESCRITAN2',
+                               'COMUNICACIÓN ESCRITAN3',
+                               'COMUNICACIÓN ESCRITAN4',
+                               'COMUNICACIÓN ESCRITAN5',
+                               'COMUNICACIÓN ESCRITAN6',
+                               'COMUNICACIÓN ESCRITAN7',
+                               'COMUNICACIÓN ESCRITAN8')]
+@
+
+\thispagestyle{empty}
+
+<<TablaResInst3,results=tex,echo=false>>=
+addRows <- list(pos = as.list(c(-1, 1, nrow(tabResInst3))),
+                command = c("\\textbf{Grupo de referencia} &
+                            \\textbf{N\\'umero de} &
+                            \\multicolumn{3}{c}{\\textbf{Razonamiento}} &
+                            \\multicolumn{8}{c}{\\textbf{Comunicaci\\'on}}
+                            & & & & & & & & & \\\\
+                            & \\textbf{estudiantes} &
+                             \\multicolumn{3}{c}{\\textbf{cuantitativo}} &
+                            \\multicolumn{8}{c}{\\textbf{escrita}}
+                            & & & & & & & & &  \\\\ \\hline
+                            & & N1 & N2 & N3 & N1 & N2 & N3
+                            & N4 & N5 & N6 & N7 & N8 \\\\
+
+             \\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(tabResInst3)
+align(tabla)   <- c('c', 'l{7cm}|', 'c', 'c', 'c|', 'c', 'c', 'c', 'c', 'c',
+                    'c', 'c', 'c', 'c')
+caption(tabla) <- "Distribución de estudiantes por niveles de desempeño
+para las pruebas genéricas de SABER PRO 2014 - Parte II"
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H",
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force, size = 'ssmall')
+@
+
+\thispagestyle{empty}
+
+\end{changemargin}
+
+\thispagestyle{empty}
+
+\end{landscape}

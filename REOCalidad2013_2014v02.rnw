@@ -1,0 +1,105 @@
+<<TablaOC,results=tex,echo=false>>=
+
+Tabla1 <- data.frame()
+
+Tabla1[1, 'simbolo'] <- '*'
+Tabla1[1, 'UNIV_NOMBREREDUCIDO'] <- as.character(NombreUniv)
+
+Tablaoc <- subset(TablaOC, TablaOC[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+# TablaOC <- merge(TablaOC, universidades, by.x = "CodInstitucion",
+#                                by.y = "INST_ID")
+
+Tablaoc[, 'INST_BY_REF'] <- NULL
+
+Tablaoc <- merge(Tablaoc, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+
+Tablaoc1 <- Tablaoc[, c('simbolo', 'UNIV_NOMBREREDUCIDO', 'ProgAcred', 'TotalProg', 'Acreditada', 'Adm2013_2014', 'Insc2013_2014',
+                     'PropAdmInsc', 'CostoMatricula')]
+
+Tablaoc2 <- Tablaoc[, c('simbolo', 'UNIV_NOMBREREDUCIDO', 'DesercionCohorte', 'DesercionPeriodo', 'Vinculacion', 'Salario')]
+
+if (nrow(Tablaoc1) > 0 | nrow(Tablaoc2) > 0) {
+cat( '\\newpage\n',
+'\\thispagestyle{empty}\n',
+'\\begin{landscape}\n',
+'\\begin{center}\n',
+'\\textbf{III. Indicadores adicionales de calidad educativa}\n',
+'\\end{center}\n',
+
+'\\vspace{-3mm}\n', sep = '')}
+
+addRows1 <- list(pos = as.list(c(-1, 1, nrow(Tablaoc1))),
+                command = c(
+            "\\thickline\n C\\'odigo & Nombre IES & Programas & Total de
+             & Acreditaci\\'on & N\\'umero de & N\\'umero de
+             & Aspirantes/ & Costo \\\\
+             &  & acreditados$^2$ &
+             programas$^3$ & institucional$^2$ & admitidos$^4$
+             & aspirantes$^4$ & admitidos &
+             matr\\'\\i{}cula$^4$ \\\\
+             &  & (2015) & (2015) & (2015) & (2013-2014)
+             & (2013-2014) & (2013-2014) & (2013) \\\\
+             \\hline", '',
+                            '\\thickline\n'))
+
+addRows2 <- list(pos = as.list(c(-1, 1, nrow(Tablaoc1))),
+                command = c(
+            "\\thickline\n C\\'odigo & Nombre IES & Deserci\\'on
+            & Deserci\\'on & Tasa de & Primer \\\\
+            & & cohorte$^5$ & per\\'\\i{}odo$^5$ &
+             vinculaci\\'on$^6$ & salario$^6$ \\\\
+            & & (2014) & (2014-1) &
+             (2013) & (2013) \\\\
+             \\hline", '',
+                            '\\thickline\n'))
+
+
+tabla1 <- xtable(Tablaoc1)
+tabla2 <- xtable(Tablaoc2)
+label(tabla1)   <- 'TablaOC1'
+label(tabla2)   <- 'TablaOC2'
+align(tabla1)   <- c('l', 'l', 'l', 'c', 'c', 'c', 'c', 'c', 'c', 'c')
+align(tabla2)   <- c('l', 'l', 'l', 'c', 'c', 'c', 'c')
+
+caption(tabla1) <- paste("Otros indicadores de calidad para la IGR y las
+                        instituciones de la vecindad - Parte I")
+
+caption(tabla2) <- paste("Otros indicadores de calidad para la IGR y las
+                        instituciones de la vecindad - Parte II")
+
+if(nrow(Tablaoc1) > 0){
+
+print(tabla1, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H", size = 'ssmall',
+      add.to.row = addRows1, caption.placement = 'top',
+      sanitize.text.function = force)}
+
+if(nrow(Tablaoc2) > 0){
+
+print(tabla2, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H", size = 'ssmall',
+      add.to.row = addRows2, caption.placement = 'top',
+      sanitize.text.function = force)}
+
+if (nrow(Tablaoc1) > 0 | nrow(Tablaoc2) > 0) {
+cat('\\tiny{\n',
+"\\footnotetext[2]{Fuente: Consejo Nacional de Acreditaci\\'on. Fecha de corte: Mayo de 2015.}\n",
+"\\footnotetext[3]{Fuente: Sistema Nacional de Informaci\\'on de Educaci\\'on
+Superior (SNIES). Fecha de corte: Mayo de 2015. }\n",
+"\\footnotetext[4]{Fuente: Reporte de las IES al SNIES. Fecha de corte de la informaci\\'on: Abril de 2015. Datos preliminares antes de auditoria.}\n",
+"\\footnotetext[5]{Fuente: C\\'alculo del SPADIES con base en el reporte de
+matr\\'\\i{}cula y graduados de las IES al sistema. Fecha de corte: Mayo de 2015.}\n",
+"\\footnotetext[6]{Fuente: Cruce reporte de graduados de las IES al SNIES
+con las cotizaciones hechas al sistema de seguridad social. Fecha de corte: Diciembre de 2013.}\n",
+
+'\\end{landscape}\n',
+
+'\\clearpage\n',
+
+'\\newpage\n', sep = '')}
+@
+

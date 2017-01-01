@@ -18,7 +18,7 @@ options(encoding='UTF-8')
 # # Folders
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 outPath      <- "../output/"
 inPath       <- "../input/"
@@ -1954,16 +1954,20 @@ TablaResInst2 <- TablaResInst2[, c('InstitN1', 'RefGrpN1', 'n',
                                  'COMUNICACIÓN ESCRITAN7',
                                  'COMUNICACIÓN ESCRITAN8')]
 								 
+expression({ # hasta aqui corrio 2 pm
+
 ################################################################################
 # # Definición de la parte iterativa
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+{ ### Antes InformesIES2013_2014v03.rnw
+
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 seguimiento <- NULL
 
-filesAux <- c('ResPRO2013_2014v02.rnw', 'AR2013_2014v01.rnw',
-              'OCalidad2013_2014v01.rnw', 'anexoAR2013_2014v01.rnw',
+filesAux <- c('ResPRO2013_2014v03.rnw', 'AR2013_2014v01.rnw',
+              'OCalidad2013_2014v02.rnw', 'anexoAR2013_2014v01.rnw',
               'anexoCompAR2013_2014v01.rnw',
               'anexoDetalles2013_2014v01.rnw', 
 			  'anexoGrupRef2013_2014v01.rnw')
@@ -1974,7 +1978,9 @@ names(ref.grps) <- nombres
 dat[, 'ESTU_GRUPO_REFERENCIA'] <- CambCaractRaros(dat, 'ESTU_GRUPO_REFERENCIA')
 dat[, 'inst_by_ref'] <- CambCaractRaros(dat, 'inst_by_ref')
 
-rnwBase <- file.path("Sweave", "InformesIES2013_2014v02.rnw")
+# rnwBase <- file.path("Sweave", "InformesIES2013_2014v02.rnw")
+
+rnwBase <- file.path("Sweave", "InformesIES2013_2014v03.rnw")
 
 # refGr = names(ref.grps)[18]
 # refGr = names(ref.grps)[18]
@@ -2055,8 +2061,9 @@ for (ij in seq(1,length(names(ref.grps)))){
    }
 }
 
+} ### Antes InformesIES2013_2014v03.rnw
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 outPath      <- "../output/"
 
@@ -2071,11 +2078,15 @@ write.table (TablaANEXO, outFile, row.names =TRUE,
              sep="|",fileEncoding = "latin1", dec=".")
 
 
+}) # hasta aqui corrio 2 pm
+
 ################################################################################
 # # RESUMENES EJECUTIVOS
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+{ ### Antes ResuEjecIES2013_2014v03.rnw
+
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 outPath      <- "../output/"
 inPath       <- "../input/"
@@ -2084,8 +2095,8 @@ docPath      <- "../doc"
 
 seguimiento <- NULL
 
-filesAux <- c('REResPRO2013_2014v02.rnw', 'REAR2013_2014v01.rnw',
-              'REOCalidad2013_2014v01.rnw')
+filesAux <- c('REResPRO2013_2014v03.rnw', 'REAR2013_2014v01.rnw',
+              'REOCalidad2013_2014v02.rnw')
 
 nombres <- CambCaractRaros(data.frame(nombre = names(ref.grps)), 'nombre')
 names(ref.grps) <- nombres
@@ -2093,10 +2104,10 @@ names(ref.grps) <- nombres
 dat[, 'ESTU_GRUPO_REFERENCIA'] <- CambCaractRaros(dat, 'ESTU_GRUPO_REFERENCIA')
 dat[, 'inst_by_ref'] <- CambCaractRaros(dat, 'inst_by_ref')
 
-rnwBase <- file.path("Sweave", "ResuEjecIES2013_2014v02.rnw")
+rnwBase <- file.path("Sweave", "ResuEjecIES2013_2014v03.rnw")
 
 # refGr = names(ref.grps)[1]
-for (ij in seq(1,length(names(ref.grps)))){
+for (ij in seq(1,length(names(ref.grps)))){ # quedo en ij 3 a las 4:04 pm
  refGr <- names(ref.grps)[ij]
 # refGr = names(ref.grps)[17]
 #refGr = names(ref.grps)[18]
@@ -2116,7 +2127,7 @@ for (ij in seq(1,length(names(ref.grps)))){
 # Inst = Instituciones[5]
 # for (Instit in seq (1,length(Instituciones))){
 #        Inst <- Instituciones[Instit]
- for (Instit in seq (1,length(Instituciones))){
+ for (Instit in seq (1,length(Instituciones))){  # paro en 16 a las 4:04
         Inst <- Instituciones[Instit]
 # for (Instit in seq (76,length(Instituciones))){
 #        Inst <- Instituciones[Instit]
@@ -2177,7 +2188,9 @@ for (ij in seq(1,length(names(ref.grps)))){
    }
 }
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+} ### Antes ResuEjecIES2013_2014v03.rnw
+
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 outPath      <- "../output/"
 
@@ -2190,7 +2203,9 @@ write.table (seguimiento, outFile, row.names =TRUE,
 # # RESUMENES POR INSTITUCIÓN
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+{ ### Antes ReportesInstit2013_2014.rnw
+
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 seguimiento <- NULL
 
@@ -2262,11 +2277,23 @@ Instituciones <- unique(dat[, 'INST_COD_INSTITUCION'])
 
 }
 
+} ### Antes ReportesInstit2013_2014.rnw
+  
 ################################################################################
 # # Reportes para IGR que no tienen ningun estudiantes en AR
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+
+
+
+
+
+
+
+
+{ ###   InformesIES2013_2014v03.rnw
+  
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 seguimiento <- NULL
 
@@ -2378,11 +2405,15 @@ rnwBase <- file.path("Sweave", "InformesIES2013_2014v03.rnw")
  runPath <- auxPath2
    }
 
+} ###   InformesIES2013_2014v03.rnw
+
 ################################################################################
 # # Resumenes para IGR que no tienen ningun estudiantes en AR
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+{ ### ResuEjecIES2013_2014v03.rnw
+
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 seguimiento <- NULL
 
@@ -2491,11 +2522,15 @@ rnwBase <- file.path("Sweave", "ResuEjecIES2013_2014v03.rnw")
  runPath <- auxPath2
    }
 
+} ###  ### ResuEjecIES2013_2014v03.rnw
+
 ################################################################################
 # # RESUMENES POR INSTITUCIÓN para IGR que no tienen ningun estudiantes en AR
 ################################################################################
 
-setwd("C:/ecuellar/2015/ek/Aporte Relativo/src")
+{ ### Antes ReportesInstit2013_2014.rnw
+
+setwd("C:/Users/LENOVO/Desktop/DISCO DURO EXTERNO/Aporte Relativo Dummy 2/src")
 
 seguimiento <- NULL
 
@@ -2571,3 +2606,5 @@ for(Inst in c('1218', '1219', '1220', '1221', '1221', '1704',
 
 } 
    
+}  ### Antes ReportesInstit2013_2014.rnw
+  
