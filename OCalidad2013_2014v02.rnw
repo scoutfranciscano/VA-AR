@@ -1,0 +1,239 @@
+\newpage
+\section{Indicadores adicionales de calidad educativa}
+
+La calidad de la educaci\'on es un concepto multidimensional y para
+comprenderlo es necesario contar con diversos indicadores sobre las
+diferentes dimensiones que lo componen. El ICFES, en aras de aportar a
+esta comprensi\'on, entrega al p\'ublico indicadores adicionales que
+est\'an asociados a la calidad de los programas acad\'emicos de las
+IES en tales dimensiones. Para conocer las definiciones de
+cada indicador, por favor dir\'\i{}jase al glosario que se encuentra en la
+gu\'\i{}a de interpretaci\'on. \vspace{3mm}
+
+<<Tabla6,results=tex,echo=false>>=
+
+Tabla1 <- data.frame()
+
+Tabla1[1, 'simbolo'] <- '*'
+Tabla1[1, 'UNIV_NOMBREREDUCIDO'] <- as.character(NombreUniv)
+
+Tabla6 <- subset(tabla6, tabla6[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+Tabla6 <- merge(Tabla6, universidades, by.x = "CodInstitucion",
+                               by.y = "INST_ID")
+
+Tabla6[, 'INST_BY_REF'] <- NULL
+
+Tabla6 <- merge(Tabla6, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+
+Tabla6 <- Tabla6[, c('simbolo', 'ProgAcred', 'TotalProg', 'Acreditada',
+                     'FechaAcreditacion')]
+
+if(nrow(Tabla6) > 0){
+
+cat("\\subsection{Acreditaci\\'on}\n")
+
+cat("En la tabla \\ref{Tabla6} se presenta la informaci\\'on de
+    acreditaci\\'on para cada una de las IES de su vecindad: fecha de
+    acreditaci\\'on institucional, total de programas del grupo de
+    referencia de ",GrupRefer[refGr]," y cu\\'antos de
+ellos est\\'an acreditados.\n")
+
+addRows <- list(pos = as.list(c(-1, 1, nrow(Tabla6))),
+                command = c(
+            "\\thickline\n C\\'odigo & N\\'umero de programas de & Total de
+             & Acreditaci\\'on & Fecha de\\\\ & acreditados (2015)$^6$ &
+            programas (2015)$^7$
+             & instituci\\'on (2015)$^6$ & acreditaci\\'on (2015)$^6$ \\\\
+\\hline",
+                            '',
+                            '\\thickline\n'))
+
+tabla <- xtable(Tabla6)
+label(tabla) <- 'Tabla6'
+align(tabla)   <- c('l', 'c', 'c', 'c', 'c', 'c')
+
+caption(tabla) <- paste("Acreditaci\\'on de las IES y de los programas
+                        acad\\'emicos.")
+
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H", size = 'scriptsize',
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force)}
+
+if (nrow(Tabla6) > 0) {
+cat( '\\tiny{\n',
+"\\footnotetext[6]{Fuente: Consejo Nacional de Acreditaci\\'on. Fecha de corte: Mayo de 2015.}\n",
+"\\footnotetext[7]{Fuente: Sistema Nacional de Informaci\\'on de Educaci\\'on
+Superior (SNIES). Fecha de corte: Mayo de 2015.}\n",
+'}\n',
+'\\normalsize', sep = '')}
+@
+
+<<Tabla7,results=tex,echo=false>>=
+
+Tabla7 <- subset(tabla7, tabla7[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+Tabla7 <- merge(Tabla7, universidades, by.x = "CodInstitucion",
+                               by.y = "INST_ID")
+
+Tabla7[, 'INST_BY_REF'] <- NULL
+
+Tabla7 <- merge(Tabla7, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+
+Tabla7 <- Tabla7[, c('simbolo', 'Caracter', 'Adm2013_2014', 'Insc2013_2014',
+                     'PropAdmInsc', 'CostoMatricula')]
+
+if(nrow(Tabla7) > 0){
+
+cat("\\subsection{Selectividad}\n")
+
+cat("En la tabla \\ref{Tabla7} se muestra el sector (oficial / privado) al que pertenece cada una de las instituciones de su vecindad y, con respecto a los a\\~{n}os
+2013-2014, el n\\'umero de admitidos y aspirantes a los programas del grupo
+de referencia de ",GrupRefer[refGr]," as\\'\\i{} como la raz\\'on entre
+estos dos datos. Adicionalmente, se incluye el valor promedio de la
+matr\\'\\i{}cula para los estudiantes que ingresaron a cursar su primer
+semestre acad\\'emico durante 2013.\n")
+
+addRows <- list(pos = as.list(c(-1, 1, nrow(Tabla7))),
+                command = c(
+            "\\thickline\n C\\'odigo & Car\\'acter IES & N\\'umero de
+             & N\\'umero de & Aspirantes/ & Costo de \\\\ & &
+            admitidos & aspirantes & admitidos
+             & matr\\'\\i{}cula  \\\\
+			& & (2013-2014)$^8$ & (2013-2014)$^8$ & (2013-2014) &
+			(2013)$^8$ \\\\
+\\hline",
+                            '',
+                            '\\thickline\n'))
+
+tabla <- xtable(Tabla7)
+label(tabla) <- 'Tabla7'
+align(tabla)   <- c('l', 'c', 'l', rep('c', 4))
+caption(tabla) <- paste("Sector, selectividad y costo de matr\\'\\i{}cula de
+                        las IES de la vecindad.")
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0,
+      add.to.row = addRows, caption.placement = 'top', size =
+      'scriptsize', table.placement = "H",
+      sanitize.text.function = force)}
+
+if (nrow(Tabla7) > 0) {
+cat( '\\tiny{\n',
+"\\footnotetext[8]{Fuente: Reporte de las IES al SNIES. Fecha de corte de la información: Abril de 2015. Datos preliminares antes de auditorías.}\n",
+'}\n',
+'\\normalsize', sep = '')}
+@
+
+<<Tabla8,results=tex,echo=false>>=
+
+Tabla8 <- subset(tabla8, tabla8[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+Tabla8 <- merge(Tabla8, universidades, by.x = "CodInstitucion",
+                               by.y = "INST_ID")
+
+Tabla8[, 'INST_BY_REF'] <- NULL
+
+Tabla8 <- merge(Tabla8, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+
+Tabla8 <- Tabla8[, c('simbolo', 'DesercionCohorte', 'DesercionPeriodo')]
+
+if(nrow(Tabla8) > 0){
+
+cat("\\subsection{Deserci\\'on}\n")
+
+cat("En la tabla \\ref{Tabla8} se presentan la informaci\\'on de
+    deserci\\'on de la vecindad de comparación como indicadores de eficiencia escolar,
+    tomando como per\\'\\i{}odo de referencia el a\\~{n}o 2014. Las tasas presentadas 
+	corresponden al promedio de las tasas de deserci\\'on de los programas 
+	acad\\'emicos asociados al grupo de referencia de ",GrupRefer[refGr]," 
+	para cada instituci\\'on.\n")
+
+addRows <- list(pos = as.list(c(-1, 1, nrow(Tabla8))),
+                command = c(
+            "\\thickline\n C\\'odigo & Tasa de deserci\\'on & Tasa de deserci\\'on \\\\
+             & Cohorte (2014)$^9$ & Periodo (2014-1)$^9$ \\\\
+\\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(Tabla8)
+label(tabla) <- 'Tabla8'
+align(tabla)   <- c('l', 'c', rep('c', 2))
+caption(tabla) <- paste("Deserci\\'on.")
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H",
+      add.to.row = addRows, caption.placement = 'top',  size = 'scriptsize',
+      sanitize.text.function = force)}
+
+if (nrow(Tabla8) > 0) {
+cat( '\\tiny{\n',
+"\\footnotetext[9]{Fuente: C\\'alculo del SPADIES con base en el reporte
+de las IES al sistema. Fecha de corte: Mayo de 2015.}\n",
+'}\n',
+'\\normalsize', sep = '')}
+@
+
+<<Tabla9,results=tex,echo=false>>=
+
+Tabla9 <- subset(tabla9, tabla9[, 'INST_BY_REF'] %in% VecComp[,
+                 'INST_BY_REF'])
+
+Tabla9 <- merge(Tabla9, universidades, by.x = "CodInstitucion",
+                               by.y = "INST_ID")
+
+Tabla9[, 'INST_BY_REF'] <- NULL
+
+Tabla9 <- merge(Tabla9, Tabla1, by = 'UNIV_NOMBREREDUCIDO')
+
+Tabla9 <- Tabla9[, c('simbolo', 'Vinculacion', 'Salario')]
+
+if(nrow(Tabla9) > 0){
+
+cat("\\subsection{Vinculaci\\'on laboral}\n")
+
+cat("En la tabla \\ref{Tabla9} se reporta informaci\\'on relacionada con
+    la vinculaci\\'on
+laboral de los egresados de los programas del grupo de referencia de",
+GrupRefer[refGr], "en las instituciones de la vecindad: el porcentaje que hace aportes al Sistema General de Seguridad Social (Tasa de cotizantes) y el
+promedio del Ingreso Base de Cotizaci\\'on (Promedio primer salario) de
+los aportes a seguridad social de los empleados dependientes y que
+pertenecen al r\\'egimen contributivo en 2013.
+\n")
+
+addRows <- list(pos = as.list(c(-1, 1, nrow(Tabla9))),
+                command = c(
+            "\\thickline\n C\\'odigo & Tasa de Vinculaci\\'on (2013)$^10$ &
+            Salario de enganche (2013)$^10$
+            \\\\
+\\hline", '',
+                            '\\thickline\n'))
+
+tabla <- xtable(Tabla9)
+label(tabla) <- 'Tabla9'
+align(tabla)   <- c('l', 'c', rep('c', 2))
+caption(tabla) <- paste("Vinculaci\\'on laboral.")
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE,
+      hline.after = 0, table.placement = "H",  size = 'scriptsize',
+      add.to.row = addRows, caption.placement = 'top',
+      sanitize.text.function = force)
+
+if (nrow(Tabla9) > 0) {
+cat( '\\tiny{\n',
+"\\footnotetext[10]{Fuente: Cruce reporte de graduados de las IES al
+SNIES con las cotizaciones hechas al sistema de seguridad social. Fecha de corte: Diciembre de 2013.}\n",
+'}\n',
+'\\normalsize', sep = '')}
+}
+
+@
+
+\clearpage
+
+

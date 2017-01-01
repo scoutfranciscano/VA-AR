@@ -1,0 +1,239 @@
+<<NombreEncab,results=hide,echo=false>>=
+NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
+                     universidades[, 'INST_ID'] == Inst)
+@
+
+\documentclass[11pt,doc,babel,spanish,noapacite]{icfesdocapa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Construccion base de valor agregado 2011-2 y 2012
+% %
+% % Autor(es): Edwin Cuellar y Alvaro Uzaheta
+% %
+% % Descripcion: Procedimiento para la construccion de la base de datos
+% de Valor Agregado 2011-2 y 2012
+% %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % <<< Preambulo no modificable por el usuario
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Preambulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % Paquetes
+\usepackage[titles]{tocloft}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[letterpaper]{geometry}
+\usepackage[dvips]{graphicx,graphics}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[mathscr]{euscript}
+\usepackage{fancyhdr,pstricks,pst-node,multido}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color,array,verbatim,multirow,lscape}
+\usepackage{csquotes,longtable}
+\usepackage[style=apa]{biblatex}
+\usepackage{tabularx,ctable}
+\usepackage[colorlinks=TRUE,allcolors=black,breaklinks]{hyperref}
+\usepackage{breakurl}
+\usepackage{makecell}
+\usepackage[none]{hyphenat}
+\usepackage{chngcntr}
+\usepackage{fancyref}
+\usepackage{tikz}
+%\usepackage{landscape}
+\usepackage{moresize}
+
+\definecolor{OliveGreen}{RGB}{55,139,46}
+\definecolor{ColorVerde}{RGB}{133,165,162}
+
+\sloppy
+
+% % Modificaciones al paquete biblatex
+
+
+\renewcommand{\blxauxsuffix}{}
+\setcounter{smartand}{0}
+\DefineBibliographyStrings{spanish}{
+  andothers = {et al.},
+}
+
+
+% % Definicion del flotante ``cuadro'' (paquete float)
+
+\floatstyle{plaintop}
+\newfloat{cuadro}{htbp}{lop}
+\floatname{cuadro}{Cuadro}
+
+% % Modificaciones a la lista de tablas y de cuadros (paquete tocloft)
+
+\renewcommand{\cfttabpresnum}{Tabla }
+\setlength{\cfttabnumwidth}{60pt}
+\setlength{\cftfignumwidth}{60pt}
+\renewcommand{\cfttabaftersnum}{:}
+\setlength{\cftsecnumwidth}{0pt}
+\setlength{\cftsubsecnumwidth}{0pt}
+
+\setlength\LTleft\parindent
+\setlength\LTright\fill
+
+\makeatletter
+  \renewcommand{\@cftbsnum}{Cuadro }
+  \renewcommand{\@cftasnum}{:}
+\makeatother
+
+\makeatletter
+  \newcommand{\listofcuadros}{
+    \@namedef{l@cuadro}{\@dottedtocline{1}{1.5em}{60pt}}
+    \float@listhead{Lista de cuadros}
+    \begingroup\setlength{\parskip}{\z@}
+      \@starttoc{\@nameuse{ext@cuadro}}
+    \endgroup
+  }
+\makeatother
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+% % Modificaciones a los encabezados de las tablas, cuadros y figuras
+% % (paquete caption)
+
+\captionsetup[table]{margin = 10pt, font = small, labelsep = space}
+\captionsetup[cuadro]{margin = 10pt, font = small, labelsep = colon}
+\captionsetup[figure]{margin = 10pt, font = small, labelsep = none}
+
+
+% % Modificaciones al tamanno de las tablas (paquete longtable)
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% % Otras opciones
+
+\DeclareGraphicsExtensions{.eps, .png, .pdf, .jpg}
+\renewcommand{\l}{\left}
+\renewcommand{\r}{\right}
+\newcommand{\ord}[1]{$#1\text{o.}$}
+\makeatletter
+  \def\hlinewd#1{
+    \noalign{\ifnum0=`}\fi\hrule \@height #1
+    \futurelet\reserved@a\@xhline
+  }
+\makeatother
+
+\renewcommand{\thickline}{\hlinewd{1.5pt}}
+
+% % Cambios a los parametros de presentacion de la pagina
+% % Incluir el logo del ICFES y el pie (paquete fancyhdr)
+
+\pagestyle{fancy}
+\headheight 50pt
+\fancyhead{}
+\fancyfoot{}
+\addtolength{\headheight}{\baselineskip}
+\newcommand{\ffont}{\fontsize{9}{9}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % >>>
+
+% % <<< Preambulo modificable por el usuario
+
+% % \rhead{\includegraphics[width=3.5cm]{logo} GUIA DE CONTENIDO MINIMO PARA
+% % LOS MANUALES DE PROCESAMIENTO Y REPORTES \\
+% % $Codigo: B2.3.G01 Version: 1}
+\usepackage{longtable}
+\chead{\includegraphics[width=8.8cm]{../logonuevo.eps}} \\
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\footnotesize{\thepage}}
+\headinglevels{five} % one two three four or five
+%\newcommand{\ord}[1]{#1\textsuperscript{o}}
+\decimalpoint
+
+% % Archivos de bibliografia e idioma de esta
+\bibliography{apa-es,jourlong,arts,soft,buks,R}
+
+\DeclareLanguageMapping{spanish}{spanish-apa}
+% % \addbibresource{arts.bib}
+% % >>>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<Preparacion,results=hide,echo=false>>=
+################################################################################
+# # Algunos valores importantes
+################################################################################
+
+tabRepInst <- subset(TablaANEXO2, INST_COD_INSTITUCION == Inst)
+
+@
+
+\begin{document}
+
+\pagenumbering{gobble} 
+% %  <<< Cambios en los nombres de los flotantes y la lista de tablas
+
+  \renewcommand{\figurename}{Gr\'afico}
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listtablename}{Lista de tablas}
+  \renewcommand{\listfigurename}{Lista de gr\'aficos}
+% % >>>
+% % Titulo
+%  \maketitle
+
+\LARGE{
+\begin{center}
+\textbf{Reporte de resultados institucionales de SABER PRO 
+para las Instituciones de Educación Superior 2013-2014 \vspace{25mm}}
+\end{center}
+}
+
+\Large{
+\begin{center}
+\textbf{\Sexpr{NombreUniv}}
+\end{center}} \vspace{35mm}
+
+\Large{
+\begin{center}
+\textbf{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on y
+\\
+Direcci\'on de Evaluaci\'on}
+\vspace{3mm}
+
+\textbf{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on -
+ICFES}
+\vspace{60mm}
+\end{center}
+}
+
+\Large{
+\begin{center}
+  \textbf{Agosto de 2015}
+\end{center}
+}
+\normalsize
+
+% % Para incluir el logo y el pie en la primera pagina
+  \thispagestyle{fancy}
+
+  % % No modificar la siguiente l\'\i{}nea
+
+  \setcounter{tocdepth}{2}
+
+% % Tabla de contenido
+
+<<Compilado,results=hide,echo=false>>=
+if(nrow(tabRepInst) > 0){
+Sweave('TablaReportesInst2013_2014.rnw', encoding = "latin1")
+}
+@
+
+<<Armado,results=tex,echo=false>>=
+if(nrow(tabRepInst) > 0){
+    cat('\\input{TablaReportesInst2013_2014}\n')
+}
+@
+
+\end{document}
+
+

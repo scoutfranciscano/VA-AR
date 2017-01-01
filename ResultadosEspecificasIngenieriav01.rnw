@@ -1,0 +1,735 @@
+<<NombreEncab,results=hide,echo=false>>=
+NombreUniv <- subset(universidades[, 'UNIV_NOMBREREDUCIDO'],
+                     universidades[, 'INST_ID'] == Inst)
+@
+
+\documentclass[11pt,doc,babel,spanish,noapacite]{icfesdocapa}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Generación de reportes de Aporte Relativo para el período 2013-2014
+% % VERSIÓN 1
+% %
+% % Autor(es): Edwin Cuellar 
+% %
+% % Descripcion: Procedimiento para la generación de reportes de Aporte Relativo
+% % VERSIÓN 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % <<< Preambulo no modificable por el usuario
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Preambulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % Paquetes
+\usepackage[titles]{tocloft}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[letterpaper]{geometry}
+\usepackage[dvips]{graphicx,graphics}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage[mathscr]{euscript}
+\usepackage{fancyhdr,pstricks,pst-node,multido}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{color,array,verbatim,multirow,lscape}
+\usepackage{csquotes,longtable}
+\usepackage[style=apa]{biblatex}
+\usepackage{tabularx,ctable}
+\usepackage[colorlinks=TRUE,allcolors=black,breaklinks]{hyperref}
+\usepackage{breakurl}
+\usepackage{makecell}
+\usepackage[none]{hyphenat}
+\usepackage{chngcntr}
+\usepackage{fancyref}
+\usepackage{tikz}
+\usepackage{wasysym}
+%\usepackage{landscape}
+
+\definecolor{OliveGreen}{RGB}{55,139,46}
+
+\sloppy
+
+% % Modificaciones al paquete biblatex
+
+\renewcommand{\blxauxsuffix}{}
+\setcounter{smartand}{0}
+\DefineBibliographyStrings{spanish}{
+  andothers = {et al.},
+}
+
+
+% % Definicion del flotante ``cuadro'' (paquete float)
+
+\floatstyle{plaintop}
+\newfloat{cuadro}{htbp}{lop}
+\floatname{cuadro}{Cuadro}
+
+% % Modificaciones a la lista de tablas y de cuadros (paquete tocloft)
+
+\renewcommand{\cfttabpresnum}{Tabla }
+\setlength{\cfttabnumwidth}{60pt}
+\setlength{\cftfignumwidth}{60pt}
+\renewcommand{\cfttabaftersnum}{:}
+\setlength{\cftsecnumwidth}{0pt}
+\setlength{\cftsubsecnumwidth}{0pt}
+
+\setlength\LTleft\parindent
+\setlength\LTright\fill
+
+\makeatletter
+  \renewcommand{\@cftbsnum}{Cuadro }
+  \renewcommand{\@cftasnum}{:}
+\makeatother
+
+\makeatletter
+  \newcommand{\listofcuadros}{
+    \@namedef{l@cuadro}{\@dottedtocline{1}{1.5em}{60pt}}
+    \float@listhead{Lista de cuadros}
+    \begingroup\setlength{\parskip}{\z@}
+      \@starttoc{\@nameuse{ext@cuadro}}
+    \endgroup
+  }
+\makeatother
+
+% % Modificaciones a los encabezados de las tablas, cuadros y figuras
+% % (paquete caption)
+
+\captionsetup[table]{margin = 10pt, font = small, labelsep = space}
+\captionsetup[cuadro]{margin = 10pt, font = small, labelsep = colon}
+\captionsetup[figure]{margin = 10pt, font = small, labelsep = none}
+
+
+% % Modificaciones al tamanno de las tablas (paquete longtable)
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+
+% % Otras opciones
+
+\DeclareGraphicsExtensions{.eps, .png, .pdf, .jpg}
+\renewcommand{\l}{\left}
+\renewcommand{\r}{\right}
+\newcommand{\ord}[1]{$#1\text{o.}$}
+\makeatletter
+  \def\hlinewd#1{
+    \noalign{\ifnum0=`}\fi\hrule \@height #1
+    \futurelet\reserved@a\@xhline
+  }
+\makeatother
+
+\renewcommand{\thickline}{\hlinewd{1.5pt}}
+
+% % Cambios a los parametros de presentacion de la pagina
+% % Incluir el logo del ICFES y el pie (paquete fancyhdr)
+
+\pagestyle{fancy}
+%% Esta línea permite modificar los márgenes de las páginas
+\headheight 53pt
+\fancyhead{}
+\fancyfoot{}
+\addtolength{\headheight}{\baselineskip}
+\newcommand{\ffont}{\fontsize{9}{9}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % >>>
+
+% % <<< Preambulo modificable por el usuario
+
+\usepackage{longtable}
+\chead{\includegraphics[width=8.8cm]{../logonuevo.eps} \\
+\scriptsize \textit{\Sexpr{refGr}} \\
+\textit{\Sexpr{NombreUniv}} \\
+\textit{\Sexpr{NombrePruebaEspec[PruebaEsp]}}}
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{\footnotesize{\thepage}}
+\headinglevels{five} % one two three four or five
+\decimalpoint
+
+\title{Reporte de resultados en Aporte Relativo en pruebas específicas de SABER PRO \vspace{8mm}}
+
+\author{Instituto Colombiano para la Evaluaci\'on de la Educaci\'on - ICFES}
+
+% % Insertar la fecha del documento en la siguiente linea
+\date{Agosto de 2015}
+
+\affiliation{Oficina Asesora de Gesti\'on de Proyectos de Investigaci\'on}
+
+% % Archivos de bibliografia e idioma de esta
+\bibliography{apa-es,jourlong,arts,soft,buks,R}
+
+\DeclareLanguageMapping{spanish}{spanish-apa}
+% % \addbibresource{arts.bib}
+% % >>>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<Preparacion,results=hide,echo=false>>=
+################################################################################
+# # Preparación para la generación de reportes
+################################################################################
+
+tab <- table(Cruce[, 'inst_by_ref'])
+
+GR <- subset(AgregCompPunta, RefGrp == refGr)
+foc <- subset(GR, INST_BY_REF == InstGR)
+
+preFlag <- subset(TablaANEXO,
+                  INST_BY_REF %in% foc[, 'INST_BY_REF'])
+
+comparables <- NULL
+
+if (nrow(preFlag) == 0){
+  flagVA <- FALSE
+  flagVec <- FALSE
+  nComparables <- 0
+} else {
+  if(nrow(preFlag) > 1){ stop('algo mal con filtro de TablaANEXO') }
+  flagVA <- preFlag[, 'hasVA']
+  flagVec <- preFlag[, 'has15Vec']
+}
+
+## Para las instituciones que tienen la sección de Aporte Relativo, su
+## vecindad se escoge entre instituciones que tienen las condiciones
+## para tener Aporte Relativo
+
+  if (flagVA) {
+    instHasVA <- TablaANEXO[TablaANEXO[, 'hasVA'], 'INST_BY_REF']
+    resto <- subset(GR, INST_BY_REF != InstGR &
+                    INST_BY_REF %in% instHasVA)
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+    resto <- resto[order(resto[, 'dist']),]
+	TodasComparables <- resto[resto[, 'dist'] < .3, ]
+
+## Para las instituciones que no tienen la sección de Aporte Relativo
+## pero si tienen vecindad, esta se escoge entre instituciones con
+## vecindad
+
+  } else if (nrow(foc) > 0){
+  if(preFlag[, 'has15Vec']) {
+    instHas15Vec <- TablaANEXO[TablaANEXO[, 'has15Vec'], 'INST_BY_REF']
+    resto <- subset(GR, INST_BY_REF != InstGR)
+    nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+    resto <- resto[order(resto[, 'dist']),]
+	TodasComparables <- resto[resto[, 'dist'] < .3, ]
+  } else{
+    nComparables <- 0
+}
+  }
+
+  if(refGr == 'CIENCIAS MILITARES Y NAVALES'){
+    flagVA <- FALSE
+nComparables <- 0
+}
+
+  flag2 <- TRUE
+
+ if (nrow(foc) == 0){
+  flag2 <- FALSE
+}
+
+if(nrow(foc) > 0){
+if(preFlag[, 'has15Vec']){
+VectoresVec <- list()
+
+for(s in 1: 100){
+set.seed(s)
+tmpAgreg <- subset(Crucetmp, inst_by_ref == InstGR)
+
+TamMuestra <- round((0.95*dim(tmpAgreg)[1]))
+
+tmpAgreg <- sample(tmpAgreg[sample(nrow(tmpAgreg), TamMuestra), ])
+
+GR <- subset(AgregCompPunta, RefGrp == refGr)
+foc <- aggregate(tmpAgreg[, c('IndicadorPuntajes')],
+                    list(tmpAgreg$inst_by_ref), mean,
+                    na.rm = TRUE)
+names(foc) <- c('INST_BY_REF', 'IndicadorPuntajes_va')
+foc[, 'Inst'] <- gsub("(.*)__.*", "\\1", 
+                          foc[, 'INST_BY_REF'])
+foc[, 'RefGrp'] <- gsub(".*__(.*)", "\\1", 
+                          foc[, 'INST_BY_REF'])	
+foc <- merge(foc, TablaANEXO, by = 'INST_BY_REF')
+
+# # definicion si lleva o no AR
+preFlag <- subset(TablaANEXO,
+                  INST_BY_REF %in% foc[, 'INST_BY_REF'])
+
+comparables <- NULL
+
+## Para las instituciones que tienen la sección de Aporte Relativo, su
+## vecindad se escoge entre instituciones que tienen las condiciones
+## para tener Aporte Relativo
+
+  if (flagVA) {
+    instHasVA <- TablaANEXO[TablaANEXO[, 'hasVA'], 'INST_BY_REF']
+    resto <- subset(GR, INST_BY_REF != InstGR & INST_BY_REF %in% instHasVA)
+	nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+	resto <- resto[order(resto[, 'dist']),]
+	tmpVec <- resto[seq(nParcial), ]
+	tmpVec <- tmpVec[tmpVec[, 'dist'] < .3, ]
+	VectoresVec[[s]] <- tmpVec[, c('INST_BY_REF', 'dist')]
+
+## Para las instituciones que no tienen la sección de Aporte Relativo
+## pero si tienen vecindad, esta se escoge entre instituciones con
+## vecindad
+
+  } else if (nrow(foc) > 0 & nrow(preFlag) > 0){
+  if(preFlag[, 'has15Vec']) {
+    instHas15Vec <- TablaANEXO[TablaANEXO[, 'has15Vec'], 'INST_BY_REF']
+    resto <- subset(GR, INST_BY_REF != InstGR & INST_BY_REF %in% instHas15Vec)
+	nParcial <- ifelse(nrow(resto) > 15, 15, nrow(resto))
+    resto[, 'dist'] <- abs(resto$IndicadorPuntajes_va-foc$IndicadorPuntajes_va)
+	resto <- resto[order(resto[, 'dist']),]
+	tmpVec <- resto[seq(nParcial), ]
+	tmpVec <- tmpVec[tmpVec[, 'dist'] < .3, ]
+	VectoresVec[[s]] <- tmpVec[, c('INST_BY_REF', 'dist')]} else {
+}
+  }
+
+  flag2 <- TRUE
+
+ if (nrow(foc) == 0){
+  flag2 <- FALSE
+}
+}
+}
+}
+
+if(nrow(foc) > 0){
+if(preFlag[, 'has15Vec']){
+if(nrow(TodasComparables)>0){
+ListaCompVec <- data.frame()
+for(i in seq(1,100)){
+tmp <- VectoresVec[[i]][,c('INST_BY_REF', 'dist')]
+ListaCompVec <- rbind(ListaCompVec,tmp) 
+}
+AgregVecindad <- ddply(ListaCompVec, .(INST_BY_REF), summarize,
+						   dist = mean(dist))
+OrdenAgreg <- order(AgregVecindad[, 'dist'], decreasing = TRUE)
+AgregVecindad <- AgregVecindad[OrdenAgreg,]
+AgregVecindad <- subset(AgregVecindad, AgregVecindad[, 'dist'] < 0.3)
+nParcialVec <- ifelse(nrow(AgregVecindad) > 15, 15, nrow(AgregVecindad))
+AgregVecindad <- AgregVecindad[seq(nParcialVec),]
+nComparables <- nrow(AgregVecindad)
+comparables <- subset(resto, INST_BY_REF %in% AgregVecindad[, 'INST_BY_REF'])
+} else if (nrow(TodasComparables)==0){nComparables <- 0}
+}
+}
+
+if (nComparables > 0) {
+VecComp <- rbind.fill(foc, comparables)
+}
+@
+
+\begin{document}
+% %  <<< Cambios en los nombres de los flotantes y la lista de tablas
+
+  \renewcommand{\figurename}{Gr\'afico}
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listtablename}{Lista de tablas}
+  \renewcommand{\listfigurename}{Lista de gr\'aficos}
+% % >>>
+% % Titulo
+%  \maketitle
+
+% % Para incluir el logo y el pie en la primera pagina
+  \thispagestyle{fancy}
+
+  % % No modificar la siguiente l\'\i{}nea
+
+  \setcounter{tocdepth}{2}
+
+% % Tabla de contenido
+
+\newpage
+
+%\tableofcontents
+
+%\newpage
+
+<<grafica1,results=hide,echo=false>>=
+#graf1Name <- file.path(
+#                         paste("grafico1",
+#                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+#postscript(file.path(runPath,graf1Name), width = 6.0, height = 6.0)
+	
+graf1Name <- file.path(
+                         paste("grafico11PRO_", Inst, "_", PruebaEsp, "_",
+                               ".jpg", sep = ""))
+
+options(OutDec= ",")
+
+jpeg(file.path(runPath,graf1Name), width = 6, height = 6, units = "in", res = 300)
+	
+############## Gráficos
+
+#grafName <- file.path(paste("Graficos__", Inst, PruebaEsp,  ".pdf", sep = ""))
+
+#options(OutDec= ",")
+
+#pdf(file.path(outPath,grafName))
+
+nombres <- CambCaractRaros(data.frame(nombre =
+                        names(VAEstimacionesEsp[[PruebaEsp]])), 'nombre')
+names(VAEstimacionesEsp[[PruebaEsp]]) <- nombres
+
+VAEstimacionesEsp[[PruebaEsp]][[refGr]][, 'inst_by_ref'] <-
+  CambCaractRaros(VAEstimacionesEsp[[PruebaEsp]][[refGr]], 'inst_by_ref')
+
+AgregCompPuntajes  <- AgregComp[, c('INST_BY_REF', 'IndicadorPuntajes_va')]
+
+vars <- c("base","inse","sb11", "M_post")
+
+nRow <- nrow(VAEstimacionesEsp[[PruebaEsp]][[refGr]])
+
+x <- data.frame(row.names = NULL)
+
+  foc <- subset(VAEstimacionesEsp[[PruebaEsp]][[refGr]],
+                VAEstimacionesEsp[[PruebaEsp]][[refGr]][, 'inst_by_ref'] == InstGR)
+
+  foc <- merge(foc, AgregCompPuntajes, by.x = "inst_by_ref",
+               by.y = "INST_BY_REF")
+
+  ref <- subset(VAEstimacionesEsp[[PruebaEsp]][[refGr]],
+                VAEstimacionesEsp[[PruebaEsp]][[refGr]][, 'inst_by_ref'] != InstGR)
+
+  ref0 <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+  ref  <- merge(ref, AgregCompPuntajes, by.x = "inst_by_ref",
+                by.y = "INST_BY_REF")
+
+MatrizComparab <- subset(ref, ref[, 'inst_by_ref'] %in% comparables[,
+                         'INST_BY_REF'])
+
+varsKeep <- names(MatrizComparab)[names(MatrizComparab) %in% names(foc)]
+comp <- MatrizComparab[, varsKeep]
+
+data.frame(rbind(foc, comp))->tmp
+tmp[, 'CodInst']  <- substr(tmp[, 'inst_by_ref'], 1, 4)
+tmp[, 'rowname'] <- row.names(tmp)
+tmp <- merge(tmp, universidades, by.x = "CodInst", by.y = "INST_ID")
+rownames(tmp) <- tmp[, 'rowname']
+
+OrdenLet <- order(tmp[, 'UNIV_NOMBREREDUCIDO'])
+tmp <- tmp[OrdenLet,]
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+tmp[, 'color'] <- 'blue'
+tmp[isFoc, 'color'] <- 'red'
+tmp[!isFoc, 'simbolo'] <- LETTERS[seq(nrow(tmp) - 1)]
+tmp[isFoc, 'simbolo'] <- "*"
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2
+
+Tabla1 <- tmp[, c('UNIV_NOMBREREDUCIDO', 'simbolo')]
+
+Agregtmp <- merge(tmp, AgregComp, by.x = "inst_by_ref", by.y =
+                  "INST_BY_REF")
+
+Todos  <- VAEstimacionesEsp[[PruebaEsp]][[refGr]]
+Todos <- merge(Todos, AgregCompPuntajes, by.x = "inst_by_ref", by.y = "INST_BY_REF")
+Todos[, 'col']  <- "black"
+isCom <- Todos[, 'inst_by_ref'] %in% MatrizComparab[, 'inst_by_ref']
+isFoc <- Todos[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+Todos[isCom, 'col']  <- "blue"
+Todos[isFoc, 'col']  <- "red"
+
+Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+MediaPro <- mean(Todos[, 'M_post'])
+Media11 <- mean(Todos[, 'IndicadorPuntajes_va'])
+MediaINSE <- mean(Todos[, 'M_inse'])
+
+  MinX <- min(Todos[, "IndicadorPuntajes_va"])
+  MaxX <- max(Todos[, "IndicadorPuntajes_va"])
+  MinY <- min(Todos[, "M_post"])
+  MaxY <- max(Todos[, "M_post"])
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+     col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'],
+     ylab=NombrePruebaEspec[PruebaEsp], xlab="Promedio Indice SABER 11")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "IndicadorPuntajes_va"], Todos[, "M_post"],
+       col = Todos[, 'col'], pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab=NombrePruebaEspec[PruebaEsp],
+     xlab="Promedio Indice SABER 11")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=Media11, col="red", lty=2)
+
+cerrar <- dev.off()
+@	 
+
+<<TablaProgramas,results=tex,echo=false>>=
+tabla <- xtable(Tabla1, "Instituciones de la vecindad de comparaci\\'on",
+ align = c('c', 'l', 'l'))
+label(tabla) <- 'Tabla1'
+print(tabla, include.rownames = FALSE,
+      include.colnames = FALSE, hline.after = seq(1,nrow(Tabla1)),
+      caption.placement = 'top',
+      sanitize.text.function = force)
+@
+
+<<Grafico1,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf1Name, '}\n',
+      '\\end{center}\n',
+      '\\vspace{-10mm}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+	
+<<grafica3,results=hide,echo=false>>=
+#graf3Name <- file.path(
+#                         paste("grafico3",
+#                               ".eps", sep = ""))
+
+options(OutDec= ",")
+
+graf3Name <- file.path(
+                         paste("graficoVA_", Inst, "_", PruebaEsp, "_",
+                               ".jpg", sep = ""))
+
+options(OutDec= ",")
+
+#postscript(file.path(runPath,graf3Name), width = 6.0, height = 6.0)	
+
+jpeg(file.path(runPath,graf3Name), width = 6, height = 6, units = "in", res = 300)
+
+
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+for (val in c("base", "inse", "sb11")) {
+  tmp[, paste(val, "_025", sep = '')] <- tmp[, paste(val, "_025", sep = '')] - tmp[isFoc, val]
+  tmp[, paste(val, "_975", sep = '')] <- tmp[, paste(val, "_975", sep = '')] - tmp[isFoc, val]
+    tmp[, val] <- tmp[, val] - tmp[isFoc, val]
+}
+
+nm = 'base'
+    Ordennm <- order(tmp[[nm]])
+    tmp <- tmp[Ordennm,]
+    range(tmp[[nm]])->ran
+    ran[2]-ran[1]->L
+    ran[1]-.1*L->ran[1]
+    ran[2]+.1*L->ran[2]
+  limInfnm <- min(tmp[, paste(nm, "_025", sep = '')])
+  limSupnm <- max(tmp[, paste(nm, "_975", sep = '')])
+
+    isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+       varsPer <- grep(paste(nm, "_", sep = ""),
+                    names(foc), value = TRUE)
+    radio <- max(abs(foc[, varsPer]-foc[, nm]))
+    tmp[, "pch"] <- 1
+    tmp[, 'tam'] <- 1.9
+    tP025 <- paste(nm, "_025", sep = '')
+    tP975 <- paste(nm, "_975", sep = '')
+
+    isAbove <- tmp[isFoc, tP975] < tmp[, tP025]
+    isBelow <- tmp[isFoc, tP025] > tmp[, tP975]
+    isSimil <- !isAbove & !isBelow
+
+    tmp[isAbove, 'pch'] <- 24
+    tmp[isAbove, 'tam'] <- 1.4
+    tmp[isBelow, 'pch'] <- 25
+    tmp[isBelow, 'tam'] <- 1.4
+    tmp[isFoc, 'pch'] <- 15
+    tmp[isFoc, 'tam'] <- 1.2
+
+    tmp[, 'cod'] <- substr(tmp[, 'inst_by_ref'], 1, 4)
+
+        isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+    plot(x = seq(1,nrow(tmp)), y = tmp[, nm],
+         col = tmp[, 'color'],
+         ylab="Aporte Relativo", xlab="Instituciones",
+ cex = tmp[, 'tam'],
+         ylim=c(limInfnm, limSupnm),
+         pch = tmp[, 'pch'], xaxt="n", las = 1)
+    Perc25 <- paste(nm, "_025", sep = '')
+    Perc75 <- paste(nm, "_975", sep = '')
+    rect(0 , tmp[isFoc, Perc25], 17,
+         tmp[isFoc, Perc75],
+         col = rgb(0.67,0.9,0.93), density =20, border = "transparent")
+    par (new = TRUE)
+    plot(x = seq(1,nrow(tmp)), y = tmp[, nm],
+         col = tmp[, 'color'],
+         ylab="Aporte Relativo", xlab="Instituciones",
+         cex = tmp[, 'tam'],
+         ylim=c(limInfnm, limSupnm),
+         pch = tmp[, 'pch'], xaxt="n", las = 1)
+    axis(side = 1, at = seq(1,nrow(tmp)), labels = tmp[, 'simbolo'])
+  abline(h = tmp[isFoc, nm], col="red", lty=1)
+    for (k in 1:nrow(tmp)) {
+      segments(k, tmp[[nm]][k], k, tmp[[paste(nm, "_025", sep = '')]][k],
+               col = tmp[k, 'color'], lty=1)
+      segments(k, tmp[[nm]][k], k, tmp[[paste(nm, "_975", sep = '')]][k],
+               col = tmp[k, 'color'], lty=1)
+}
+
+cerrar <- dev.off()
+@	 
+
+\newpage
+
+<<grafica4,results=tex,echo=false>>=
+#graf4Name <- file.path(
+#                         paste("grafico4",
+#                               ".eps", sep = ""))
+
+graf4Name <- file.path(
+                         paste("graficoPRO_", Inst, "_", PruebaEsp, "_",
+                               ".jpg", sep = ""))
+
+options(OutDec= ",")
+
+#postscript(file.path(runPath,graf4Name), width = 6.0, height = 6.0)
+
+jpeg(file.path(runPath,graf4Name), width = 6, height = 6, units = "in", res = 300)
+
+TamanoEfecto14 <-  0.2*(subset(Desviac2014GR[, 'DesvEstand'], Desviac2014GR[,
+                          'Prueba'] == PruebaEsp))
+
+tmp[, 'pch'] <- 1
+tmp[isFoc, 'pch'] <- 15
+tmp[, 'tam'] <- 1.4
+tmp[isFoc, 'tam'] <- 2						  
+						  
+OrdenPRO <- order(tmp[["M_post"]])
+tmp <- tmp[OrdenPRO,]
+isFoc <- tmp[, 'inst_by_ref'] %in% foc[, 'inst_by_ref']
+  limInfP <- min(tmp$M_post)
+  limSupP <- max(tmp$M_post)
+ plot(x = seq(1,nrow(tmp)), y = tmp$M_post,
+       cex = tmp[, 'tam'], pch = tmp[, 'pch'], xaxt = "n",
+       col = tmp[, 'color'], ylim = c(limInfP,limSupP), las = 1,
+       xlab="Instituciones", ylab=NombrePruebaEspec[PruebaEsp])
+  limInfPRO <- tmp[isFoc, 'M_post'] - TamanoEfecto14
+  limSupPRO <- tmp[isFoc, 'M_post'] + TamanoEfecto14
+  rect(0 , limInfPRO, 17, limSupPRO,
+         col = "pink", border = "transparent")
+  par (new = TRUE)
+  plot(x = seq(1,nrow(tmp)), y = tmp$M_post,
+       cex = tmp[, 'tam'], pch = tmp[, 'pch'], xaxt = "n",
+       col = tmp[, 'color'], ylim = c(limInfP,limSupP), las = 1,
+       xlab="Instituciones", ylab=NombrePruebaEspec[PruebaEsp])
+  axis(side = 1, at = seq(1,nrow(tmp)), labels = tmp[, 'simbolo'], cex =
+       0.8)
+  abline(h=tmp[isFoc, 'M_post'], col="red", lty=1)
+
+cerrar <-  dev.off()
+@
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  %% Resultados de SABER PRO en Lectura crítica para estudiantes 
+  %% de Valor Agregado
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+<<Grafico4,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf4Name, '}\n',
+      '\\end{center}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+
+\clearpage
+\newpage
+
+<<Grafico3,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = 270]{',
+      graf3Name, '}\n',
+      '\\end{center}\n',
+      '\\end{figure}\n',
+      sep = '')
+@	
+	
+<<grafica2,results=hide,echo=false>>=
+graf2Name <- file.path(
+                         paste("grafico2",
+                               ".eps", sep = ""))
+options(OutDec= ",")
+
+postscript(file.path(runPath,graf2Name), width = 6.0, height = 6.0)	 
+	 
+MinX <- min(Todos[, "M_inse"])
+  MaxX <- max(Todos[, "M_inse"])
+  MinY <- min(Todos[, "M_post"])
+  MaxY <- max(Todos[, "M_post"])
+  DifX <- MaxX - MinX
+  DifY <- MaxY - MinY
+
+
+ Todos[, 'punto']  <- 18
+Todos[isCom, 'punto']  <- 1
+Todos[isFoc, 'punto']  <- 15
+
+Todos[, 'tam']  <- 0.8
+Todos[isCom, 'tam']  <- 1.3
+Todos[isFoc, 'tam']  <- 1.5
+
+     plot(Todos[, "M_inse"], Todos[, "M_post"], col = Todos[, 'col'],
+          pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab=PruebaEsp,
+     xlab="Promedio INSE")
+  legend(MinX + (0.55*DifX), MinY + (0.90*DifY), "I", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.90*DifY), "II", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.05*DifX), MinY + (0.35*DifY), "III", cex = 2, text.col =
+         "gray69", bty = "n")
+  legend(MinX + (0.55*DifX), MinY + (0.35*DifY), "IV", cex = 2, text.col =
+         "gray69", bty = "n")
+  par (new = TRUE)
+  plot(Todos[, "M_inse"], Todos[, "M_post"],col = Todos[, 'col'],
+       pch = Todos[, 'punto'], las = 1,
+     cex = Todos[, 'tam'], ylab=PruebaEsp,
+     xlab="Promedio INSE")
+     abline(h=MediaPro, col="red", lty=2)
+     abline(v=MediaINSE, col="red", lty=2)
+	 
+cerrar <- dev.off()
+@	 
+
+\clearpage
+\newpage
+
+<<Grafico2,results=tex,echo=false>>=
+cat('\\begin{figure}[H]\n',
+      '\\begin{center}\n',
+      '\\includegraphics[width=11cm, angle = -90]{',
+      graf2Name, '}\n',
+      '\\end{center}\n',
+      '\\end{figure}\n',
+      sep = '')
+@
+	
+
